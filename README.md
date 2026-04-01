@@ -8,7 +8,7 @@
 
 ---
 
-> We investigate whether a persistent **caregiver–child relationship** improves knowledge transfer in language agents. A Qwen3-235B caregiver teaches a Qwen3-8B child across 160 household tasks using a cognitively-inspired memory architecture and a **salience-gated consolidation** mechanism. Caregiver-assisted agents achieve **100% training success** with **25% fewer turns**, but this advantage **does not transfer** to independent evaluation — mirroring the *scaffolding dependency* phenomenon from developmental psychology.
+> I investigate whether a persistent **caregiver–child relationship** improves knowledge transfer in language agents. A Qwen3-235B caregiver teaches a Qwen3-8B child across 160 household tasks using a cognitively-inspired memory architecture and a **salience-gated consolidation** mechanism. Caregiver-assisted agents achieve **100% training success** with **25% fewer turns**, but this advantage **does not transfer** to independent evaluation — mirroring the *scaffolding dependency* phenomenon from developmental psychology.
 
 ## Key Results
 
@@ -226,23 +226,7 @@ $$s = \alpha \cdot \text{novelty}(e) + \beta \cdot \text{prediction\\_error}(e) 
 </td></tr>
 </table>
 
-## Citation
-
-```bibtex
-@misc{more2026asymmetric,
-  author = {More, Rishi},
-  title  = {Can Adding Asymmetric Relation Dynamics Make Knowledge
-            Transfer More Efficient in Language Agents?},
-  year   = {2026},
-  school = {Johns Hopkins University},
-  note   = {EN.601.773 Machine Social Intelligence, Spring 2026}
-}
-```
 
 ## Acknowledgements
 
 This project uses the [Tinker API](https://thinkingmachines.ai/tinker/) for LLM inference and LoRA fine-tuning. Experiments were run on the JHU CS research compute cluster. Total API cost: ~$45.
-
-## License
-
-This project is for academic purposes. Please contact the author for usage inquiries.
