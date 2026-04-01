@@ -1,0 +1,81 @@
+================================================================================
+  MSI Project: Asymmetric Relational Dynamics for Knowledge Transfer
+  EN.601.773 Machine Social Intelligence, Spring 2026
+================================================================================
+
+STEP 1: Generate task database (~200 household tasks, uses 235B model)
+--------------------------------------------------------------------------------
+  python run_generate_tasks.py
+
+  Pipeline: ontology -> skeletons -> expansion -> verification -> filtering
+  Output:   data/task_database.json (197 tasks: 157 train, 40 eval)
+            data/tasks/task_XXXX.json (individual files)
+
+STEP 2: Run experiment (4 conditions x 3 seeds = 12 concurrent training runs)
+--------------------------------------------------------------------------------
+  python run_experiment.py train                                   # all conditions, all seeds
+  python run_experiment.py train --conditions solo relational      # subset of conditions
+  python run_experiment.py train --seeds 1 2                       # specific seeds
+  python run_experiment.py eval                                    # evaluate all trained runs
+  python run_experiment.py eval --conditions solo relational       # evaluate subset
+  python run_experiment.py all                                     # train + eval
+
+  Options:
+    --mode-caregiver combined       1 fused judge+caregiver call/turn (fastest, default)
+    --mode-caregiver speculative    3 parallel calls/turn (judge + 2 caregiver variants)
+    --mode-caregiver sequential     2 serial calls/turn (cheapest)
+    --no-adaptive-turns             fixed 15 turns for all tasks (default: scaled by difficulty)
+
+  Conditions:
+    solo          child only, 235B judge, no teacher
+    peer          two 8B children, 235B judge, no roles
+    role_labeled  235B caregiver + scaffolding, generic teacher (no child model)
+    relational    235B caregiver + scaffolding + personalized child model + teaching salience
+
+  Output:   data/runs/{condition}_seed{N}/metrics.jsonl
+            data/runs/{condition}_seed{N}/transcripts/episode_XXXX.json
+            data/runs/{condition}_seed{N}/ltm.json
+            data/runs/{condition}_seed{N}/scaffolding.json
+            data/runs/{condition}_seed{N}/child_model.json  (relational only)
+            data/runs/evaluation_results.json
+
+ARCHITECTURE
+--------------------------------------------------------------------------------
+  Models:
+    Caregiver  Qwen3-235B-A22B-Instruct (frozen, shared across all runs)
+    Child      Qwen3-8B-Base (LoRA r=32, one per run, salience-weighted SFT)
+
+  Memory:
+    M1  Instinct buffer     fixed role prompt (+ child model profile in relational)
+    M2  Working memory      k=8 sliding window of dialogue turns
+    M3  Long-term memory    episodic store, BM25 retrieval, 235B compression
+    M4  Habits              LoRA adapter weights (salience * reward weighted)
+
+  Parallelism:
+    Level 1  12 runs via asyncio.gather (all conditions x seeds concurrent)
+    Level 2  combined judge+caregiver in 1 call (or speculative: 3 parallel)
+    Level 3  post-episode: LTM compress + LoRA update + logging in parallel
+    Level 4  evaluation: all 40 eval tasks batched concurrently
+
+  Key difference (Relational vs Role-Labeled):
+    Role-Labeled  generic teacher, scaffolding adapts by category competence only
+    Relational    teacher maintains a persistent mental model of THIS child:
+                  knowledge gaps, mistake patterns, recent improvements,
+                  teaching notes -- updated via 235B reflection every 5 episodes.
+                  Teaching episodes also weighted higher in salience (gamma=0.4).
+
+EVALUATION METRICS
+--------------------------------------------------------------------------------
+  H1  Transfer accuracy       completion rate on 40 held-out tasks (no caregiver)
+  H2  Habit acceleration      LoRA convergence speed at episodes 40/80/120/160
+  H3  ToM proxy               child predicts caregiver responses (BM25 similarity)
+      Learning curves          rolling-average reward over episodes
+      Teaching efficiency      average turns to completion
+      Generalization distance  accuracy vs BM25 distance to nearest training task
+      Category heatmap         completion rate matrix (condition x category)
+
+ESTIMATED RUNTIME & COST
+--------------------------------------------------------------------------------
+  Training (combined mode, adaptive turns):  ~1.5-2.5 hours wall-clock
+  Evaluation:                                ~15-30 minutes
+  Total Tinker cost:                         ~$40-55 (well within $249 budget)

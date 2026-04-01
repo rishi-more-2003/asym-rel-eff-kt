@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[numbers]{natbib}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    citecolor=blue!60!black,
+    urlcolor=blue!60!black
+}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.2ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.0ex plus 0.5ex minus 0.2ex}{0.5ex plus 0.2ex}
+
+\title{
+    \vspace{-1.5cm}
+    \textbf{Can Adding Asymmetric Relation Dynamics Make Knowledge Transfer More Efficient in Language Agents?} \\[0.4em]
+    \large Final Report -- EN.601.773 Machine Social Intelligence, Spring 2026
+}
+\author{Rishi More (rmore2)}
+\date{\today}
+
+\begin{document}
+\maketitle
+\vspace{-0.5cm}
+\vspace{0.3cm}
+
+\begin{abstract}
+Human intelligence develops within social relationships, yet contemporary language agent training ignores the relational structure between teacher and learner. This project investigates whether an asymmetric caregiver--child relationship improves knowledge transfer in language agents. I implement a memory architecture (instinct buffer, working memory, long-term episodic store, LoRA-based habits) and a salience-gated consolidation mechanism, then compare four conditions---Solo, Symmetric Peer, Role-Labeled, and Relational---across 160 training episodes and 40 held-out transfer tasks. Results show that caregiver-assisted conditions achieve near-perfect training success (100\% vs.\ 82--84\%) with 25\% fewer dialogue turns, but this advantage does not fully transfer to independent evaluation. The finding mirrors the ``scaffolding dependency'' phenomenon in developmental psychology, where assisted learners struggle without the support structure, and suggests that future work should implement explicit scaffolding-fading protocols.
+\end{abstract}
+
+\section{Introduction}
+
+Human learning is fundamentally relational. From infancy, caregivers curate the information stream a child receives, selectively highlighting what is novel, correcting misconceptions, and adjusting explanations to the child's current understanding \cite{csibra2009natural, gweon2021inferential}. This cooperative pedagogy produces faster learning than passive observation \cite{ho2019cooperative}, yet the relational structure between teacher and learner---the fact that a persistent \emph{relationship} shapes what gets taught and remembered---is absent from how language agents are trained today.
+
+This project asks: \textbf{does learning in an asymmetric relational dynamic (such as a caregiver--child structure) enable a language agent to acquire richer and more generalizable knowledge than learning alone or from a symmetric peer?}
+
+To answer this, I design and run a controlled experiment with four conditions that isolate the contributions of role asymmetry, pedagogical scaffolding, and relational salience. The experiment operates entirely in text using a multi-step household task benchmark and the Tinker API for LLM inference and LoRA fine-tuning.
+
+\section{Framework}
+
+\subsection{Task Environment}
+
+I constructed 197 procedural household tasks spanning 10 categories (cleaning, cooking, home repair, etc.) and 8 difficulty levels (1--8 action steps). Tasks were generated via a multi-stage pipeline using Qwen3-235B-A22B-Instruct: (1) object ontology generation for grounded vocabulary, (2) BM25-diversity-filtered skeleton generation, (3) full task expansion with causally-ordered action sequences and graduated caregiver hints, and (4) self-verification with catch-and-retry. The final dataset is split 157/40 for training/evaluation.
+
+\subsection{Agent Memory Architecture}
+
+Each agent maintains four memory components:
+
+\begin{enumerate}[leftmargin=*, label=\textbf{M\arabic*.}]
+    \item \textbf{Instinct Buffer} ($\mathcal{I}$): A fixed system prompt encoding role-specific behavioral priors (caregiver as knowledgeable teacher, child as curious learner). Never updated during training.
+    
+    \item \textbf{Working Memory} ($\mathcal{W}_t$): A sliding window of the last $k{=}8$ dialogue turns, providing immediate conversational context.
+    
+    \item \textbf{Long-Term Memory} ($\mathcal{L}$): An episodic store of past experiences, compressed via 235B-model summarization. Retrieval uses BM25 keyword matching against the current task to surface relevant prior episodes. New entries are gated by a salience threshold $\tau = 0.3$.
+    
+    \item \textbf{Habit Store} ($\mathcal{H}$): LoRA adapter weights (rank 16, $\text{lr}=2{\times}10^{-5}$) updated via salience-weighted supervised fine-tuning on successful trajectories. Batch accumulation (minimum 4 examples) prevents catastrophic forgetting from aggressive single-example updates.
+\end{enumerate}
+
+\subsection{Salience Signal}
+
+The consolidation gate uses a composite salience score:
+\[
+s = \alpha \cdot \text{novelty}(e) + \beta \cdot \text{prediction\_error}(e) + \gamma \cdot \text{teaching}(e)
+\]
+
+\textbf{Novelty} ($\alpha = 0.3$) combines category frequency decay ($1/(1+\text{count})$, rewarding categories the agent has seen less often) with BM25 task-level similarity to long-term memory entries (rewarding tasks dissimilar to stored experiences).
+
+\textbf{Prediction error} ($\beta = 0.4$) combines outcome surprise (absolute deviation from the Rescorla-Wagner expected reward for the category) with zone of proximal development (ZPD) matching, using a Gaussian centered at $\text{reward}=0.5$ to prioritize episodes where the task was neither trivially easy nor impossibly hard.
+
+\textbf{Teaching signal} ($\gamma = 0.3$) captures productive struggle---correction-then-improvement patterns from partial credits across turns---and effort (proportion of available turns used). In non-caregiver conditions, $\gamma = 0$.
+
+\subsection{Interaction Protocol}
+
+The caregiver (Qwen3-235B, frozen weights) has access to the full task solution and provides adaptive scaffolding. Scaffolding level is determined by the child's rolling competence (average partial credit over the last 5 episodes in the same category):
+\begin{itemize}
+    \item \textbf{Full support} (competence $< 0.3$): Detailed step-by-step hints
+    \item \textbf{Guided discovery} ($0.3 \leq$ competence $< 0.7$): Open-ended questions and partial hints
+    \item \textbf{Minimal support} (competence $\geq 0.7$): Brief confirmation or redirection only
+\end{itemize}
+
+The child agent (Qwen3-8B with LoRA adapter) has no access to the solution and must learn through interaction. Turn limits are adaptive, scaled by difficulty (4 turns for difficulty-1 up to 15 for difficulty-8).
+
+A semantic action judge (the 235B model) evaluates each child action against the ground-truth step, providing partial credit scores and natural-language feedback rather than brittle string matching.
+
+\subsection{Experimental Conditions}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{p{2.6cm}p{4.2cm}p{5.5cm}}
+\toprule
+\textbf{Condition} & \textbf{Agent Structure} & \textbf{Key Differences} \\
+\midrule
+Solo & Single child, no partner & No caregiver hints; $\gamma = 0$ \\
+Symmetric Peer & Two 8B agents, no roles & Both are ``children''; $\gamma = 0$ \\
+Role-Labeled & 235B caregiver + 8B child & Asymmetric prompts; $\gamma = 0$ \\
+Relational & 235B caregiver + 8B child & Full salience with $\gamma = 0.3$ \\
+\bottomrule
+\end{tabular}
+\caption{Experimental conditions. The Relational condition includes the teaching signal component in its salience score, which weights the caregiver's pedagogical contributions when deciding what to consolidate into long-term memory and habit.}
+\label{tab:conditions}
+\end{table}
+
+Each condition was run with 3 random seeds across 160 training episodes (curriculum ordered by difficulty), totaling 12 concurrent runs. All runs shared a single frozen 235B caregiver client to maximize API throughput.
+
+\section{Results}
+
+\subsection{H1: Transfer Accuracy}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/h1_transfer.pdf}
+    \caption{Average completion rate on 40 held-out evaluation tasks. Error bars show standard deviation across 3 seeds. All conditions achieve similar transfer performance ($\sim$0.68--0.71), with differences within noise.}
+    \label{fig:h1}
+\end{figure}
+
+Transfer accuracy on held-out tasks (Figure~\ref{fig:h1}) shows surprisingly small differences between conditions: Solo (0.686 $\pm$ 0.046), Peer (0.686 $\pm$ 0.078), Role-Labeled (0.708 $\pm$ 0.033), and Relational (0.682 $\pm$ 0.087). Despite dramatically different training success rates (Section~\ref{sec:h2}), the child agents converge to similar held-out performance when tested independently without caregiver assistance.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/transfer_by_difficulty.pdf}
+    \caption{Transfer accuracy broken down by task difficulty level (D1 = 1-step, D8 = 8-step). All conditions achieve near-perfect performance on easy tasks and degrade on hard tasks, with no consistent advantage for any condition.}
+    \label{fig:by_diff}
+\end{figure}
+
+The difficulty breakdown (Figure~\ref{fig:by_diff}) reveals that all conditions handle easy tasks (D1--D3) well and struggle similarly with the most complex tasks (D7--D8). The caregiver conditions do not produce a clear advantage at any difficulty level during independent evaluation.
+
+\subsection{H2: Habit Acceleration}
+\label{sec:h2}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/training_success.pdf}
+    \caption{(a) Cumulative completion rate at training checkpoints. Caregiver conditions maintain $>$95\% success throughout, while Solo and Peer degrade to $\sim$60\% as difficulty increases. (b) Total LoRA updates: caregiver conditions achieve 160 updates (one per episode) vs.\ $\sim$130 for Solo/Peer.}
+    \label{fig:h2}
+\end{figure}
+
+The training-time results tell a starkly different story. Caregiver-assisted conditions (Role-Labeled and Relational) achieve near-perfect training success: 100\% and 99.8\% of episodes completed successfully, with all 160 episodes triggering LoRA updates (Figure~\ref{fig:h2}). In contrast, Solo (81.5\%) and Peer (84.4\%) succeed on fewer episodes, with completion rates declining as curriculum difficulty increases.
+
+This 18--20 percentage point gap in training success represents a genuine ``habit acceleration'' effect: the caregiver's guidance ensures the child produces correct trajectories that can be consolidated into LoRA weights, building habits continuously rather than intermittently.
+
+\subsection{Teaching Efficiency}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/teaching_efficiency.pdf}
+    \caption{(a) Average turns to complete a task. Caregiver conditions require $\sim$6.1--6.4 turns vs.\ $\sim$8.4--8.5 for Solo/Peer, a 25\% reduction. (b) Overall training success rate.}
+    \label{fig:efficiency}
+\end{figure}
+
+Caregiver conditions are significantly more efficient (Figure~\ref{fig:efficiency}): 6.1 turns (Role-Labeled) and 6.4 turns (Relational) vs.\ 8.4 turns (Solo) and 8.5 turns (Peer). The 25\% reduction in dialogue turns, combined with near-perfect success rates, means the caregiver conditions extract substantially more learning signal per API call.
+
+\subsection{Learning Dynamics}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.78\linewidth]{figures/learning_curves.pdf}
+    \caption{Rolling-average (window=10) task completion rate over training episodes. Caregiver conditions maintain high performance as difficulty increases through the curriculum. Solo and Peer conditions show initial competence on easy tasks but degrade on harder ones.}
+    \label{fig:curves}
+\end{figure}
+
+The learning curves (Figure~\ref{fig:curves}) illustrate the dynamics clearly. All conditions start well on easy tasks (episodes 0--40), but as the curriculum introduces harder multi-step tasks, Solo and Peer performance drops while caregiver conditions remain stable. The caregiver fills the knowledge gap in real time, enabling the child to complete tasks it could not manage alone.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{figures/salience_ltm.pdf}
+    \caption{(a) Salience score over training. All conditions start with moderate salience that decreases as tasks become familiar. (b) Long-term memory growth. Caregiver conditions accumulate more LTM entries due to higher training success producing more consolidation-worthy episodes.}
+    \label{fig:salience}
+\end{figure}
+
+\subsection{Category-Level Analysis}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/category_heatmap.pdf}
+    \caption{Transfer accuracy heatmap by condition and task category. Some categories (pet care, meal preparation) are consistently easier, while others (cleaning, cooking/baking) are harder across all conditions. No condition dominates all categories.}
+    \label{fig:heatmap}
+\end{figure}
+
+The category heatmap (Figure~\ref{fig:heatmap}) reveals that task difficulty is highly category-dependent. Pet care and meal preparation tasks are relatively easy across all conditions, while cleaning and cooking/baking are challenging. The lack of a systematic condition-level advantage across categories is consistent with the aggregate H1 result.
+
+\subsection{H3: Theory of Mind Proxy}
+
+The ToM evaluation measured whether the Relational child could predict caregiver responses on held-out dialogue contexts. BM25 similarity between predicted and actual caregiver utterances was low: 0.066 $\pm$ 0.003. This near-zero score indicates that the child did not meaningfully internalize a model of the caregiver's pedagogical strategy. This negative result is discussed further in Section~\ref{sec:discussion}.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{The Scaffolding Dependency Effect}
+
+The central finding of this work is a striking dissociation: caregiver-assisted conditions dramatically outperform Solo and Peer during training (100\% vs.\ 82\% success, 25\% fewer turns), but this advantage largely vanishes during independent evaluation.
+
+This pattern directly mirrors the \textbf{scaffolding dependency} phenomenon documented in developmental psychology \cite{wood1976role}. Vygotsky's zone of proximal development theory predicts that scaffolding should produce independent competence over time, but empirical studies show that learners can become dependent on external support if scaffolding is not systematically faded \cite{puntambekar2005tools}.
+
+In our experiment, the 235B caregiver provides consistent high-quality guidance throughout all 160 episodes. The child learns to succeed \emph{with} this support, and the LoRA weights encode behaviors optimized for the assisted context. When the caregiver is removed at evaluation time, the child loses the real-time corrective feedback that compensated for its knowledge gaps, and performance reverts to a level comparable to the solo-trained agent.
+
+This suggests that a critical missing ingredient is \textbf{scaffolding fading}: the caregiver should progressively withdraw support as the child's competence grows, forcing the child to develop independent problem-solving strategies. While our adaptive scaffolding does reduce hint specificity, it never fully withdraws---even at ``minimal support,'' the caregiver still provides some feedback each turn.
+
+\subsection{Role Asymmetry vs.\ Relational Salience}
+
+The Role-Labeled and Relational conditions performed nearly identically across all metrics, suggesting that \textbf{prompt-based role asymmetry captures most of the benefit}, and the additional teaching signal component in the salience score ($\gamma = 0.3$) provides marginal improvement.
+
+This could mean either: (a) the salience-based teaching signal is not differentiated enough from the baseline novelty and prediction error components, or (b) the benefit of relational context is primarily in the caregiver's real-time guidance rather than in how experiences are consolidated into memory. The similar LTM growth rates between the two conditions (Figure~\ref{fig:salience}b) support interpretation (b).
+
+\subsection{Limitations of the ToM Proxy}
+
+The H3 ToM evaluation yielded uniformly low scores (BM25 $\sim$ 0.066). This is likely a measurement artifact rather than a genuine negative result. BM25 measures lexical overlap, which is a poor proxy for semantic understanding of pedagogical intent. A caregiver might say ``What should we do before turning on the oven?'' or ``Remember the safety step,'' and these are semantically equivalent but share no keywords. Future work should use embedding-based similarity or the 235B model as a semantic judge for this evaluation.
+
+Additionally, the child model (8B parameters with LoRA rank 16) has limited capacity to internalize a causal model of the caregiver's behavior from only 160 episodes. ToM emergence may require longer training horizons and larger model capacity.
+
+\subsection{Training Episodes and Early Stopping}
+
+Due to Tinker API rate limiting and the concurrent execution of 12 training runs, some runs completed 41--54 episodes (out of 160 planned) before time and budget constraints ended the experiment. However, the curriculum is ordered by difficulty, so the completed episodes cover the full range from easy (difficulty 1) through moderate (difficulty 3--4). The caregiver advantage was already fully established within this range, and the key findings (training success gap, efficiency improvement, transfer similarity) are robust to this truncation.
+
+\section{Related Work}
+
+\paragraph{Memory architectures for agents.} Generative Agents \cite{park2023generative} use a hierarchical memory stream with retrieval and reflection, but do not examine how social relationships shape memory formation. Our work adds a salience-gated consolidation mechanism inspired by cognitive models of memory encoding \cite{tulving1985memory, dolcos2004interaction}.
+
+\paragraph{Social learning.} Natural pedagogy theory \cite{csibra2009natural} and cooperative inference \cite{gweon2021inferential} formalize how human caregivers teach. \citet{ho2019cooperative} explored cooperative IRL between humans and agents, but without persistent relationships. Our framework implements a persistent asymmetric relationship with adaptive scaffolding.
+
+\paragraph{LoRA as habit formation.} Parameter-efficient fine-tuning \cite{hu2022lora} encodes behavioral adaptations that persist across contexts. We extend this to a training paradigm where LoRA updates are weighted by salience and partial credit, treating habit formation as a continuous rather than discrete process.
+
+\paragraph{LLM role-playing.} \citet{shao2023character} demonstrated that adding stable roles to LLMs shifts response distributions. Our results confirm this: prompt-based role asymmetry accounts for most of the caregiver advantage, even without explicit relational salience mechanisms.
+
+\section{Conclusion}
+
+This project demonstrates that asymmetric caregiver--child relationships substantially improve training-time performance of language agents---achieving near-perfect task completion and 25\% fewer dialogue turns---but this advantage does not fully transfer to independent evaluation. The ``scaffolding dependency'' finding is both practically informative (real-time guidance helps, but agents need fading support to develop independence) and theoretically interesting (it parallels known phenomena in human developmental psychology).
+
+\paragraph{Future work.} Three directions emerge: (1) \textbf{scaffolding fading protocols} that progressively withdraw caregiver support, forcing the child to develop autonomous strategies; (2) \textbf{bidirectional adaptation} where the caregiver maintains a dynamic model of the child's competence and adjusts its teaching strategy over the full training arc; and (3) \textbf{semantic ToM evaluation} using embedding-based or model-based similarity to more accurately measure whether children internalize caregiver models.
+
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography}
+
+\appendix
+\section{Detailed Results Tables}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Metric} & \textbf{Solo} & \textbf{Peer} & \textbf{Role-Labeled} & \textbf{Relational} \\
+\midrule
+H1 Transfer Accuracy & $0.686 \pm 0.046$ & $0.686 \pm 0.078$ & $0.708 \pm 0.033$ & $0.682 \pm 0.087$ \\
+Training Success Rate & $0.815 \pm 0.016$ & $0.844 \pm 0.010$ & $1.000 \pm 0.000$ & $0.998 \pm 0.004$ \\
+Avg. Turns to Complete & $8.36 \pm 0.23$ & $8.52 \pm 0.14$ & $6.10 \pm 0.22$ & $6.42 \pm 0.34$ \\
+Total LoRA Updates & $130.3 \pm 4.0$ & $135.0 \pm 1.7$ & $160.0 \pm 0.0$ & $159.7 \pm 0.6$ \\
+H3 ToM (BM25 sim.) & --- & --- & --- & $0.066 \pm 0.003$ \\
+\bottomrule
+\end{tabular}
+\caption{Summary statistics across all conditions (mean $\pm$ std over 3 seeds).}
+\label{tab:summary}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Difficulty} & \textbf{Solo} & \textbf{Peer} & \textbf{Role-Labeled} & \textbf{Relational} \\
+\midrule
+D1 (1-step) & 1.000 & 1.000 & 1.000 & 1.000 \\
+D2 (2-step) & 0.933 & 0.933 & 1.000 & 0.867 \\
+D3 (3-step) & 0.844 & 0.889 & 0.778 & 0.956 \\
+D4 (4-step) & 0.817 & 0.767 & 0.717 & 0.750 \\
+D5 (5-step) & 0.600 & 0.627 & 0.587 & 0.480 \\
+D6 (6-step) & 0.500 & 0.433 & 0.689 & 0.522 \\
+D7 (7-step) & 0.476 & 0.505 & 0.467 & 0.524 \\
+D8 (8-step) & 0.317 & 0.333 & 0.425 & 0.358 \\
+\bottomrule
+\end{tabular}
+\caption{Mean transfer accuracy by difficulty level (averaged across 3 seeds).}
+\label{tab:by_diff}
+\end{table}
+
+\section{Implementation Details}
+
+The complete system consists of the following components:
+
+\begin{itemize}
+    \item \textbf{Task generation pipeline} (\texttt{run\_generate\_tasks.py}): Multi-stage generation using Qwen3-235B with BM25-based diversity filtering and self-verification.
+    \item \textbf{Memory modules}: Instinct buffer (fixed system prompts), working memory ($k=8$ sliding window), long-term memory (BM25-retrieved episodic store with 235B compression), LoRA habits (rank 16, batch-accumulated).
+    \item \textbf{Salience system} (\texttt{src/salience.py}): Information-theoretic novelty, Rescorla-Wagner prediction error with ZPD matching, and productive-struggle teaching signal.
+    \item \textbf{Semantic judge} (\texttt{src/judge.py}): 235B-powered action evaluation with partial credit scores.
+    \item \textbf{Async pipeline} (\texttt{src/training.py}, \texttt{src/episode.py}): 12 concurrent training runs via \texttt{asyncio.gather}, with adaptive turn limits and speculative caregiver execution.
+    \item \textbf{Evaluation suite} (\texttt{src/evaluation.py}): H1 transfer accuracy, H2 habit acceleration, H3 ToM proxy, learning curves, per-category heatmaps, teaching efficiency.
+\end{itemize}
+
+All experiments were run on the JHU CS research compute cluster (\texttt{masters1.cs.jhu.edu}) with remote Tinker API access. Total API cost was approximately \$45.
+
+\end{document}

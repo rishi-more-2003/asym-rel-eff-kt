@@ -1,0 +1,178 @@
+[
+  {
+    "episode_id": 0,
+    "task_id": "task_0019",
+    "category": "pet_care",
+    "summary": "The task was to refill the cat's water bowl with fresh water from the tap, categorized as pet care. The child struggled with understanding the need to first bring the empty water bowl to the sink and instead attempted to use the cup without ensuring proper water flow or bowl placement. The caregiver explained that the bowl should be placed under the running tap to fill directly, ensuring it's clean and full, and demonstrated turning on the tap before filling. The task succeeded after the correction.",
+    "reward": 1.0,
+    "salience": 0.4407876173288095
+  },
+  {
+    "episode_id": 2,
+    "task_id": "task_0012",
+    "category": "laundry",
+    "summary": "The task involved placing a dirty cotton t-shirt into the washing machine, categorized as a laundry task. The child initially hesitated, unsure whether the washing machine needed to be powered on or if detergent had to be added, but the caregiver clarified that the goal was simply to place the t-shirt inside, requiring only opening the closed door and putting the shirt in. The task succeeded after the child opened the washing machine door, placed the t-shirt inside, and closed the door.",
+    "reward": 1.0,
+    "salience": 0.4307756983776772
+  },
+  {
+    "episode_id": 3,
+    "task_id": "task_0020",
+    "category": "home_repair",
+    "summary": "The task was a home repair involving tightening a loose screw on a bathroom cabinet door hinge using a screwdriver. The child initially overthought the process and hesitated on the direction to turn the screw, but the caregiver clarified that turning clockwise tightens the screw and demonstrated proper alignment of the screwdriver with the screw head. The task succeeded after the child correctly tightened the screw, securing the door.",
+    "reward": 1.0,
+    "salience": 0.42068769548617485
+  },
+  {
+    "episode_id": 4,
+    "task_id": "task_0011",
+    "category": "cooking_baking",
+    "summary": "The child attempted to measure 1 cup of granulated sugar but incorrectly used the regular cup instead of retrieving and using the measuring cup with measurement markings. The caregiver corrected this by explaining that the measuring cup must be used for accuracy and demonstrated scooping sugar from the bowl into the measuring cup, then leveling it off with the knife. The task succeeded after the child followed the corrected steps.",
+    "reward": 1.0,
+    "salience": 0.4317352213414389
+  },
+  {
+    "episode_id": 6,
+    "task_id": "task_0013",
+    "category": "gardening",
+    "summary": "The child struggled with knowing which parts of the rose bushes to trim and how to properly use the pruning shears, overcomplicating the task by considering unrelated tools like the watering can and garden hose. The caregiver clarified that the goal was simply to cut back visibly overgrown branches using the pruning shears, demonstrating how to open and use the shears safely while wearing gloves. The task succeeded after the child followed the guidance and trimmed the excess growth from the rose bushes.",
+    "reward": 1.0,
+    "salience": 0.4291492484961443
+  },
+  {
+    "episode_id": 8,
+    "task_id": "task_0014",
+    "category": "organizing",
+    "summary": "The task was organizing, requiring the child to place keys from a jacket pocket into an entryway bowl. The child struggled with accessing the keys, initially not realizing they needed to remove the jacket from the hook to retrieve the keys from the pocket. The caregiver clarified that the jacket must be taken down to reach the keys, then demonstrated removing the keys and placing them directly into the bowl. The task succeeded after the child followed these steps correctly.",
+    "reward": 1.0,
+    "salience": 0.4215722521931465
+  },
+  {
+    "episode_id": 9,
+    "task_id": "task_0008",
+    "category": "home_repair",
+    "summary": "This home repair task required replacing a cracked showerhead using a wrench and plumber's tape. The child struggled with the correct rotational direction for loosening the old showerhead, repeatedly turning it clockwise (which tightens instead of loosens), and failed to apply plumber\u2019s tape to seal the new showerhead\u2019s threads. The caregiver corrected that connections must be turned counter-clockwise to loosen and emphasized sealing threads with plumber\u2019s tape before clockwise installation; however, the task failed due to persistent incorrect turning and omission of sealing steps.",
+    "reward": 0.0,
+    "salience": 0.46635579499708346
+  },
+  {
+    "episode_id": 10,
+    "task_id": "task_0015",
+    "category": "furniture_assembly",
+    "summary": "The task was a furniture assembly requiring the child to build a wooden bookshelf using screws and a hammer, with a screwdriver as the correct tool for driving screws. The child struggled with tool selection, repeatedly attempting to use the hammer or wrench instead of the screwdriver to drive screws, indicating confusion about which tool was appropriate for screws versus nails or bolts. The caregiver explained that screws must be turned with a screwdriver\u2014clockwise to tighten\u2014and demonstrated proper tool use, but the child failed to apply this correction, resulting in incorrect assembly.",
+    "reward": 0.0,
+    "salience": 0.4177291791660139
+  },
+  {
+    "episode_id": 13,
+    "task_id": "task_0010",
+    "category": "cleaning",
+    "summary": "The task was to sweep the living room floor using a broom and dustpan, categorized as a cleaning activity. The child initially hesitated on the sequence of actions, particularly whether to move the dustpan into position before sweeping, but after the caregiver explained that sweeping should be done toward the dustpan and demonstrated proper alignment of the broom to gather debris efficiently, the child coordinated the tools correctly. The task succeeded as the floor was cleared of crumbs and dust.",
+    "reward": 1.0,
+    "salience": 0.4177291791660139
+  },
+  {
+    "episode_id": 14,
+    "task_id": "task_0022",
+    "category": "home_repair",
+    "summary": "The task was a home repair to fix a squeaky bedroom door by tightening loose hinge screws using a screwdriver. The child initially hesitated about whether a ladder was needed or if the screws required a different tool, but the caregiver clarified that the screwdriver should be used to turn the screws clockwise for tightening, just like in the prior bathroom cabinet hinge repair. The child successfully retrieved the screwdriver from the toolbox, accessed the hinge screws without the ladder (as they were within reach), and tightened them correctly, eliminating the squeak and completing the task.",
+    "reward": 1.0,
+    "salience": 0.31543910283013604
+  },
+  {
+    "episode_id": 16,
+    "task_id": "task_0002",
+    "category": "organizing",
+    "summary": "The task was to organize spice jars alphabetically on a kitchen cabinet shelf. The child struggled with understanding that the jars were already on the shelf inside the closed cabinet and needed to be rearranged in place, not removed from the cabinet entirely or sorted externally. The caregiver clarified that the child should open the cabinet, leave the jars on the shelf, and simply reorder them alphabetically by comparing labels; the task succeeded after the child correctly sorted the jars directly on the shelf.",
+    "reward": 0.0,
+    "salience": 0.47180785428738736
+  },
+  {
+    "episode_id": 17,
+    "task_id": "task_0029",
+    "category": "cleaning",
+    "summary": "The task was to vacuum the bedroom carpet using the upright vacuum cleaner, a cleaning task requiring proper equipment operation. The child struggled with the sequence of steps, initially omitting the need to plug in the vacuum before turning it on and failing to maneuver it properly around obstacles like the bed and clothes. The caregiver corrected this by emphasizing the importance of plugging in the vacuum first, turning it on, and using slow, overlapping strokes to ensure full carpet coverage while navigating around furniture. The task succeeded after the child followed the corrected procedure.",
+    "reward": 0.5,
+    "salience": 0.48609709984686755
+  },
+  {
+    "episode_id": 18,
+    "task_id": "task_0028",
+    "category": "cleaning",
+    "summary": "The task was to clean the bathroom mirror using glass cleaner and a microfiber cloth, categorized as a cleaning task. The child struggled with correctly applying the glass cleaner, likely failing to open the bottle or spray it onto the mirror, and may have used an incorrect cloth such as the towel instead of the required microfiber cloth. The caregiver emphasized that the glass cleaner must be opened and sprayed directly on the mirror before wiping with the microfiber cloth in circular motions, but the child did not execute these steps properly, resulting in failure.",
+    "reward": 0.0,
+    "salience": 0.3777435132391064
+  },
+  {
+    "episode_id": 20,
+    "task_id": "task_0035",
+    "category": "organizing",
+    "summary": "The child attempted to organize hardcover books alphabetically by author on the living room bookshelf but incorrectly tried to sort them while still stacked, failing to remove and spread them out for proper comparison. The caregiver explained that, unlike the spice jars which were sorted in place on a shelf, the books were in a pile and needed to be unstacked first to view all authors, then sorted systematically before being placed back in order on the bookshelf. The task failed due to misunderstanding the initial arrangement and proper sorting procedure.",
+    "reward": 1.0,
+    "salience": 0.32344497244678094
+  },
+  {
+    "episode_id": 25,
+    "task_id": "task_0032",
+    "category": "cooking_baking",
+    "summary": "The task was a cooking activity requiring the child to melt butter and make a roux by whisking in flour, but the child struggled with the sequence and tool use, repeatedly attempting incorrect methods like using the microwave or adding flour before the butter melted. The caregiver emphasized that butter must be fully melted in the saucepan on the stove before flour is gradually whisked in with a spoon to avoid lumps, and that measuring ingredients accurately is essential. Despite these explanations, the child failed to execute the correct steps, resulting in an unsuccessful attempt.",
+    "reward": 0.0,
+    "salience": 0.4720380465703482
+  },
+  {
+    "episode_id": 27,
+    "task_id": "task_0033",
+    "category": "meal_preparation",
+    "summary": "The task was to boil 2 cups of water in a kettle and pour it into a mug to prepare instant ramen, a meal preparation activity. The child struggled with using the correct appliance, repeatedly opting to use the microwave instead of the kettle, and failed to measure the required 2 cups of water using the available cup. The caregiver emphasized that the task specifically required using the kettle for boiling and measuring water with the cup before heating, but the child did not follow these steps, resulting in task failure.",
+    "reward": 0.5,
+    "salience": 0.44713569692246263
+  },
+  {
+    "episode_id": 29,
+    "task_id": "task_0040",
+    "category": "cooking_baking",
+    "summary": "The child attempted to preheat the oven before retrieving the frozen pizza from the freezer, failing to recognize that the pizza needed to be removed and prepared first. The caregiver explained that while preheating is necessary, the logical sequence requires retrieving the pizza and preparing it for baking before or during preheating, and emphasized using oven mitts for safety when handling frozen food and hot surfaces. The task failed due to incorrect sequencing and lack of preparation awareness.",
+    "reward": 1.0,
+    "salience": 0.3204837145137195
+  },
+  {
+    "episode_id": 30,
+    "task_id": "task_0024",
+    "category": "pet_care",
+    "summary": "This pet care task required cleaning a hamster's cage by removing soiled bedding and replacing it with fresh bedding from a sealed storage bin in the garage. The child struggled with retrieving the fresh bedding, likely failing to go to the garage or open the sealed bin, and may have omitted wearing gloves or properly disposing of the soiled bedding. The caregiver emphasized the need to wear gloves, open both the cage and the storage bin, dispose of old bedding in the trash can, and place fresh bedding inside the cage, but the task failed due to incomplete or incorrect execution of these steps.",
+    "reward": 0.5,
+    "salience": 0.49063402755639496
+  },
+  {
+    "episode_id": 33,
+    "task_id": "task_0041",
+    "category": "personal_care",
+    "summary": "The task was a personal care activity requiring the child to comb slightly tangled hair using a hair comb at the bedroom vanity mirror. The child struggled with the proper technique, likely attempting to comb from the roots downward without detangling the ends first, which worsened the tangles. The caregiver explained that combing should start at the ends of the hair and gradually work upward in small sections to gently remove knots, using the mirror for visibility and the lamp for better lighting if needed; however, the child did not implement this method correctly, resulting in task failure.",
+    "reward": 1.0,
+    "salience": 0.41945845641889584
+  },
+  {
+    "episode_id": 36,
+    "task_id": "task_0043",
+    "category": "meal_preparation",
+    "summary": "The task was a meal preparation requiring toasting bread and spreading peanut butter, but the child failed to plug in the toaster before use and attempted to spread peanut butter with a fork instead of the knife. The caregiver explained that the toaster must be plugged in to function and that the knife\u2014not the fork\u2014is the correct tool for spreading peanut butter. Despite these corrections, the child did not complete the task successfully, resulting in failure.",
+    "reward": 0.0,
+    "salience": 0.35256145729958044
+  },
+  {
+    "episode_id": 37,
+    "task_id": "task_0072",
+    "category": "cooking_baking",
+    "summary": "The task was to bake a single-serving apple pie using a pre-made crust and sliced apples, then cool it on a wire rack, categorized as cooking/baking. The child struggled with correctly sequencing the preparation steps, particularly failing to wash the apple, peel and core it before slicing, and not transferring the baked pie to the cooling rack afterward. The caregiver emphasized the necessity of washing produce, properly preparing the filling, using the oven (not microwave), and completing the cooling step on the rack; however, the child omitted critical steps, resulting in task failure.",
+    "reward": 0.3333333333333333,
+    "salience": 0.3858605890065986
+  },
+  {
+    "episode_id": 38,
+    "task_id": "task_0049",
+    "category": "cooking_baking",
+    "summary": "The task was to bake banana muffins and cool them on a rack, a cooking/baking activity requiring proper sequencing and ingredient use. The child struggled with recognizing missing ingredients (e.g., flour, sugar, eggs) not listed in available objects, failed to preheat the oven, and may have attempted to use incorrect appliances like the toaster or coffee maker. The caregiver emphasized that all baking tasks require a complete batter, proper oven use, and post-baking cooling on the rack; however, due to uncorrected omissions in preparation and equipment use, the task failed.",
+    "reward": 0.0,
+    "salience": 0.3227421677726874
+  }
+]

@@ -1,0 +1,211 @@
+{
+  "category_scores": {
+    "pet_care": 0.8823509999999999,
+    "laundry": 0.657,
+    "home_repair": 0.8823509999999999,
+    "cooking_baking": 0.9423519899999997,
+    "gardening": 0.7599,
+    "organizing": 0.8823509999999999,
+    "furniture_assembly": 0.3,
+    "cleaning": 0.657,
+    "meal_preparation": 0.51,
+    "personal_care": 0.3
+  },
+  "knowledge_gaps": [
+    "proper sequence for accessing tools in home repair tasks",
+    "understanding the necessity of preparing the workspace (e.g., moving shower curtain) before starting",
+    "proper technique for folding bed sheets efficiently",
+    "understanding that some tasks require tactile handling rather than over-planning",
+    "understanding the necessity of preparing the workspace before starting",
+    "understanding that oven controls are typically external and do not require opening the door",
+    "knowing standard baking temperatures for common items like frozen pizza",
+    "recognizing that some appliances have preset functions (e.g., preheat) without needing manual temperature input",
+    "understanding the importance of workspace preparation before starting a task",
+    "recognizing that tool setup (e.g., opening shears) should be done immediately before use, not prematurely"
+  ],
+  "common_mistakes": [
+    "pausing to reconsider basic object interactions like opening the dryer or moving objects between rooms",
+    "over-verbalizing initial steps without taking action",
+    "pausing to reconsider basic object interactions like opening drawers or unfolding ladders",
+    "over-verbalizing steps related to appliance operation without taking action",
+    "hesitating to interact with common kitchen appliances due to uncertainty about controls",
+    "assuming physical access (e.g., opening oven door) is required for operation",
+    "over-verbalizing action sequences without progressing efficiently",
+    "repeating planned steps without adapting to real-time task flow"
+  ],
+  "recent_improvements": [
+    "demonstrated correct sequencing of gardening steps",
+    "applied prior knowledge of protective gear use by wearing gloves",
+    "showed sustained focus and safe handling of tools throughout the task"
+  ],
+  "teaching_notes": [
+    "Encourage quicker transition from planning to doing, and reinforce confidence in handling household tasks through guided practice rather than extended verbal reasoning.",
+    "Encourage faster transition from planning to action and reinforce confidence in tool handling through guided, hands-on practice.",
+    "Provide more hands-on practice with kitchen appliances using guided, real-time feedback to build confidence and reduce overthinking.",
+    "Encourage more opportunities for independent practice in familiar domains to reinforce confidence and generalization of skills.",
+    "Encourage concise planning followed by immediate action, and introduce pre-task routines like gathering all tools and preparing the workspace upfront."
+  ],
+  "episodes_observed": 40,
+  "episode_history": [
+    {
+      "task_goal": "Arrange a stack of hardcover books alphabetically by author on the living room bookshelf",
+      "category": "organizing",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fix a wobbly dining chair by tightening the loose screw on the front leg",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fertilize a potted lemon tree on the balcony using liquid plant food",
+      "category": "gardening",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fix a leaky kitchen faucet by tightening the handle screw and replacing the worn washer",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Replace a broken ceiling light bulb in the living room using a ladder and a new bulb",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Melt two tablespoons of butter in a saucepan and whisk in flour to make a roux for gravy",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Refill a dog's food bowl with kibble from the pet food bag in the pantry and place it back in the dining room",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Boil 2 cups of water in a kettle and pour it into a mug to prepare instant ramen",
+      "category": "meal_preparation",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Prune dead leaves from a potted aloe vera plant on the patio using gardening shears",
+      "category": "gardening",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Preheat the oven and place a frozen pizza on the center rack to bake for dinner",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Clean a hamster's cage by removing soiled bedding and replacing it with fresh bedding from the storage bin in the garage",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Bake chocolate chip cookies by scooping dough onto a baking sheet and placing it in the preheated oven",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Sort a mix of AA and AAA batteries into separate compartments of a storage case in the utility drawer",
+      "category": "organizing",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Comb hair using a hair comb at the bedroom vanity mirror",
+      "category": "personal_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Brush a dog's fur with a pet brush and then dispose of the loose hair in the bathroom trash can",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Place a set of mismatched coffee mugs back into the kitchen cabinet in a neat row on the top shelf",
+      "category": "organizing",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Toast two slices of bread in a toaster and spread peanut butter on each slice",
+      "category": "meal_preparation",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Bake a single-serving apple pie using a pre-made crust and sliced apples, then cool on a wire rack",
+      "category": "cooking_baking",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Bake a small batch of banana muffins and place them on a cooling rack",
+      "category": "cooking_baking",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Trim overgrown rose bushes in the front yard using pruning shears and collect clippings",
+      "category": "gardening",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    }
+  ]
+}

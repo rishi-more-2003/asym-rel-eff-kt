@@ -1,0 +1,154 @@
+[
+  {
+    "episode_id": 0,
+    "task_id": "task_0013",
+    "category": "gardening",
+    "summary": "The task is to trim overgrown rose bushes near the front porch, categorized as gardening. The child initially considered watering the plants or opening the shears but did not know the correct sequence of actions. The caregiver clarified the steps: put on gloves first, retrieve the pruning shears from the toolbench, then trim only the overgrown branches before closing the shears. The task succeeded as the child followed the guided steps to complete the pruning.",
+    "reward": 1.0,
+    "salience": 0.47078761732880947
+  },
+  {
+    "episode_id": 1,
+    "task_id": "task_0004",
+    "category": "laundry",
+    "summary": "The task was to transfer damp socks from the washing machine to the clothes dryer, categorized as laundry. The child initially overthought the process and was unsure whether to use the laundry basket or close the dryer door, but the caregiver clarified the simple steps: open the washing machine, remove the socks, open the dryer, and place the socks inside without needing to close the door or start the cycle. The child successfully completed the task by following these steps, and the caregiver praised their careful execution.",
+    "reward": 1.0,
+    "salience": 0.6639856692768615
+  },
+  {
+    "episode_id": 2,
+    "task_id": "task_0011",
+    "category": "cooking_baking",
+    "summary": "The task is to measure 1 cup of granulated sugar using a measuring cup for cookie dough, categorized as cooking/baking. The child was unsure how to accurately measure the sugar and whether to use additional tools, struggling with the technique of leveling. The caregiver explained to fill the measuring cup to the 1-cup line and use the back of the knife or spoon to level off the excess, ensuring an exact measurement; the task succeeded as the child followed these instructions correctly.",
+    "reward": 1.0,
+    "salience": 0.4690019030430952
+  },
+  {
+    "episode_id": 3,
+    "task_id": "task_0020",
+    "category": "home_repair",
+    "summary": "The child successfully retrieved the screwdriver from under the bathroom sink to address the loose hinge screw on the cabinet door, demonstrating understanding of the home repair task. The caregiver affirmed the correct first step and guided the child to proceed with tightening the screw. The task is ongoing, with success expected upon proper reattachment of the hinge.",
+    "reward": 1.0,
+    "salience": 0.4565734573179796
+  },
+  {
+    "episode_id": 6,
+    "task_id": "task_0003",
+    "category": "organizing",
+    "summary": "The task was an organizing activity requiring the child to slide a stack of unsorted mail into a designated sorting tray on the hallway desk. The child initially overcomplicated the task by considering irrelevant objects like magazines and coasters, struggling to identify the simple physical action needed. The caregiver clarified that no extra steps were necessary\u2014just use hands to gently push the pre-stacked mail directly into the tray. The child succeeded by following this guidance and completing the task with focused, appropriate action.",
+    "reward": 1.0,
+    "salience": 0.6070619360076092
+  },
+  {
+    "episode_id": 7,
+    "task_id": "task_0018",
+    "category": "pet_care",
+    "summary": "The task was to fill a dog's food bowl with dry kibble from the pantry, categorized as pet care. The child initially considered using tools like a spoon or cup but was unsure whether measuring was necessary. The caregiver clarified that no measuring was needed and guided the child to simply open the pantry, retrieve and open the kibble bag, and pour directly into the bowl. The child succeeded by following these steps independently and correctly.",
+    "reward": 1.0,
+    "salience": 0.6659181292308425
+  },
+  {
+    "episode_id": 9,
+    "task_id": "task_0002",
+    "category": "organizing",
+    "summary": "The task is an organizing activity requiring the child to arrange spice jars alphabetically in a kitchen cabinet. The child initially struggled with identifying the first action and understanding how to begin sorting the jars. The caregiver guided the child to open the cabinet door as the first step and confirmed that the jars would then be visible and accessible for sorting. The task succeeded as the child followed the guidance and prepared to arrange the jars in alphabetical order.",
+    "reward": 1.0,
+    "salience": 0.4724521952362644
+  },
+  {
+    "episode_id": 10,
+    "task_id": "task_0019",
+    "category": "pet_care",
+    "summary": "The task was to refill a cat's water bowl with fresh water from the tap, categorized as pet care. The child initially overcomplicated the process by considering indirect methods like using a cup, but the caregiver guided them to simplify by bringing the bowl directly to the tap. The child succeeded by turning on the tap, filling the bowl directly, and avoiding spills, completing the task independently and correctly.",
+    "reward": 1.0,
+    "salience": 0.40527256226244657
+  },
+  {
+    "episode_id": 11,
+    "task_id": "task_0015",
+    "category": "furniture_assembly",
+    "summary": "The task is a level-1 furniture assembly requiring the child to build a wooden bookshelf using screws and a screwdriver. The child initially overcomplicated the process by considering unnecessary tools like the hammer and wrench, and was unsure how to access the kit and tools. The caregiver clarified that the toolbox and kit box can be opened by hand, emphasized using only the screwdriver, and guided the child to retrieve the screwdriver first and then the screws from the plastic bag inside the kit. The task succeeded as the child correctly sequenced the steps and proceeded with assembly.",
+    "reward": 1.0,
+    "salience": 0.6601865124974453
+  },
+  {
+    "episode_id": 14,
+    "task_id": "task_0010",
+    "category": "cleaning",
+    "summary": "The task is a level-1 cleaning activity requiring the child to sweep the living room floor using a broom and dustpan. The child was unsure how to begin and how to effectively gather the debris after sweeping. The caregiver guided the child to pick up both tools, sweep the crumbs into a pile, and use the broom to push the pile into the dustpan, emphasizing simple, actionable steps. The task succeeded with the child following the instructions to complete the cleaning.",
+    "reward": 1.0,
+    "salience": 0.44703921043422046
+  },
+  {
+    "episode_id": 17,
+    "task_id": "task_0041",
+    "category": "personal_care",
+    "summary": "The task is a level-2 personal care activity requiring the child to comb their hair using a comb at the bedroom vanity mirror. The child initially overthought the process, hesitating on whether to adjust the mirror or turn on the lamp, and was unsure how to proceed after picking up the comb. The caregiver simplified the task by prompting the child to first pick up the comb and then stand in front of the mirror to begin combing slowly, using the reflection to guide the action. The task succeeded as the child followed the step-by-step guidance, used the comb on their slightly tangled hair while looking in the mirror, and completed the grooming activity with caregiver support.",
+    "reward": 1.0,
+    "salience": 0.46133189597216645
+  },
+  {
+    "episode_id": 20,
+    "task_id": "task_0033",
+    "category": "meal_preparation",
+    "summary": "The task is a level-2 meal preparation activity requiring the child to boil water and prepare instant ramen. The child initially struggled with the correct sequence, focusing on boiling water before preparing the noodles, and was uncertain about using the sink and measuring water with the cup. The caregiver guided the child to first place the mug on the counter, use the cup to measure two cups of water into the kettle, turn on the stove, and open the noodle packet to pour the noodles into the mug before adding the hot water. The task succeeded as the child followed the corrected sequence with caregiver support.",
+    "reward": 1.0,
+    "salience": 0.6289326119030857
+  },
+  {
+    "episode_id": 23,
+    "task_id": "task_0040",
+    "category": "cooking_baking",
+    "summary": "The task is a level-2 cooking activity requiring the child to preheat the oven and bake a frozen pizza. The child initially struggled with the sequence, focusing only on temperature settings and not considering the pizza's placement. The caregiver guided the child to check the package for instructions and emphasized that the pizza must be removed from its box and placed on the oven rack before baking. The task succeeded as the child integrated these steps and planned to place the pizza in the center of the oven using oven mitts.",
+    "reward": 1.0,
+    "salience": 0.38343390876089
+  },
+  {
+    "episode_id": 24,
+    "task_id": "task_0043",
+    "category": "meal_preparation",
+    "summary": "The task is a level-2 meal preparation activity requiring the child to toast bread and spread peanut butter on each slice. The child struggled with identifying the correct sequence and tools, initially overcomplicating the process and not recognizing that the knife is used both to open the peanut butter jar and spread the contents. The caregiver guided the child to retrieve the knife from the drawer, use it to open the jar lid, and then spread the peanut butter on the toasted slices, emphasizing tool versatility. The task succeeded as the child used the knife appropriately for both opening and spreading with caregiver support.",
+    "reward": 1.0,
+    "salience": 0.3750657498857096
+  },
+  {
+    "episode_id": 26,
+    "task_id": "task_0024",
+    "category": "pet_care",
+    "summary": "The task is pet care, involving adding fresh bedding to a hamster's cage. The child initially struggled with task scope, overcomplicating it by including removal of soiled bedding, which was not required. The caregiver clarified that only adding fresh bedding from the garage was needed, simplifying the goal. The child succeeded by retrieving the fresh bedding and placing it in the cage as directed.",
+    "reward": 1.0,
+    "salience": 0.3497537875452974
+  },
+  {
+    "episode_id": 27,
+    "task_id": "task_0032",
+    "category": "cooking_baking",
+    "summary": "The task is a cooking/baking activity where the child needs to make a roux by melting butter and whisking in flour. The child struggled with identifying the current step, initially focusing on early actions like retrieving ingredients instead of recognizing that the butter was already melted and the saucepan ready. The caregiver clarified that the butter had already been melted and guided the child to add flour using their hands to open the container safely, then whisk it in thoroughly; the task succeeded as the child followed the instructions and completed the roux.",
+    "reward": 1.0,
+    "salience": 0.3487775228146537
+  },
+  {
+    "episode_id": 29,
+    "task_id": "task_0028",
+    "category": "cleaning",
+    "summary": "The task is a level-2 cleaning activity requiring the child to clean a smudged bathroom mirror using glass cleaner and a microfiber cloth. The child initially struggled with accessing the glass cleaner, being unsure whether to open the medicine cabinet first and how to handle the closed bottle, and was uncertain about the sequence of applying cleaner to the cloth. The caregiver guided the child by prompting them to first open the medicine cabinet by pulling the door, then to twist the lid off the glass cleaner like a spice jar, and finally to spray the cleaner onto the cloth before wiping the mirror in circular motions. The task succeeded as the child followed the steps, properly cleaned the mirror, and restored it to a clear, smudge-free state.",
+    "reward": 1.0,
+    "salience": 0.3741981565155468
+  },
+  {
+    "episode_id": 37,
+    "task_id": "task_0060",
+    "category": "meal_preparation",
+    "summary": "The task is to prepare oatmeal with milk and sliced banana for breakfast, categorized as meal preparation. The child initially struggled with whether to use a knife to peel the banana and overcomplicated the peeling step, not realizing it could be done safely by hand. The caregiver explained that peeling the banana by hand is safer and easier, and guided the child to place the peeled banana on the cutting board before slicing. The task succeeded as the child correctly adapted the steps, peeled the banana by hand, and prepared it for slicing to add to the oatmeal.",
+    "reward": 1.0,
+    "salience": 0.3279782878810201
+  },
+  {
+    "episode_id": 38,
+    "task_id": "task_0052",
+    "category": "furniture_assembly",
+    "summary": "The task is a level-3 furniture assembly requiring the child to build a nightstand by connecting side panels and attaching drawer fronts with screws. The child initially struggled with task sequencing and overcomplicated the process by hesitating on tool use and part placement, but the caregiver guided them to retrieve the screwdriver and screws first, then directly attach the drawer fronts. The child succeeded by correctly positioning the drawer front, inserting a screw, and using the screwdriver to secure it, completing the step independently.",
+    "reward": 1.0,
+    "salience": 0.3447373497763253
+  }
+]

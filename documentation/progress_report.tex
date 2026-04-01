@@ -1,0 +1,128 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{parskip}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    citecolor=blue!60!black,
+    urlcolor=blue!60!black
+}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.2ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.0ex plus 0.5ex minus 0.2ex}{0.5ex plus 0.2ex}
+
+\title{
+    \vspace{-1.5cm}
+    \textbf{Can Adding Asymmetric Relation Dynamics Make Knowledge Transfer More Efficient in Language Agents?} \\[0.4em]
+    \large Midway Progress Report -- EN.601.773 Machine Social Intelligence, Spring 2026
+}
+\author{Rishi More (rmore2)}
+\date{\today}
+
+\begin{document}
+\maketitle
+\vspace{-0.5cm}
+\vspace{0.4cm}
+
+\section{Progress Summary}
+
+Over the first four weeks, I have completed the task environment (the data backbone of the entire experiment) and designed the full experiment pipeline architecture. Below I describe what has been accomplished, the technical challenges encountered, and how they were resolved.
+
+\subsection{Task Environment: Complete}
+
+The proposal called for $\sim$200 multi-step procedural household scenarios. I have generated and validated \textbf{197 tasks} (157 training, 40 held-out evaluation) spanning 10 household categories and 8 difficulty levels (1--8 action steps). Rather than writing tasks by hand or generating them in a single LLM call, I built a multi-stage generation pipeline using the Qwen3-235B-A22B-Instruct model via the Tinker API:
+
+\begin{enumerate}
+    \item \textbf{Stage 0 -- Object Ontology Generation.} The pipeline first generates a grounded ontology of household objects organized by room (kitchen, bathroom, garage, etc.), with per-object affordance lists (e.g., \texttt{oven} $\to$ \texttt{[preheat, open\_door, set\_temperature, ...]}). This ontology serves as the shared vocabulary that all downstream tasks draw from, preventing hallucinated objects or impossible actions.
+
+    \item \textbf{Stage 1 -- Diversity-Aware Skeleton Generation.} For each (category, difficulty) combination, the model generates lightweight task skeletons (goal description, key objects, rooms) using few-shot prompting. Critically, I implemented a BM25-based diversity filter: after each batch of skeletons is generated, candidates that are too textually similar to existing ones (BM25 similarity $> 0.7$) are rejected and regenerated. This prevents the common failure mode of LLM-generated datasets collapsing to a small set of paraphrases.
+
+    \item \textbf{Stage 2 -- Full Task Expansion.} Each skeleton is expanded into a complete structured task with: a causally-ordered action sequence (each step annotated with preconditions and effects), an affordance map, distractor objects, initial/goal world states, common mistakes the child might make, and graduated caregiver hints (general $\to$ specific). The expansion is grounded against the ontology generated in Stage 0.
+
+    \item \textbf{Stage 3 -- Self-Verification.} Every expanded task is sent back to the 235B model for automated self-verification against criteria including causal chain validity, goal achievability, and step count consistency. Tasks failing critical checks are fed back with the model's critique for re-expansion. This catch-and-retry loop brought the acceptance rate from $\sim$60\% to $>$95\%.
+
+    \item \textbf{Stage 4 -- Filtering, Deduplication, and Splitting.} A final pass deduplicates via pairwise BM25 similarity, rebalances the distribution across categories and difficulty levels, and assigns the 80/20 train/eval split.
+\end{enumerate}
+
+Each task is stored as a structured JSON file with all the fields needed for the interaction protocol. For example, a difficulty-1 organizing task includes the goal (``Place a stack of folded bath towels in the linen closet on the middle shelf''), available and distractor objects, preconditions, effects, and caregiver hints ranging from an open-ended prompt (``Where should we keep clean towels so we can find them easily?'') to a direct instruction.
+
+\subsection{Infrastructure and Tooling}
+
+Alongside the task environment, I built several reusable components:
+
+\begin{itemize}
+    \item \textbf{Tinker API client layer} (\texttt{tinker\_utils.py}): A utility module providing a singleton \texttt{ServiceClient}, batch sampling with concurrent request submission, and robust JSON parsing with fallback heuristics. This module will be extended with \texttt{async} wrappers for the experiment phase.
+    \item \textbf{Dependency-free BM25} (\texttt{bm25.py}): A lightweight BM25 implementation used for both the diversity filter during generation and the long-term memory retrieval in the upcoming experiment. Avoiding external dependencies (no FAISS, no embedding models) keeps the pipeline portable and self-contained.
+    \item \textbf{Structured task schema} (\texttt{task\_schema.py}): Python dataclasses for \texttt{ActionStep}, \texttt{HouseholdTask}, \texttt{TaskSkeleton}, and \texttt{TaskDatabase} with serialization, split-aware accessors, and separate \texttt{child\_view()} / \texttt{caregiver\_view()} methods reflecting the information asymmetry in the proposal.
+\end{itemize}
+
+\subsection{Experiment Pipeline: Designed}
+
+I have completed the detailed architecture for the experiment pipeline but have not yet begun implementation. The design includes several refinements over the original proposal (discussed in Section~\ref{sec:findings}).
+
+\section{Key Findings and Design Refinements}
+\label{sec:findings}
+
+Building the task environment surfaced several insights that informed refinements to the experiment design:
+
+\paragraph{Model capacity asymmetry matters.} The proposal used Qwen3-8B for both the caregiver and the child. During task generation, I observed that the 235B model produces qualitatively better pedagogical content (hints, mistake anticipation) than the 8B model. This motivated upgrading the experiment to use \textbf{Qwen3-235B-A22B-Instruct as a frozen caregiver} and \textbf{Qwen3-8B-Base as the trainable child}. The MoE architecture (22B active parameters) keeps inference cost manageable at $\sim$\$1.10/M tokens while creating a genuine knowledge gap between teacher and learner, rather than relying solely on prompt asymmetry.
+
+\paragraph{String matching is too brittle for action judging.} The original proposal implicitly assumed the child's action could be matched against the ground truth via string comparison. In practice, a child might say ``I'll heat up the oven to 350 degrees'' while the ground truth is ``Preheat the oven to 350°F'' -- semantically identical but textually different. The updated design uses the 235B caregiver model as a \textbf{semantic action judge}, returning structured verdicts with partial credit scores and natural-language explanations of mistakes. This enables a continuous reward signal rather than binary pass/fail.
+
+\paragraph{Continuous training beats sparse triggers.} The proposal defined habit formation as triggering LoRA updates only after three consecutive successes on a task. I realized this creates very sparse gradient signal -- most episodes produce no training. The refined design uses \textbf{salience-weighted supervised fine-tuning} on every successful episode, where the per-token loss weight is scaled by $\text{salience} \times \text{partial\_credit}$. High-salience episodes (novel, emotionally significant, teacher-guided) get stronger gradient signal; routine successes still contribute weakly. This should produce smoother learning curves.
+
+\paragraph{Adaptive scaffolding.} The proposal used a fixed caregiver prompt throughout training. The updated design tracks per-category child competence as a rolling average of partial credit and adjusts the caregiver's hint style across three levels: full support ($<$0.3 competence), guided discovery (0.3--0.7), and minimal support ($>$0.7). This implements a Vygotskian zone of proximal development that fades assistance as the child improves.
+
+\section{Remaining Challenges}
+
+\paragraph{Parallelism and wall-clock time.} The full experiment involves 4 conditions $\times$ 3 seeds $=$ 12 independent training runs, each consisting of 160 episodes with up to 15 turns per episode. Running these sequentially would be prohibitively slow. My plan is to exploit Tinker's ability to handle concurrent requests by running all 12 training runs simultaneously via \texttt{asyncio.gather}, sharing a single frozen 235B caregiver client across all runs while giving each run its own 8B LoRA training client. Within each turn, I also plan speculative parallel execution: submitting the judge evaluation and two caregiver response variants (one for correct, one for incorrect) simultaneously, then discarding the unused variant. This roughly doubles the caregiver token cost ($\sim$\$53 total, still well within the \$249 budget) but should reduce wall-clock time by an estimated ${\sim}18\times$.
+
+\paragraph{Peer condition implementation.} The Symmetric Peer condition requires two independent 8B child agents that alternate turns without a caregiver. Both need independent LoRA adapters and independent memory stores, but share the same 235B judge for evaluation. The interaction dynamics are less well-defined than the mother--child dyad and may require careful prompt engineering to prevent both agents from producing vacuous exchanges.
+
+\paragraph{Theory of Mind evaluation.} Hypothesis H3 (whether the child internalizes a model of the caregiver's pedagogy) relies on measuring the child's ability to predict caregiver responses on held-out dialogues. The BM25-based similarity metric proposed originally may be too coarse; I am considering supplementing it with the 235B model as a semantic similarity judge, analogous to how it is used for action evaluation.
+
+\section{Updated Timeline}
+
+\begin{center}
+\begin{tabular}{p{2.5cm}p{10cm}}
+\toprule
+\textbf{Week} & \textbf{Milestone} \\
+\midrule
+Weeks 1--2 \newline \textit{(complete)} & Project setup, Tinker API integration, task schema design, initial task generation pipeline \\[0.5em]
+Weeks 3--4 \newline \textit{(complete)} & Multi-stage generation pipeline (ontology $\to$ skeletons $\to$ expansion $\to$ verification $\to$ filtering), task database finalized (197 tasks), experiment architecture designed \\[0.5em]
+Week 5 & Implement memory architecture (instinct buffer, working memory, long-term episodic store with BM25 retrieval and 235B compression) \\[0.5em]
+Week 6 & Implement agents (async caregiver + child with LoRA), semantic judge, adaptive scaffolding, salience scoring, and salience-weighted SFT trainer \\[0.5em]
+Week 7 & Implement async episode runner with speculative execution, training loop with concurrent runs, curriculum ordering, and metrics logging \\[0.5em]
+Week 8 & Run all 4 conditions $\times$ 3 seeds (768 total training episodes per condition). Debug and monitor. \\[0.5em]
+Weeks 9--10 & Evaluation: H1 (transfer accuracy on 40 held-out tasks), H2 (habit acceleration via LoRA gradient norms and convergence), H3 (ToM proxy), learning curves, per-category heatmaps \\[0.5em]
+Weeks 11--12 & Analysis, ablations, write final report \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Next Steps}
+
+The immediate priorities for the next two weeks are:
+
+\begin{enumerate}
+    \item \textbf{Async Tinker utilities.} Extend \texttt{tinker\_utils.py} with \texttt{async}/\texttt{await} wrappers so all downstream modules can exploit concurrent API calls natively.
+    \item \textbf{Memory modules.} Implement M1 (instinct buffer), M2 (working memory with $k{=}8$ sliding window), and M3 (long-term episodic memory with BM25 retrieval and 235B-driven compression, gated by salience $> \tau$).
+    \item \textbf{Core agent loop.} Implement the child and caregiver agents, the semantic action judge, adaptive scaffolding, and the episode runner with speculative parallel execution.
+    \item \textbf{Trainer.} Implement salience-weighted SFT using Tinker's \texttt{forward\_backward()} and \texttt{optim\_step()} API, with LoRA weight refresh via \texttt{save\_weights\_and\_get\_sampling\_client()}.
+\end{enumerate}
+
+Once these are in place, I can begin running the 12 concurrent training runs and collecting data for evaluation.
+
+\end{document}

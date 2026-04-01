@@ -1,0 +1,5 @@
+tinker
+python-dotenv
+transformers
+numpy
+jinja2

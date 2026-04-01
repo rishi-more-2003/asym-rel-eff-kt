@@ -1,0 +1,82 @@
+[
+  {
+    "episode_id": 0,
+    "task_id": "task_0019",
+    "category": "pet_care",
+    "summary": "The task was to refill a cat's water bowl with fresh water from the tap, categorized as pet care. The child initially struggled with the sequence of steps and how to operate the tap, but successfully followed the caregiver\u2019s guided instructions to pick up the bowl, turn on the tap by twisting left, fill the bowl under running water, turn off the tap, and return the bowl to the cat. The caregiver confirmed the task was completed correctly and safely, resulting in a full water bowl for the cat.",
+    "reward": 1.0,
+    "salience": 0.4407876173288095
+  },
+  {
+    "episode_id": 2,
+    "task_id": "task_0012",
+    "category": "laundry",
+    "summary": "The task was to place a dirty cotton t-shirt into the washing machine, categorized as a laundry task. The child initially overthought whether detergent or turning on the machine was necessary, but the caregiver clarified the simple steps: open the door, pick up the t-shirt, and place it inside. With guidance, the child successfully completed the task by correctly opening the washing machine and placing the t-shirt in the drum.",
+    "reward": 1.0,
+    "salience": 0.427391612628457
+  },
+  {
+    "episode_id": 3,
+    "task_id": "task_0020",
+    "category": "home_repair",
+    "summary": "The task is a level-1 home repair: tightening a loose screw on a bathroom cabinet door hinge using a screwdriver. The child initially overthought the process, questioning which objects were relevant and how to properly use the screwdriver, but with caregiver guidance\u2014confirming the screwdriver type (flathead), the correct turning direction (clockwise), and offering support to stabilize the door\u2014the child successfully located the tool, accessed the hinge, and tightened the screw. The task was completed correctly, resolving the sagging door.",
+    "reward": 1.0,
+    "salience": 0.42224157164785153
+  },
+  {
+    "episode_id": 4,
+    "task_id": "task_0011",
+    "category": "cooking_baking",
+    "summary": "The child needed to measure exactly 1 cup of granulated sugar using a measuring cup but initially considered pouring sugar directly into the cup without leveling. The caregiver corrected this by explaining to use a spoon to scoop sugar into the measuring cup and to level it off with a knife for accuracy. The child successfully followed the guidance, resulting in a properly measured 1 cup of sugar for the cookie dough.",
+    "reward": 1.0,
+    "salience": 0.4327147643683688
+  },
+  {
+    "episode_id": 6,
+    "task_id": "task_0013",
+    "category": "gardening",
+    "summary": "The task was to trim overgrown rose bushes near the front porch using pruning shears, categorized as a gardening task. The child understood the need for gloves and retrieving the shears but hesitated on the sequence and forgot to complete the final action of trimming the bushes and closing the shears afterward. The caregiver affirmed the correct steps\u2014wearing gloves, opening the shears, trimming the bushes, and closing the shears\u2014and with this guidance, the child successfully completed the task.",
+    "reward": 1.0,
+    "salience": 0.42989620697934
+  },
+  {
+    "episode_id": 8,
+    "task_id": "task_0014",
+    "category": "organizing",
+    "summary": "The task was to organize by placing keys in the entryway bowl, and the child initially struggled with accessing the keys in the jacket pocket while it was hanging. The caregiver confirmed the correct approach of removing the jacket to retrieve the keys and guided the child to place them in the bowl. The child successfully completed the task by taking the jacket down, removing the keys, and placing them in the entryway bowl.",
+    "reward": 1.0,
+    "salience": 0.4199281585271363
+  },
+  {
+    "episode_id": 10,
+    "task_id": "task_0015",
+    "category": "furniture_assembly",
+    "summary": "The child is assembling a wooden bookshelf, a level-1 furniture assembly task, and initially overcomplicated the process by assuming tools were needed to open the toolbox and kit box. The caregiver clarified that the toolbox could be opened by hand and the sealed box opened manually, guiding the child to retrieve the screwdriver and lay out the panels. With this support, the child successfully completed the initial steps, accessing the materials and preparing the workspace, marking the task as successful so far.",
+    "reward": 1.0,
+    "salience": 0.4183819439065006
+  },
+  {
+    "episode_id": 13,
+    "task_id": "task_0010",
+    "category": "cleaning",
+    "summary": "The task is a level-1 cleaning activity requiring the child to sweep the living room floor using a broom and dustpan. The child initially hesitated on the sequence of actions and object use, but with caregiver encouragement, successfully retrieved the broom and began sweeping. The caregiver provided clear, step-by-step guidance\u2014confirming the broom's location, praising proper handling, and instructing to sweep crumbs toward the dustpan\u2014enabling the child to progress confidently, though the final collection with the dustpan has not yet been completed.",
+    "reward": 1.0,
+    "salience": 0.4183819439065006
+  },
+  {
+    "episode_id": 27,
+    "task_id": "task_0033",
+    "category": "meal_preparation",
+    "summary": "The child needed to prepare instant ramen by boiling water and pouring it into a mug but initially struggled with the sequence, particularly remembering to open the noodles and add them to the mug before boiling water. The caregiver guided the child to first retrieve and open the instant noodles, place them in the mug, then fill the kettle with 2 cups of water using the cup as a measuring tool, and finally boil and pour the water. The task succeeded, resulting in properly prepared ramen.",
+    "reward": 1.0,
+    "salience": 0.4251197802375937
+  },
+  {
+    "episode_id": 33,
+    "task_id": "task_0041",
+    "category": "personal_care",
+    "summary": "The child needed to comb their slightly tangled hair using a hair comb at the bedroom vanity mirror, a personal care task requiring sequential steps and object use. Initially, the child overthought the process, hesitating on tool selection and sequence, but with caregiver guidance to first pick up the comb and turn on the lamp, they proceeded correctly. The caregiver emphasized starting from the bottom of the hair and working upward while using the mirror for feedback, which the child followed, successfully detangling their hair with the comb.",
+    "reward": 1.0,
+    "salience": 0.42114176846937607
+  }
+]

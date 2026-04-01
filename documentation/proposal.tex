@@ -1,0 +1,190 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{parskip}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    citecolor=blue!60!black,
+    urlcolor=blue!60!black
+}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.2ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titlespacing*{\subsection}{0pt}{1.0ex plus 0.5ex minus 0.2ex}{0.5ex plus 0.2ex}
+
+\title{
+    \vspace{-1.5cm}
+    \textbf{Can adding Assymetric Relation Dynamics make Knowledge Transfer more Efficient in Language Agents?} \\[0.4em]
+    \large Project Proposal - EN.601.773 Machine Social Intelligence, Spring 2026
+}
+\author{Rishi More (rmore2)}
+\date{\today}
+
+\begin{document}
+\maketitle
+\vspace{-0.5cm}
+% \hrule
+\vspace{0.4cm}
+
+
+% -------------------------------------------------------
+\section{Motivation and Research Question}
+
+Human intelligence does not develop in isolation. From birth, teaching and learning are performed through a \emph{relationship}: the mother (caregiver) knows more, senses more, and performs actions to selectively reveal information that the child (learner) is ready to receive. What the infant absorbs is not a random snapshot of the world but a curated stream of experience, decided by the caregiver's theory of the child's mind \citep{gweon2021inferential,csibra2009natural}. 
+
+This teamwork between an expert agent and a developing one should be the most efficient knowledge-transfer mechanism in nature, but it is absent from how AI agents are trained nowadays.
+
+Through this project, I want to investigate the question:\\
+\textbf{Does learning in an asymmetric relational dynamic (such as a ``mother--child'' structure) enable an agent to acquire richer and more generalizable knowledge than learning alone or from a symmetric peer?}
+
+I plan to implement this by equipping agents with a memory (like human memory) architecture, comprising instincts, short-term memory, long-term memory, and habits, and examining how relational context shapes what is stored, compressed, and transferred.
+
+Crucially, I plan to design the framework to run within a text-only, LoRA fine-tuning pipeline, making the project fully self-contained without external simulation environments. Therefore, all memory modules will be implemented as lightweight Python orchestration around Tinker's primitives.
+
+% -------------------------------------------------------
+\section{Background and Related Work}
+
+\paragraph{Memory architecture in cognitive agents.}
+ Neuroscience distinguishes at least four interacting systems relevant here \citep{tulving1985memory}: 
+ \begin{enumerate}
+     \item Instinctive memory encoding primitive behavioral priors.
+     \item Working (short-term) memory holding a limited and rapidly decaying context
+     \item Long-term memory storing temporally indexed personal experiences
+     \item Habits comprising stimulus--response associations created by repetition that bypass normal thinking and planning. 
+ \end{enumerate}
+ 
+ Current computational agents tend to reflect a somewhat similar approach: \citet{park2023generative} uses a hierarchical memory stream with reflection, retrieval, and planning, but doesn't examine how social relationships shape memory formation/modification.
+
+\paragraph{Social learning and pedagogy.}
+Natural pedagogy theory \citep{csibra2009natural} says that humans are uniquely adapted to both teach and be taught: caregivers \emph{ostensively} signal when information is generic vs. worth storing, while learners are inclined to learn more from information delivered in pedagogical frames. \citet{gweon2021inferential} formalizes this as a cooperative inference process in which the teacher models the learner's knowledge state to select demonstrations, and the learner uses the teacher's selections as evidence to update beliefs.
+
+This modeling (in theory) produces faster and more accurate learning than passive observation. Machine social learning work \citep{ho2019cooperative} has explored cooperative IRL between humans and agents, but has not examined whether a persistent relationship between agents is itself informative beyond the individual teaching actions.
+
+\paragraph{Relational context as an inductive bias.}
+There is growing evidence that social context acts as a bias on what gets encoded. Emotionally significant or relationally relevant events should technically occupy more space in the memory than other events \citep{dolcos2004interaction}. 
+
+Prior work on LLMs with augmented personalities \citep{shao2023character} shows that adding stable roles to LLMs shifts response distributions, but this has not been studied specifically for memory formation or learning speed.
+
+\paragraph{LoRA fine-tuning as habit formation.}
+Recent work on parameter-efficient fine-tuning \citep{hu2022lora} demonstrates that low-rank weight adaptations can encode behavioral biases that persist across contexts. 
+
+Therefore, I plan to use this LoRA fine-tuning to approximate the habit-formation mechanism. Repeated exposure to similar action-response patterns in the relational setting should ideally produce stronger adaptations than the same exposure in a non-relational setting.
+
+% -------------------------------------------------------
+\section{Proposed Framework}
+
+\subsection{Text-Only Household Task Environment}
+
+Rather than relying on external simulation platforms, I want to construct a text-based household task benchmark consisting of \~200 multi-step procedural scenarios (e.g., preparing a meal, doing laundry, assembling furniture). Each scenario is represented as a structured natural-language problem: a goal description, a set of available objects, and a sequence of actions required to complete the task. The caregiver has access to the complete action sequence and affordance map; the child does not. Tasks are partitioned into a training curriculum of 160 scenarios (graded from 1-step to 8-step tasks) and a held-out transfer set of 40 novel scenarios used exclusively for evaluation. This design keeps the entire pipeline within text, making it fully compatible with Tinker's interface.
+
+\subsection{Agent Memory Architecture}
+
+Each agent has with four memory components implemented as Python objects wrapped around Tinker API calls:
+
+\begin{enumerate}[leftmargin=*, label=\textbf{M\arabic*.}]
+    \item \textbf{Instinct Buffer} ($\mathcal{I}$): A fixed system prompt that encodes role-specific behavioral priors and is \emph{never updated} during training. 
+    
+    For the caregiver: 
+    \emph{``You are a knowledgeable parent. Your goal is to help your child understand how to complete tasks by explaining your reasoning and filling in their knowledge gaps.''} 
+    
+    For the child: \emph{``You are a curious child learning about the world. Ask questions and try to understand why things work the way they do.''} 
+    
+    The instinct buffer is passed as the system prompt in every \texttt{sample()} call for its agent but is excluded from the LoRA training objective, preserving it as a true fixed prior.
+
+    \item \textbf{Short-Term Working Memory} ($\mathcal{W}_t$): A sliding window of the last $k{=}8$ dialogue turns, passed directly as the conversation history in each \texttt{sample()} call. Older entries are removed from the context when the window is full.
+
+    \item \textbf{Long-Term Memory} ($\mathcal{L}$): A plain-text episodic store maintained as a Python list of summarized past episodes. After each episode, a lightweight summarization step (one additional call with a compression prompt) compresses the episode into a 2-3 sentence structured entry recording: the task, what the child did not know, what the caregiver explained, and whether the task succeeded. Retrieval at the start of each new episode selects the top-3 most relevant past entries by simple keyword overlap (BM25) with the new task description and adds them to $\mathcal{W}_t$. 
+    
+    (*I deliberately avoid vector databases and embedding models to keep the implementation dependency-free.)
+
+    \item \textbf{Habit Schema Store} ($\mathcal{H}$): Implemented directly as the LoRA adapter weights. When an episode is marked as a successful habit creation candidate (defined as the child producing the correct action sequence with no caregiver correction for the third consecutive time on a given task), the child agent's \texttt{forward\_backward()} is called on the successful trajectory and \texttt{optim\_step()} is applied. 
+    
+    (The LoRA weights should accumulate the agent's habituated responses over training, acting like a persistent behavioral cache that does not require explicit retrieval.)
+\end{enumerate}
+
+\paragraph{Salience signal and consolidation gate.}
+The central hypothesis is that relational context controls the remember signal (formally called the ``salience signal``), thus controlling what gets written to $\mathcal{L}$ and triggers habit formation in $\mathcal{H}$. 
+
+Salience score can be defined as (for an episode):
+\[
+s = \alpha \cdot \text{novelty}(e) + \beta \cdot \text{emotion}(e) + \gamma \cdot \text{teaching}(e)
+\]
+where $\text{novelty}(e)$ is 1 if the task class has not appeared in $\mathcal{L}$; $\text{emotion}(e) \in [-1,1]$ is a sentiment score over the child's utterances (computed via a frozen small classifier); and $\text{teaching}(e) \in \{0,1\}$ flags whether the caregiver produced at least one explicitly corrective or explanatory utterance. 
+
+An episode is added into $\mathcal{L}$ if $s > \tau$ (threshold for long-term memory). The scalars $\alpha, \beta, \gamma$ are simple hyperparameters. In the non-relational baseline, $\gamma \equiv 0$ (there is no teacher).
+
+\subsection{Interaction Protocol: The Mother--Son Dyad}
+Plan to simulate asymmetric role assignment with two Tinker-hosted model instances:
+
+\begin{itemize}
+    \item \textbf{Caregiver agent ($A_C$, ``Mother''):} Initialized from a Qwen3-8B-Instruct checkpoint with a caregiver system prompt ($\mathcal{I}_C$), has access to the full task solution. At each turn, $A_C$ calls \texttt{sample()} to generate either a targeted hint, a corrective explanation, or a question probing the child's understanding. 
+    
+    $A_C$'s weights are \emph{frozen} throughout training; it acts as a fixed expert teacher (although it seems interesting to observe how the teacher learns to teach through teaching episodes, looks too ambitious). 
+    
+    This eliminates the need to train two agents simultaneously and keeps compute costs within the \$249 budget.
+
+    \item \textbf{Learner agent ($A_L$, ``Child''):} Initialized from a Qwen3-8B base checkpoint with a child system prompt ($\mathcal{I}_L$), has no access to the task solution. At each turn, $A_L$ calls \texttt{sample()} to generate an action attempt or a question. 
+    
+    $A_L$'s LoRA adapter is updated via \texttt{forward\_backward()} and \texttt{optim\_step()} on successful habit-forming episodes.
+\end{itemize}
+
+A single episode proceeds as follows: 
+\begin{enumerate}
+    \item Task description is presented to both agents
+    \item Child ($A_L$) attempts a step
+    \item Mother ($A_C$) observes and responds with a hint or confirmation
+    \item Repeat steps 2 and 3 until success or a 15-turn limit
+    \item Reward is computed
+    \item Long-term memory and LoRA are updated using the salience score 
+    \end{enumerate}
+
+\subsection{Experimental Conditions}
+
+To isolate the effect of relational structure, I will compare four conditions using the same base model (Qwen3-8B):
+
+\begin{center}
+\begin{tabular}{p{2.8cm}p{4.5cm}p{5.5cm}}
+\toprule
+\textbf{Condition} & \textbf{Agent Structure} & \textbf{Memory \& Training} \\
+\midrule
+Solo & Single agent, no teacher & $\mathcal{W} + \mathcal{L}^{\text{self}} + \mathcal{H}^{\text{LoRA}}$; memory augmentation only by task success \\
+Symmetric Peer & Two identical agents, no role asymmetry & $\mathcal{W} + \mathcal{L} + \mathcal{H}^{\text{LoRA}}$ (both); $\gamma \equiv 0$ \\
+Role-Labeled & Asymmetric prompts, no teaching salience & $\mathcal{I} + \mathcal{W} + \mathcal{L} + \mathcal{H}^{\text{LoRA}}$; $\gamma \equiv 0$ \\
+\textbf{Relational (Mine)} & Asymmetric roles + relational salience score & $\mathcal{I} + \mathcal{W} + \mathcal{L}^{rel} + \mathcal{H}^{\text{LoRA}}$; full $s$ with $\gamma > 0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(The Role-Labeled condition controls for whether prompt asymmetry alone, without the teaching salience signal, accounts for any observed advantage.)
+
+% -------------------------------------------------------
+\section{Research Hypotheses}
+
+\begin{enumerate}[label=\textbf{H\arabic*.}]
+    \item \textbf{Better memory:} The relational condition will create a child agent whose long-term memory contains more accurate and generalizable entries (measured by transfer task accuracy) after the same number of training episodes.
+
+    \item \textbf{Habit acceleration:} LoRA habits will be formed in fewer episodes in the Relational condition than in Solo or Peer, because the mother's help creates repeated, consistently correct trajectories.
+
+    \item \textbf{ToM proxy in child:} After training, the child agent's ability to predict which hint the caregiver will give next (measured on a held-out dialogue prediction task) should be higher in the Relational condition, due to possible internalization of the caregiver's pedagogical model.
+\end{enumerate}
+
+\paragraph{Budget estimate:}
+At Qwen3-8B pricing (\$0.40/M sample tokens, \$0.40/M train tokens), running 160 training episodes $\times$ 15 turns $\times$ 2 agents $\times$ $\sim$500 tokens/turn yields approximately 2.4M sample tokens per condition, or $\sim$\$1.00 per condition. Four conditions $\times$ 3 seeds $\approx$ \$12 for training sampling. LoRA updates are triggered sparsely (estimated 30\% of episodes), adding $\sim$\$3. Evaluation on 40 held-out tasks adds $\sim$\$2. \textbf{Total estimated cost: under \$20}.
+
+% -------------------------------------------------------
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography}
+
+\end{document}

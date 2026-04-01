@@ -1,0 +1,211 @@
+{
+  "category_scores": {
+    "gardening": 0.657,
+    "laundry": 0.657,
+    "cooking_baking": 0.8823509999999999,
+    "home_repair": 0.9176456999999998,
+    "organizing": 0.8823509999999999,
+    "pet_care": 0.8823509999999999,
+    "furniture_assembly": 0.51,
+    "cleaning": 0.657,
+    "personal_care": 0.3,
+    "meal_preparation": 0.657
+  },
+  "knowledge_gaps": [
+    "procedure for accessing stored items when container is closed",
+    "understanding alphabetical ordering of physical objects",
+    "procedure for coordinating broom and dustpan use in cleaning tasks",
+    "understanding optimal sweeping direction and debris collection strategy",
+    "procedure for handling sealed food containers in meal preparation tasks",
+    "optimal sequencing of parallel task components (e.g., preparing tools while waiting for appliances)",
+    "procedure for accessing and opening multi-layered storage (e.g., cabinet followed by container lid) in cleaning tasks",
+    "procedure for safely setting up and stabilizing a ladder before use",
+    "understanding the importance of turning off power before replacing a light bulb",
+    "correct sequence for handling tools and components in home repair tasks"
+  ],
+  "common_mistakes": [
+    "overthinking tool positioning without taking action",
+    "hesitation in initiating sweeping motion despite clear task instructions",
+    "overcomplicating access to simple kitchen items by introducing unnecessary tools (e.g., using a knife to open a bread bag that can be opened by hand)",
+    "repeating planning steps without transitioning to action in time-sensitive task phases",
+    "overthinking access steps by pausing at intermediate stages (e.g., opening cabinet but hesitating before retrieving item)",
+    "repeating planning steps without taking action (e.g., describing ladder setup without initiating it)",
+    "failing to execute physical actions despite correct verbal planning",
+    "overthinking safety steps without applying them (e.g., mentioning turning off the light but not doing it)"
+  ],
+  "recent_improvements": [
+    "successfully transitioned from planning to action in a home repair task",
+    "correctly identified and retrieved the appropriate tool without hesitation",
+    "executed physical steps confidently after verbal planning"
+  ],
+  "teaching_notes": [
+    "Continue encouraging transfer of skills across similar tasks while introducing slightly more complex gardening challenges to build confidence and precision.",
+    "Guide the child to distinguish between necessary and redundant steps in kitchen routines by highlighting time-efficient strategies and encouraging direct handling of containers.",
+    "Guide the child to transition smoothly between access steps in storage systems by modeling continuous action sequences and reinforcing confidence in handling nested containers.",
+    "Encourage the child to transition from planning to action by using guided prompts and modeling confidence in executing physical steps.",
+    "Continue reinforcing confidence in physical execution by providing minimal prompts and praising timely action initiation."
+  ],
+  "episodes_observed": 40,
+  "episode_history": [
+    {
+      "task_goal": "Boil 2 cups of water in a kettle and pour it into a mug to prepare instant ramen",
+      "category": "meal_preparation",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Arrange a stack of hardcover books alphabetically by author on the living room bookshelf",
+      "category": "organizing",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Refill a dog's food bowl with kibble from the pet food bag in the pantry and place it back in the dining room",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Preheat the oven and place a frozen pizza on the center rack to bake for dinner",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Toast two slices of bread in a toaster and spread peanut butter on each slice",
+      "category": "meal_preparation",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fertilize a potted lemon tree on the balcony using liquid plant food",
+      "category": "gardening",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Clean a hamster's cage by removing soiled bedding and replacing it with fresh bedding from the storage bin in the garage",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Melt two tablespoons of butter in a saucepan and whisk in flour to make a roux for gravy",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Sort a mix of AA and AAA batteries into separate compartments of a storage case in the utility drawer",
+      "category": "organizing",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Clean the bathroom mirror with glass cleaner and a microfiber cloth",
+      "category": "cleaning",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fix a wobbly dining chair by tightening the loose screw on the front leg",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Vacuum the bedroom carpet using the upright vacuum cleaner",
+      "category": "cleaning",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fix a leaky kitchen faucet by tightening the handle screw and replacing the worn washer",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fold a freshly dried bed sheet and place it in the linen closet",
+      "category": "laundry",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Replace a broken ceiling light bulb in the living room using a ladder and a new bulb",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Bake chocolate chip cookies by scooping dough onto a baking sheet and placing it in the preheated oven",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Brush a dog's fur with a pet brush and then dispose of the loose hair in the bathroom trash can",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Prepare a bowl of oatmeal with milk and sliced banana for breakfast",
+      "category": "meal_preparation",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Build a two-drawer nightstand by connecting the side panels and attaching the drawer fronts with screws",
+      "category": "furniture_assembly",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fix a wobbly dining room chair by tightening its leg bolts with a wrench",
+      "category": "home_repair",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    }
+  ]
+}

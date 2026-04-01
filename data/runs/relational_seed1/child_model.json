@@ -1,0 +1,205 @@
+{
+  "category_scores": {
+    "furniture_assembly": 0.3,
+    "cleaning": 0.657,
+    "cooking_baking": 0.9176456999999998,
+    "home_repair": 0.8823509999999999,
+    "organizing": 0.8823509999999999,
+    "pet_care": 0.9176456999999998,
+    "gardening": 0.657,
+    "laundry": 0.7599,
+    "meal_preparation": 0.51,
+    "personal_care": 0.3
+  },
+  "knowledge_gaps": [
+    "whether oven can be turned on while door is closed",
+    "standard preheating temperature for frozen pizza",
+    "whether oven mitts are needed to open oven door",
+    "how to handle implied resources in tasks (e.g., water source when not explicitly listed)",
+    "understanding standard kitchen workflows involving unstated tools or fixtures",
+    "whether to preheat oven before or after placing food inside",
+    "standard sequence for oven-based cooking tasks"
+  ],
+  "common_mistakes": [
+    "overcomplicating prerequisites for simple actions (e.g., assuming oven mitts are required to open oven)",
+    "hesitation in initiating task due to uncertainty about unspoken rules",
+    "overcomplicating access to basic utilities (e.g., water) when not explicitly listed",
+    "hesitation in proceeding with logical steps due to missing object enumeration",
+    "overcomplicating step order due to uncertainty about oven operation",
+    "hesitation in task initiation despite having all necessary tools"
+  ],
+  "recent_improvements": [
+    "demonstrated clear sequential planning",
+    "correctly identified need to retrieve baking sheet and garlic butter before assembly"
+  ],
+  "teaching_notes": [
+    "Introduce organizing tasks with additional constraints (e.g. categorization by size or color) to further develop systematic thinking.",
+    "Introduce more complex meal preparation tasks with timing or safety considerations to build on emerging competence.",
+    "Guide the child through standard kitchen appliance procedures and reinforce confidence in initiating tasks without over-relying on safety precautions for low-risk steps.",
+    "Focus on reinforcing confidence in making reasonable assumptions about common household setups and streamline decision-making for routine kitchen tasks.",
+    "Focus on reinforcing standard kitchen workflows and validating reasonable assumptions to reduce hesitation in task execution."
+  ],
+  "episodes_observed": 40,
+  "episode_history": [
+    {
+      "task_goal": "Fertilize a potted lemon tree on the balcony using liquid plant food",
+      "category": "gardening",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Arrange a stack of hardcover books alphabetically by author on the living room bookshelf",
+      "category": "organizing",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Prune dead leaves from a potted aloe vera plant on the patio using gardening shears",
+      "category": "gardening",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Brush a dog's fur with a pet brush and then dispose of the loose hair in the bathroom trash can",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Toast two slices of bread in a toaster and spread peanut butter on each slice",
+      "category": "meal_preparation",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Melt two tablespoons of butter in a saucepan and whisk in flour to make a roux for gravy",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fold a freshly dried bed sheet and place it in the linen closet",
+      "category": "laundry",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Refill a dog's food bowl with kibble from the pet food bag in the pantry and place it back in the dining room",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Replace a broken ceiling light bulb in the living room using a ladder and a new bulb",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Preheat the oven and place a frozen pizza on the center rack to bake for dinner",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Bake chocolate chip cookies by scooping dough onto a baking sheet and placing it in the preheated oven",
+      "category": "cooking_baking",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Clean a hamster's cage by removing soiled bedding and replacing it with fresh bedding from the storage bin in the garage",
+      "category": "pet_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Fix a wobbly dining chair by tightening the loose screw on the front leg",
+      "category": "home_repair",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Vacuum the bedroom carpet using the upright vacuum cleaner",
+      "category": "cleaning",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Boil 2 cups of water in a kettle and pour it into a mug to prepare instant ramen",
+      "category": "meal_preparation",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Sort a mix of AA and AAA batteries into separate compartments of a storage case in the utility drawer",
+      "category": "organizing",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Comb hair using a hair comb at the bedroom vanity mirror",
+      "category": "personal_care",
+      "difficulty": 2,
+      "steps_completed": 2,
+      "total_steps": 2,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Take a dog for a short evening walk and clean its paws with a damp towel afterward",
+      "category": "pet_care",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Remove a load of dried towels from the dryer, fold them neatly, and store them in the bathroom linen cabinet",
+      "category": "laundry",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    },
+    {
+      "task_goal": "Prepare and bake garlic butter toast using sliced baguette and melt in the oven",
+      "category": "cooking_baking",
+      "difficulty": 3,
+      "steps_completed": 3,
+      "total_steps": 3,
+      "reward": 1.0
+    }
+  ]
+}

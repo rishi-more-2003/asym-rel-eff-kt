@@ -1,0 +1,3759 @@
+[
+  {
+    "skeleton_id": "skel_0001",
+    "category": "cooking_baking",
+    "difficulty": 1,
+    "goal_description": "Preheat the oven to 350 degrees Fahrenheit for baking cookies",
+    "key_objects": [
+      "oven",
+      "baking_sheet"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0002",
+    "category": "cooking_baking",
+    "difficulty": 1,
+    "goal_description": "Crack two large eggs into a mixing bowl for a cake recipe",
+    "key_objects": [
+      "egg",
+      "mixing_bowl"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0003",
+    "category": "organizing",
+    "difficulty": 1,
+    "goal_description": "Place a stack of folded bath towels in the linen closet on the middle shelf",
+    "key_objects": [
+      "bath_towels",
+      "linen_closet"
+    ],
+    "rooms": [
+      "bathroom",
+      "hallway"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0004",
+    "category": "organizing",
+    "difficulty": 1,
+    "goal_description": "Arrange all spice jars in alphabetical order on the kitchen cabinet shelf",
+    "key_objects": [
+      "spice_jars",
+      "kitchen_cabinet"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0005",
+    "category": "home_repair",
+    "difficulty": 1,
+    "goal_description": "Replace a burnt-out light bulb in the living room ceiling fixture",
+    "key_objects": [
+      "light_bulb",
+      "ladder"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0006",
+    "category": "home_repair",
+    "difficulty": 1,
+    "goal_description": "Tighten a loose screw on the bathroom cabinet door hinge",
+    "key_objects": [
+      "screwdriver",
+      "cabinet_door"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0007",
+    "category": "pet_care",
+    "difficulty": 1,
+    "goal_description": "Fill a dog's food bowl with dry kibble from the pantry",
+    "key_objects": [
+      "dog_food_bowl",
+      "dog_kibble",
+      "pantry"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0008",
+    "category": "pet_care",
+    "difficulty": 1,
+    "goal_description": "Refill a cat's water bowl with fresh water from the tap",
+    "key_objects": [
+      "cat_water_bowl",
+      "tap",
+      "kitchen_sink"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0009",
+    "category": "personal_care",
+    "difficulty": 1,
+    "goal_description": "Brush teeth with a toothbrush and toothpaste in the bathroom",
+    "key_objects": [
+      "toothbrush",
+      "toothpaste"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0010",
+    "category": "personal_care",
+    "difficulty": 1,
+    "goal_description": "Apply hand lotion from a lotion bottle to dry hands",
+    "key_objects": [
+      "lotion_bottle",
+      "hands"
+    ],
+    "rooms": [
+      "bedroom",
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0011",
+    "category": "gardening",
+    "difficulty": 1,
+    "goal_description": "Plant a tomato seedling in a garden bed in the backyard",
+    "key_objects": [
+      "tomato_seedling",
+      "garden_trowel",
+      "garden_bed"
+    ],
+    "rooms": [
+      "garden",
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0012",
+    "category": "gardening",
+    "difficulty": 1,
+    "goal_description": "Trim overgrown rose bushes near the front porch using pruning shears",
+    "key_objects": [
+      "rose_bushes",
+      "pruning_shears"
+    ],
+    "rooms": [
+      "garden",
+      "front_yard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0013",
+    "category": "furniture_assembly",
+    "difficulty": 1,
+    "goal_description": "Assemble a wooden bookshelf using the provided screws and hammer",
+    "key_objects": [
+      "bookshelf_kit",
+      "screws",
+      "hammer"
+    ],
+    "rooms": [
+      "living_room",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0014",
+    "category": "furniture_assembly",
+    "difficulty": 1,
+    "goal_description": "Attach four legs to a desktop using bolts and an Allen wrench",
+    "key_objects": [
+      "desktop",
+      "legs",
+      "Allen_wrench"
+    ],
+    "rooms": [
+      "office",
+      "storage_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0015",
+    "category": "cleaning",
+    "difficulty": 1,
+    "goal_description": "Wipe down the kitchen countertop with a disinfectant spray and sponge",
+    "key_objects": [
+      "disinfectant_spray",
+      "sponge",
+      "kitchen_counter"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0016",
+    "category": "cleaning",
+    "difficulty": 1,
+    "goal_description": "Sweep the living room floor with a broom and dustpan",
+    "key_objects": [
+      "broom",
+      "dustpan",
+      "living_room_floor"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0017",
+    "category": "laundry",
+    "difficulty": 1,
+    "goal_description": "Place a dirty cotton t-shirt into the washing machine",
+    "key_objects": [
+      "cotton_tshirt",
+      "washing_machine"
+    ],
+    "rooms": [
+      "laundry_room",
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0018",
+    "category": "laundry",
+    "difficulty": 1,
+    "goal_description": "Transfer damp socks from the washing machine to the clothes dryer",
+    "key_objects": [
+      "socks",
+      "washing_machine",
+      "clothes_dryer"
+    ],
+    "rooms": [
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0019",
+    "category": "meal_preparation",
+    "difficulty": 1,
+    "goal_description": "Place a clean spoon into a bowl on the dining table for breakfast",
+    "key_objects": [
+      "spoon",
+      "bowl",
+      "dining_table"
+    ],
+    "rooms": [
+      "kitchen",
+      "dining_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0020",
+    "category": "meal_preparation",
+    "difficulty": 1,
+    "goal_description": "Pour milk from the fridge into a cereal bowl on the counter",
+    "key_objects": [
+      "milk_carton",
+      "cereal_bowl",
+      "refrigerator"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0021",
+    "category": "cooking_baking",
+    "difficulty": 1,
+    "goal_description": "Grease a 9-inch baking pan with butter for a brownie recipe",
+    "key_objects": [
+      "baking_pan",
+      "butter",
+      "pastry_brush"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0022",
+    "category": "cooking_baking",
+    "difficulty": 1,
+    "goal_description": "Measure 1 cup of granulated sugar using a measuring cup for cookie dough",
+    "key_objects": [
+      "measuring_cup",
+      "granulated_sugar",
+      "sugar_bowl"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0023",
+    "category": "organizing",
+    "difficulty": 1,
+    "goal_description": "Place a set of keys in the entryway bowl by the front door",
+    "key_objects": [
+      "keys",
+      "entryway_bowl"
+    ],
+    "rooms": [
+      "entryway"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0024",
+    "category": "organizing",
+    "difficulty": 1,
+    "goal_description": "Slide a stack of mail into the designated sorting tray on the hallway desk",
+    "key_objects": [
+      "mail",
+      "sorting_tray"
+    ],
+    "rooms": [
+      "hallway"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0025",
+    "category": "home_repair",
+    "difficulty": 1,
+    "goal_description": "Replace the cracked showerhead in the master bathroom with a new one",
+    "key_objects": [
+      "showerhead",
+      "wrench",
+      "plumber's tape"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0026",
+    "category": "home_repair",
+    "difficulty": 1,
+    "goal_description": "Fix a squeaky bedroom door by tightening the hinge screws",
+    "key_objects": [
+      "screwdriver",
+      "bedroom_door_hinge"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0027",
+    "category": "pet_care",
+    "difficulty": 1,
+    "goal_description": "Administer a liquid dewormer to a puppy using a dosing syringe in the living room",
+    "key_objects": [
+      "dosing_syringe",
+      "dewormer_bottle",
+      "puppy"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0028",
+    "category": "pet_care",
+    "difficulty": 1,
+    "goal_description": "Clean a guinea pig's food dish and refill it with fresh pellets in the playroom",
+    "key_objects": [
+      "food_dish",
+      "pet_food_pellets",
+      "sponge"
+    ],
+    "rooms": [
+      "playroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0029",
+    "category": "personal_care",
+    "difficulty": 1,
+    "goal_description": "Wash face with facial cleanser using a washcloth in the bathroom sink",
+    "key_objects": [
+      "facial_cleanser",
+      "washcloth",
+      "sink"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0030",
+    "category": "cooking_baking",
+    "difficulty": 2,
+    "goal_description": "Preheat the oven and place a frozen pizza on the center rack to bake for dinner",
+    "key_objects": [
+      "frozen_pizza",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0031",
+    "category": "cooking_baking",
+    "difficulty": 2,
+    "goal_description": "Melt two tablespoons of butter in a saucepan and whisk in flour to make a roux for gravy",
+    "key_objects": [
+      "butter",
+      "flour",
+      "saucepan"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0032",
+    "category": "organizing",
+    "difficulty": 2,
+    "goal_description": "Arrange a stack of hardcover books alphabetically by author on the living room bookshelf",
+    "key_objects": [
+      "hardcover_books",
+      "bookshelf"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0033",
+    "category": "organizing",
+    "difficulty": 2,
+    "goal_description": "Sort a mix of AA and AAA batteries into separate compartments of a storage case in the utility drawer",
+    "key_objects": [
+      "AA_batteries",
+      "AAA_batteries",
+      "battery_storage_case"
+    ],
+    "rooms": [
+      "kitchen",
+      "utility_closet"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0034",
+    "category": "home_repair",
+    "difficulty": 2,
+    "goal_description": "Fix a wobbly dining chair by tightening the loose screw on the front leg",
+    "key_objects": [
+      "screwdriver",
+      "dining_chair",
+      "loose_screw"
+    ],
+    "rooms": [
+      "dining_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0035",
+    "category": "home_repair",
+    "difficulty": 2,
+    "goal_description": "Repair a frayed phone charging cable by securing the damaged end with electrical tape",
+    "key_objects": [
+      "phone_charger",
+      "electrical_tape",
+      "damaged_cable"
+    ],
+    "rooms": [
+      "living_room",
+      "office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0036",
+    "category": "pet_care",
+    "difficulty": 2,
+    "goal_description": "Fill a cat's water bowl with fresh tap water in the kitchen and place it back in the living room",
+    "key_objects": [
+      "cat_water_bowl",
+      "kitchen_sink"
+    ],
+    "rooms": [
+      "kitchen",
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0037",
+    "category": "pet_care",
+    "difficulty": 2,
+    "goal_description": "Brush a dog's fur with a pet brush and then dispose of the loose hair in the bathroom trash can",
+    "key_objects": [
+      "dog_brush",
+      "trash_can"
+    ],
+    "rooms": [
+      "living_room",
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0038",
+    "category": "personal_care",
+    "difficulty": 2,
+    "goal_description": "Brush teeth with a toothbrush and toothpaste at the bathroom sink",
+    "key_objects": [
+      "toothbrush",
+      "toothpaste"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0039",
+    "category": "personal_care",
+    "difficulty": 2,
+    "goal_description": "Comb hair using a hair comb at the bedroom vanity mirror",
+    "key_objects": [
+      "hair_comb",
+      "mirror"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0040",
+    "category": "gardening",
+    "difficulty": 2,
+    "goal_description": "Prune dead leaves from a potted aloe vera plant on the patio using gardening shears",
+    "key_objects": [
+      "aloe_vera_plant",
+      "gardening_shears"
+    ],
+    "rooms": [
+      "patio",
+      "garden"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0041",
+    "category": "gardening",
+    "difficulty": 2,
+    "goal_description": "Fertilize a potted lemon tree on the balcony using liquid plant food",
+    "key_objects": [
+      "lemon_tree",
+      "liquid_fertilizer"
+    ],
+    "rooms": [
+      "balcony",
+      "garden"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0042",
+    "category": "furniture_assembly",
+    "difficulty": 2,
+    "goal_description": "Attach two side panels to a bed frame using bolts and a wrench",
+    "key_objects": [
+      "bed_frame",
+      "side_panel",
+      "wrench"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0043",
+    "category": "furniture_assembly",
+    "difficulty": 2,
+    "goal_description": "Secure a drawer slide to a dresser using screws and a screwdriver",
+    "key_objects": [
+      "dresser",
+      "drawer_slide",
+      "screwdriver"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0044",
+    "category": "cleaning",
+    "difficulty": 2,
+    "goal_description": "Clean the bathroom mirror with glass cleaner and a microfiber cloth",
+    "key_objects": [
+      "glass_cleaner",
+      "microfiber_cloth"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0045",
+    "category": "cleaning",
+    "difficulty": 2,
+    "goal_description": "Vacuum the bedroom carpet using the upright vacuum cleaner",
+    "key_objects": [
+      "upright_vacuum_cleaner",
+      "bedroom_carpet"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0046",
+    "category": "laundry",
+    "difficulty": 2,
+    "goal_description": "Fold a freshly dried bed sheet and place it in the linen closet",
+    "key_objects": [
+      "bed_sheet",
+      "linen_closet"
+    ],
+    "rooms": [
+      "laundry_room",
+      "hallway"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0047",
+    "category": "laundry",
+    "difficulty": 2,
+    "goal_description": "Remove wrinkled dress pants from the clothes dryer and hang them on a hanger in the bedroom closet",
+    "key_objects": [
+      "dress_pants",
+      "hanger",
+      "bedroom_closet"
+    ],
+    "rooms": [
+      "laundry_room",
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0048",
+    "category": "meal_preparation",
+    "difficulty": 2,
+    "goal_description": "Boil 2 cups of water in a kettle and pour it into a mug to prepare instant ramen",
+    "key_objects": [
+      "kettle",
+      "mug",
+      "instant_noodles"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0049",
+    "category": "meal_preparation",
+    "difficulty": 2,
+    "goal_description": "Toast two slices of bread in a toaster and spread peanut butter on each slice",
+    "key_objects": [
+      "toaster",
+      "bread",
+      "peanut_butter_jar"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0050",
+    "category": "cooking_baking",
+    "difficulty": 2,
+    "goal_description": "Mix pancake batter by combining flour, milk, and an egg in a mixing bowl, then stir until smooth",
+    "key_objects": [
+      "mixing_bowl",
+      "whisk",
+      "pancake_batter"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0051",
+    "category": "cooking_baking",
+    "difficulty": 2,
+    "goal_description": "Bake chocolate chip cookies by scooping dough onto a baking sheet and placing it in the preheated oven",
+    "key_objects": [
+      "cookie_dough",
+      "baking_sheet",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0052",
+    "category": "organizing",
+    "difficulty": 2,
+    "goal_description": "Place a set of mismatched coffee mugs back into the kitchen cabinet in a neat row on the top shelf",
+    "key_objects": [
+      "coffee_mug",
+      "kitchen_cabinet"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0053",
+    "category": "organizing",
+    "difficulty": 2,
+    "goal_description": "Sort a pile of unopened mail on the entryway table into the recycling bin and the designated bills folder",
+    "key_objects": [
+      "mail",
+      "recycling_bin",
+      "bills_folder"
+    ],
+    "rooms": [
+      "entryway",
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0054",
+    "category": "home_repair",
+    "difficulty": 2,
+    "goal_description": "Replace a broken ceiling light bulb in the living room using a ladder and a new bulb",
+    "key_objects": [
+      "ladder",
+      "light_bulb"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0055",
+    "category": "home_repair",
+    "difficulty": 2,
+    "goal_description": "Fix a leaky kitchen faucet by tightening the handle screw and replacing the worn washer",
+    "key_objects": [
+      "screwdriver",
+      "washer",
+      "faucet"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0056",
+    "category": "pet_care",
+    "difficulty": 2,
+    "goal_description": "Refill a dog's food bowl with kibble from the pet food bag in the pantry and place it back in the dining room",
+    "key_objects": [
+      "dog_food_bowl",
+      "pet_food_bag",
+      "kibble"
+    ],
+    "rooms": [
+      "dining_room",
+      "pantry"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0057",
+    "category": "pet_care",
+    "difficulty": 2,
+    "goal_description": "Clean a hamster's cage by removing soiled bedding and replacing it with fresh bedding from the storage bin in the garage",
+    "key_objects": [
+      "hamster_cage",
+      "soiled_bedding",
+      "fresh_bedding"
+    ],
+    "rooms": [
+      "living_room",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0058",
+    "category": "personal_care",
+    "difficulty": 2,
+    "goal_description": "Apply hand lotion from a pump bottle to dry hands in the bathroom after washing them",
+    "key_objects": [
+      "hand_lotion",
+      "sink",
+      "towel"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0059",
+    "category": "cooking_baking",
+    "difficulty": 3,
+    "goal_description": "Bake a small batch of banana muffins and place them on a cooling rack",
+    "key_objects": [
+      "mashed_banana",
+      "muffin_tin",
+      "batter_bowl",
+      "cooling_rack"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0060",
+    "category": "cooking_baking",
+    "difficulty": 3,
+    "goal_description": "Prepare and bake garlic butter toast using sliced baguette and melt in the oven",
+    "key_objects": [
+      "baguette",
+      "garlic_butter",
+      "baking_sheet",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0061",
+    "category": "organizing",
+    "difficulty": 3,
+    "goal_description": "Organize a cluttered bookshelf by sorting books by genre and placing them upright in order",
+    "key_objects": [
+      "bookshelf",
+      "books",
+      "genre_labels"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0062",
+    "category": "organizing",
+    "difficulty": 3,
+    "goal_description": "Sort and store kitchen pantry items by expiration date and group similar items together",
+    "key_objects": [
+      "pantry",
+      "food_items",
+      "storage_containers"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0063",
+    "category": "home_repair",
+    "difficulty": 3,
+    "goal_description": "Repair a loose cabinet hinge in the kitchen using a screwdriver and replacement screws",
+    "key_objects": [
+      "screwdriver",
+      "replacement_screws",
+      "cabinet_hinge",
+      "kitchen_cabinet"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0064",
+    "category": "home_repair",
+    "difficulty": 3,
+    "goal_description": "Fix a wobbly dining room chair by tightening its leg bolts with a wrench",
+    "key_objects": [
+      "wrench",
+      "chair_leg",
+      "bolt",
+      "dining_room_chair"
+    ],
+    "rooms": [
+      "dining_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0065",
+    "category": "pet_care",
+    "difficulty": 3,
+    "goal_description": "Trim a cat's claws using pet nail clippers and apply styptic powder if needed",
+    "key_objects": [
+      "cat",
+      "nail_clippers",
+      "styptic_powder"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0066",
+    "category": "pet_care",
+    "difficulty": 3,
+    "goal_description": "Brush a dog's coat with a slicker brush and collect loose fur in a dustpan",
+    "key_objects": [
+      "dog",
+      "slicker_brush",
+      "dustpan"
+    ],
+    "rooms": [
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0067",
+    "category": "personal_care",
+    "difficulty": 3,
+    "goal_description": "Brush teeth with toothpaste and rinse the mouth using a cup of water at the bathroom sink",
+    "key_objects": [
+      "toothbrush",
+      "toothpaste",
+      "cup",
+      "sink"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0068",
+    "category": "personal_care",
+    "difficulty": 3,
+    "goal_description": "Shave face with a razor and shaving cream in the bathroom mirror",
+    "key_objects": [
+      "razor",
+      "shaving_cream",
+      "mirror",
+      "sink"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0069",
+    "category": "gardening",
+    "difficulty": 3,
+    "goal_description": "Plant basil seeds in a garden bed and water them for initial germination",
+    "key_objects": [
+      "basil_seeds",
+      "garden_bed",
+      "trowel",
+      "watering_can"
+    ],
+    "rooms": [
+      "garden"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0070",
+    "category": "gardening",
+    "difficulty": 3,
+    "goal_description": "Trim overgrown rose bushes in the front yard using pruning shears and collect clippings",
+    "key_objects": [
+      "rose_bushes",
+      "pruning_shears",
+      "garden_clippings_basket"
+    ],
+    "rooms": [
+      "front_yard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0071",
+    "category": "furniture_assembly",
+    "difficulty": 3,
+    "goal_description": "Assemble a three-shelf wooden bookshelf using dowels and a rubber mallet",
+    "key_objects": [
+      "bookshelf_planks",
+      "dowels",
+      "rubber_mallet",
+      "instruction_manual"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0072",
+    "category": "furniture_assembly",
+    "difficulty": 3,
+    "goal_description": "Build a two-drawer nightstand by connecting the side panels and attaching the drawer fronts with screws",
+    "key_objects": [
+      "nightstand_frame",
+      "drawer_fronts",
+      "screws",
+      "screwdriver"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0073",
+    "category": "cleaning",
+    "difficulty": 3,
+    "goal_description": "Wipe down and disinfect the kitchen countertop after dinner prep",
+    "key_objects": [
+      "countertop",
+      "disinfectant_spray",
+      "sponge"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0074",
+    "category": "cleaning",
+    "difficulty": 3,
+    "goal_description": "Sweep the living room floor to remove dust and pet hair",
+    "key_objects": [
+      "broom",
+      "dustpan",
+      "living_room_floor"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0075",
+    "category": "laundry",
+    "difficulty": 3,
+    "goal_description": "Sort a mixed load of whites and colors, wash the whites separately, and transfer them to the dryer",
+    "key_objects": [
+      "white_clothes",
+      "colored_clothes",
+      "washing_machine",
+      "dryer"
+    ],
+    "rooms": [
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0076",
+    "category": "laundry",
+    "difficulty": 3,
+    "goal_description": "Remove a load of dried towels from the dryer, fold them neatly, and store them in the bathroom linen cabinet",
+    "key_objects": [
+      "towels",
+      "dryer",
+      "linen_cabinet",
+      "folding_table"
+    ],
+    "rooms": [
+      "laundry_room",
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0077",
+    "category": "meal_preparation",
+    "difficulty": 3,
+    "goal_description": "Cook scrambled eggs and serve them on a plate with a side of buttered toast",
+    "key_objects": [
+      "eggs",
+      "butter",
+      "toaster",
+      "plate"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0078",
+    "category": "meal_preparation",
+    "difficulty": 3,
+    "goal_description": "Prepare a bowl of oatmeal with milk and sliced banana for breakfast",
+    "key_objects": [
+      "oats",
+      "milk",
+      "banana",
+      "bowl"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0079",
+    "category": "cooking_baking",
+    "difficulty": 3,
+    "goal_description": "Bake a single-serving apple pie using a pre-made crust and sliced apples, then cool on a wire rack",
+    "key_objects": [
+      "apple",
+      "premade_crust",
+      "pie_dish",
+      "cooling_rack"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0080",
+    "category": "cooking_baking",
+    "difficulty": 3,
+    "goal_description": "Mix and bake chocolate brownie batter from a box in a square pan, then cut into eight pieces",
+    "key_objects": [
+      "brownie_mix",
+      "mixing_bowl",
+      "baking_pan",
+      "spatula"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0081",
+    "category": "organizing",
+    "difficulty": 3,
+    "goal_description": "Sort and file monthly bills into labeled folders inside the home office desk drawer",
+    "key_objects": [
+      "bills",
+      "folders",
+      "labeler",
+      "desk_drawer"
+    ],
+    "rooms": [
+      "home_office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0082",
+    "category": "organizing",
+    "difficulty": 3,
+    "goal_description": "Arrange children's art supplies by type and store them in labeled bins inside the craft cabinet",
+    "key_objects": [
+      "crayons",
+      "markers",
+      "labelled_bins",
+      "craft_cabinet"
+    ],
+    "rooms": [
+      "playroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0083",
+    "category": "home_repair",
+    "difficulty": 3,
+    "goal_description": "Fix a leaky bathroom faucet by replacing the worn washer and tightening the faucet handle",
+    "key_objects": [
+      "wrench",
+      "replacement_washer",
+      "faucet",
+      "plumber's_tape"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0084",
+    "category": "home_repair",
+    "difficulty": 3,
+    "goal_description": "Repair a cracked window screen in the living room using a patch kit and spline roller",
+    "key_objects": [
+      "screen_patch_kit",
+      "spline_roller",
+      "utility_knife",
+      "window_screen"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0085",
+    "category": "pet_care",
+    "difficulty": 3,
+    "goal_description": "Fill a cat's food bowl with dry kibble and refresh its water bowl with clean water",
+    "key_objects": [
+      "cat_food_bowl",
+      "dry_kibble",
+      "water_bowl",
+      "pitcher"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0086",
+    "category": "pet_care",
+    "difficulty": 3,
+    "goal_description": "Take a dog for a short evening walk and clean its paws with a damp towel afterward",
+    "key_objects": [
+      "leash",
+      "dog",
+      "damp_towel",
+      "entryway_mat"
+    ],
+    "rooms": [
+      "living_room",
+      "outdoor_path",
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0087",
+    "category": "personal_care",
+    "difficulty": 3,
+    "goal_description": "Wash face with cleanser, pat dry with a towel, and apply moisturizer at the bathroom sink",
+    "key_objects": [
+      "facial_cleanser",
+      "towel",
+      "moisturizer",
+      "sink"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0088",
+    "category": "cooking_baking",
+    "difficulty": 4,
+    "goal_description": "Prepare and bake homemade pizza using store-bought dough, tomato sauce, cheese, and toppings, then slice and serve on a plate",
+    "key_objects": [
+      "pizza_dough",
+      "tomato_sauce",
+      "cheese",
+      "baking_sheet",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0089",
+    "category": "cooking_baking",
+    "difficulty": 4,
+    "goal_description": "Make banana bread from scratch using ripe bananas, flour, sugar, and butter, then cool and slice into portions",
+    "key_objects": [
+      "ripe_bananas",
+      "flour",
+      "sugar",
+      "butter",
+      "loaf_pan"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0090",
+    "category": "organizing",
+    "difficulty": 4,
+    "goal_description": "Organize a home office desk by sorting papers, placing electronics neatly, and filling the drawer with office supplies",
+    "key_objects": [
+      "desk",
+      "paper_tray",
+      "office_supplies",
+      "cable_ties"
+    ],
+    "rooms": [
+      "home_office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0091",
+    "category": "organizing",
+    "difficulty": 4,
+    "goal_description": "Reorganize the kitchen pantry by grouping similar food items, placing labels on containers, and arranging them on shelves",
+    "key_objects": [
+      "pantry",
+      "food_containers",
+      "label_maker",
+      "shelf_bins"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0092",
+    "category": "home_repair",
+    "difficulty": 4,
+    "goal_description": "Replace a broken light switch in the hallway with a new toggle switch",
+    "key_objects": [
+      "screwdriver",
+      "voltage_tester",
+      "new_light_switch",
+      "wall_plate"
+    ],
+    "rooms": [
+      "hallway"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0093",
+    "category": "home_repair",
+    "difficulty": 4,
+    "goal_description": "Repair a squeaky bedroom door hinge by tightening screws and applying lubricant",
+    "key_objects": [
+      "screwdriver",
+      "lubricant_oil",
+      "hinge_pins",
+      "cloth"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0094",
+    "category": "pet_care",
+    "difficulty": 4,
+    "goal_description": "Brush the cat's fur to remove loose hair and reduce shedding around the house",
+    "key_objects": [
+      "cat",
+      "slicker_brush",
+      "grooming_gloves",
+      "litter_box"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0095",
+    "category": "pet_care",
+    "difficulty": 4,
+    "goal_description": "Trim the dog's nails using clippers and reward with a treat to reduce anxiety",
+    "key_objects": [
+      "dog",
+      "nail_clippers",
+      "treat_bag",
+      "towel"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0096",
+    "category": "personal_care",
+    "difficulty": 4,
+    "goal_description": "Brush teeth thoroughly using toothpaste and rinse with mouthwash at the bathroom sink",
+    "key_objects": [
+      "toothbrush",
+      "toothpaste",
+      "mouthwash",
+      "sink"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0097",
+    "category": "personal_care",
+    "difficulty": 4,
+    "goal_description": "Apply facial sunscreen after washing face and comb hair in front of the bathroom mirror",
+    "key_objects": [
+      "facial_sunscreen",
+      "washcloth",
+      "comb",
+      "mirror"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0098",
+    "category": "gardening",
+    "difficulty": 4,
+    "goal_description": "Prune overgrown tomato plants in the backyard garden and dispose of the cuttings in the compost bin",
+    "key_objects": [
+      "tomato_plants",
+      "pruning_shears",
+      "compost_bin",
+      "gloves"
+    ],
+    "rooms": [
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0099",
+    "category": "gardening",
+    "difficulty": 4,
+    "goal_description": "Lay mulch around the base of fruit trees in the orchard to retain moisture and suppress weeds",
+    "key_objects": [
+      "fruit_trees",
+      "mulch",
+      "wheelbarrow",
+      "shovel"
+    ],
+    "rooms": [
+      "orchard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0100",
+    "category": "furniture_assembly",
+    "difficulty": 4,
+    "goal_description": "Assemble a five-piece metal patio chair set using bolts and an included Allen wrench",
+    "key_objects": [
+      "patio_chair_frame",
+      "metal_bolts",
+      "Allen_wrench",
+      "seat_cushion"
+    ],
+    "rooms": [
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0101",
+    "category": "furniture_assembly",
+    "difficulty": 4,
+    "goal_description": "Build a twin-sized flat-pack bed frame with slats and secure it to the wall anchor",
+    "key_objects": [
+      "bed_frame_panels",
+      "wood_screws",
+      "screwdriver",
+      "wall_anchor_kit"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0102",
+    "category": "cleaning",
+    "difficulty": 4,
+    "goal_description": "Clean and disinfect the inside of the microwave using a damp sponge and cleaning solution",
+    "key_objects": [
+      "microwave",
+      "sponge",
+      "cleaning_solution",
+      "microwave_safe_bowl"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0103",
+    "category": "cleaning",
+    "difficulty": 4,
+    "goal_description": "Dust and wipe down all surfaces of a bedroom nightstand, then organize items neatly",
+    "key_objects": [
+      "duster",
+      "cleaning_cloth",
+      "nightstand",
+      "cleaning_spray"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0104",
+    "category": "laundry",
+    "difficulty": 4,
+    "goal_description": "Wash a load of delicates using the gentle cycle and dry them flat on a drying rack",
+    "key_objects": [
+      "delicate_clothes",
+      "mesh_laundry_bag",
+      "detergent",
+      "drying_rack"
+    ],
+    "rooms": [
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0105",
+    "category": "laundry",
+    "difficulty": 4,
+    "goal_description": "Stain-treat a white blouse, wash it separately using bleach-safe detergent, and hang it to dry",
+    "key_objects": [
+      "white_blouse",
+      "stain_treatment",
+      "bleach_safe_detergent",
+      "hanger"
+    ],
+    "rooms": [
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0106",
+    "category": "meal_preparation",
+    "difficulty": 4,
+    "goal_description": "Toast a bagel and spread cream cheese on it, then serve on a plate with a glass of orange juice",
+    "key_objects": [
+      "bagel",
+      "toaster",
+      "cream_cheese",
+      "plate",
+      "glass",
+      "orange_juice"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0107",
+    "category": "meal_preparation",
+    "difficulty": 4,
+    "goal_description": "Boil spaghetti noodles, drain them, and mix with store-bought marinara sauce in a serving bowl",
+    "key_objects": [
+      "spaghetti",
+      "pot",
+      "marinara_sauce",
+      "strainer",
+      "serving_bowl"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0108",
+    "category": "cooking_baking",
+    "difficulty": 4,
+    "goal_description": "Bake chocolate chip cookies from scratch using butter, sugar, flour, eggs, and chocolate chips, then cool on a wire rack",
+    "key_objects": [
+      "butter",
+      "sugar",
+      "flour",
+      "eggs",
+      "chocolate_chips",
+      "baking_sheet",
+      "wire_rack"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0109",
+    "category": "cooking_baking",
+    "difficulty": 4,
+    "goal_description": "Prepare and bake a cheese omelet using eggs, milk, shredded cheese, and butter, then serve on a plate",
+    "key_objects": [
+      "eggs",
+      "milk",
+      "shredded_cheese",
+      "butter",
+      "frying_pan",
+      "plate"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0110",
+    "category": "organizing",
+    "difficulty": 4,
+    "goal_description": "Organize the living room bookshelf by sorting books by genre, wiping shelves, and arranging decor items symmetrically",
+    "key_objects": [
+      "books",
+      "duster",
+      "decor_items",
+      "shelves"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0111",
+    "category": "organizing",
+    "difficulty": 4,
+    "goal_description": "Sort and fold clean laundry, then store items in designated drawers and bins in the bedroom dresser",
+    "key_objects": [
+      "clean_laundry",
+      "folding_table",
+      "dresser",
+      "storage_bins"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0112",
+    "category": "home_repair",
+    "difficulty": 4,
+    "goal_description": "Fix a loose cabinet door in the kitchen by tightening the hinges and adjusting alignment",
+    "key_objects": [
+      "screwdriver",
+      "cabinet_door",
+      "hinges",
+      "level"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0113",
+    "category": "home_repair",
+    "difficulty": 4,
+    "goal_description": "Repair a cracked vinyl floor tile in the bathroom by replacing it with a new tile",
+    "key_objects": [
+      "vinyl_tile",
+      "utility_knife",
+      "adhesive",
+      "roller"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0114",
+    "category": "pet_care",
+    "difficulty": 4,
+    "goal_description": "Fill the cat's food bowl with dry kibble, add fresh water to the water bowl, and clean around the feeding area with a damp cloth",
+    "key_objects": [
+      "kibble",
+      "food_bowl",
+      "water_bowl",
+      "damp_cloth"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0115",
+    "category": "pet_care",
+    "difficulty": 4,
+    "goal_description": "Groom the rabbit by gently brushing its fur, trim its nails with pet clippers, and provide fresh hay in its enclosure",
+    "key_objects": [
+      "brush",
+      "nail_clippers",
+      "hay",
+      "rabbit_enclosure"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0116",
+    "category": "personal_care",
+    "difficulty": 4,
+    "goal_description": "Shave facial hair with a razor, apply aftershave, and clean the sink afterward",
+    "key_objects": [
+      "razor",
+      "shaving_cream",
+      "aftershave",
+      "sink",
+      "towel"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0117",
+    "category": "cooking_baking",
+    "difficulty": 5,
+    "goal_description": "Make homemade guacamole from scratch and serve with tortilla chips",
+    "key_objects": [
+      "avocado",
+      "lime",
+      "onion",
+      "knife",
+      "mixing_bowl",
+      "tortilla_chips"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0118",
+    "category": "cooking_baking",
+    "difficulty": 5,
+    "goal_description": "Prepare and bake a banana bread loaf using ripe bananas and basic pantry ingredients",
+    "key_objects": [
+      "ripe_bananas",
+      "flour",
+      "baking_loaf_pan",
+      "mixing_bowl",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0119",
+    "category": "organizing",
+    "difficulty": 5,
+    "goal_description": "Organize the pantry by grouping similar food items, discarding expired products, and placing them in labeled bins",
+    "key_objects": [
+      "labeled_bins",
+      "expiration_date_checker",
+      "cleaning_cloth",
+      "pantry_shelves",
+      "food_items"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0120",
+    "category": "organizing",
+    "difficulty": 5,
+    "goal_description": "Sort and reorganize winter clothing in the bedroom closet by type and frequency of use, storing off-season items in under-bed containers",
+    "key_objects": [
+      "winter_clothes",
+      "under_bed_containers",
+      "hangers",
+      "closet_shelves",
+      "label_maker"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0121",
+    "category": "home_repair",
+    "difficulty": 5,
+    "goal_description": "Fix a wobbly ceiling fan by tightening the mounting bracket and balancing the blades",
+    "key_objects": [
+      "ladder",
+      "screwdriver",
+      "wrench",
+      "ceiling_fan_balance_kit",
+      "blades"
+    ],
+    "rooms": [
+      "living_room",
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0122",
+    "category": "home_repair",
+    "difficulty": 5,
+    "goal_description": "Repair a cracked window seal in a double-pane window using a sealant kit",
+    "key_objects": [
+      "window_sealant_kit",
+      "razor_blade",
+      "cleaning_cloth",
+      "caulking_gun",
+      "replacement_gasket"
+    ],
+    "rooms": [
+      "living_room",
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0123",
+    "category": "pet_care",
+    "difficulty": 5,
+    "goal_description": "Bathe the dog using pet shampoo, rinse thoroughly, and dry with a towel",
+    "key_objects": [
+      "dog",
+      "pet_shampoo",
+      "towel",
+      "bathing_tub",
+      "water_hose"
+    ],
+    "rooms": [
+      "bathroom",
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0124",
+    "category": "pet_care",
+    "difficulty": 5,
+    "goal_description": "Clean and refill the hamster's cage with fresh bedding, food, and water",
+    "key_objects": [
+      "hamster",
+      "cage",
+      "bedding_material",
+      "food_bowl",
+      "water_bottle"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0125",
+    "category": "personal_care",
+    "difficulty": 5,
+    "goal_description": "Brush teeth thoroughly using fluoride toothpaste, floss between all teeth, and rinse with mouthwash",
+    "key_objects": [
+      "toothbrush",
+      "toothpaste",
+      "dental_floss",
+      "mouthwash",
+      "sink"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0126",
+    "category": "personal_care",
+    "difficulty": 5,
+    "goal_description": "Wash and condition long hair in the shower, then towel-dry and comb it gently to prevent tangles",
+    "key_objects": [
+      "shower",
+      "shampoo",
+      "conditioner",
+      "towel",
+      "comb"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0127",
+    "category": "gardening",
+    "difficulty": 5,
+    "goal_description": "Transplant young basil seedlings from indoor pots to an outdoor herb garden bed",
+    "key_objects": [
+      "seedling_trays",
+      "garden_trowel",
+      "herb_garden_bed",
+      "watering_can",
+      "compost"
+    ],
+    "rooms": [
+      "kitchen",
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0128",
+    "category": "gardening",
+    "difficulty": 5,
+    "goal_description": "Install a drip irrigation system for a vegetable garden using a timer and tubing kit",
+    "key_objects": [
+      "drip_irrigation_kit",
+      "water_timer",
+      "garden_hose",
+      "emitter_tubes",
+      "pressure_regulator"
+    ],
+    "rooms": [
+      "backyard",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0129",
+    "category": "furniture_assembly",
+    "difficulty": 5,
+    "goal_description": "Assemble a wooden three-drawer dresser using dowels, screws, and a provided Allen wrench following the manufacturer's instructions",
+    "key_objects": [
+      "dresser_panels",
+      "wooden_dowels",
+      "screws",
+      "Allen_wrench",
+      "drawer_slides"
+    ],
+    "rooms": [
+      "bedroom",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0130",
+    "category": "furniture_assembly",
+    "difficulty": 5,
+    "goal_description": "Construct a freestanding closet wardrobe with hanging rod, shelves, and doors using labeled panels and cam lock fasteners",
+    "key_objects": [
+      "wardrobe_panels",
+      "cam_lock_fasteners",
+      "hanging_rod",
+      "shelf_pins",
+      "instruction_diagram"
+    ],
+    "rooms": [
+      "bedroom",
+      "hallway"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0131",
+    "category": "cleaning",
+    "difficulty": 5,
+    "goal_description": "Clean and deodorize the garbage disposal using ice cubes, baking soda, and vinegar",
+    "key_objects": [
+      "ice_cubes",
+      "baking_soda",
+      "vinegar",
+      "garbage_disposal",
+      "cold_water"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0132",
+    "category": "cleaning",
+    "difficulty": 5,
+    "goal_description": "Wash and dry a set of muddy hiking boots using a brush, cloth, and shoe cleaner",
+    "key_objects": [
+      "hiking_boots",
+      "shoe_brush",
+      "shoe_cleaner",
+      "microfiber_cloth",
+      "drying_rack"
+    ],
+    "rooms": [
+      "entryway",
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0133",
+    "category": "laundry",
+    "difficulty": 5,
+    "goal_description": "Wash a heavily soiled gym towel using hot water and extra rinse cycle, then dry it on high heat",
+    "key_objects": [
+      "washing_machine",
+      "dryer",
+      "laundry_detergent",
+      "gym_towel",
+      "stain_remover"
+    ],
+    "rooms": [
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0134",
+    "category": "laundry",
+    "difficulty": 5,
+    "goal_description": "Pre-treat and wash a set of ink-stained cotton shirts, then air-dry them away from direct sunlight",
+    "key_objects": [
+      "ink_stained_shirts",
+      "stain_remover",
+      "washing_machine",
+      "laundry_detergent",
+      "drying_rack"
+    ],
+    "rooms": [
+      "laundry_room",
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0135",
+    "category": "meal_preparation",
+    "difficulty": 5,
+    "goal_description": "Prepare a grilled cheese sandwich and tomato soup meal using canned soup and bread from the pantry",
+    "key_objects": [
+      "bread",
+      "cheese_slices",
+      "butter",
+      "frying_pan",
+      "canned_tomato_soup"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0136",
+    "category": "meal_preparation",
+    "difficulty": 5,
+    "goal_description": "Make a fresh fruit salad with yogurt dressing using produce from the refrigerator and serve in a bowl",
+    "key_objects": [
+      "mixed_fruits",
+      "knife",
+      "cutting_board",
+      "mixing_bowl",
+      "yogurt"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0137",
+    "category": "cooking_baking",
+    "difficulty": 5,
+    "goal_description": "Bake a classic chocolate chip cookie batch from scratch using butter, flour, sugar, eggs, and chocolate chips",
+    "key_objects": [
+      "mixing_bowl",
+      "baking_sheet",
+      "oven",
+      "chocolate_chips",
+      "measuring_cups",
+      "spatula"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0138",
+    "category": "cooking_baking",
+    "difficulty": 5,
+    "goal_description": "Prepare and cook a creamy mushroom risotto using arborio rice, fresh mushrooms, broth, and Parmesan cheese",
+    "key_objects": [
+      "saucepan",
+      "wooden_spoon",
+      "arborio_rice",
+      "mushrooms",
+      "broth",
+      "grated_parmesan"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0139",
+    "category": "organizing",
+    "difficulty": 5,
+    "goal_description": "Reorganize the home office desk by sorting papers into categories, filing important documents, and discarding unnecessary clutter",
+    "key_objects": [
+      "filing_folder",
+      "paper_tray",
+      "stapler",
+      "wastebasket",
+      "label_maker"
+    ],
+    "rooms": [
+      "home_office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0140",
+    "category": "organizing",
+    "difficulty": 5,
+    "goal_description": "Arrange and optimize the bathroom medicine cabinet by grouping medications by type, checking expiration dates, and securing childproof locks",
+    "key_objects": [
+      "medicine_bottles",
+      "first_aid_kit",
+      "expiration_checker",
+      "storage_bins",
+      "childproof_locks"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0141",
+    "category": "home_repair",
+    "difficulty": 5,
+    "goal_description": "Repair a loose cabinet door hinge in the kitchen by replacing stripped screws with longer ones",
+    "key_objects": [
+      "screwdriver",
+      "longer_screws",
+      "cabinet_door",
+      "hinge",
+      "drill"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0142",
+    "category": "home_repair",
+    "difficulty": 5,
+    "goal_description": "Fix a creaking wooden floorboard in the bedroom using shims and finish nails",
+    "key_objects": [
+      "shims",
+      "hammer",
+      "finish_nails",
+      "floorboard",
+      "putty_knife"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0143",
+    "category": "pet_care",
+    "difficulty": 5,
+    "goal_description": "Trim the cat's nails using pet clippers and prevent overcutting the quick",
+    "key_objects": [
+      "pet_nail_clippers",
+      "cat",
+      "treats",
+      "towel",
+      "styptic_powder"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0144",
+    "category": "pet_care",
+    "difficulty": 5,
+    "goal_description": "Clean and refill the rabbit's water bottle while ensuring no leaks and proper attachment",
+    "key_objects": [
+      "rabbit_water_bottle",
+      "bottle_brush",
+      "clean_water",
+      "rabbit_hutch",
+      "towel"
+    ],
+    "rooms": [
+      "backyard",
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0145",
+    "category": "personal_care",
+    "difficulty": 5,
+    "goal_description": "Shave facial hair with a safety razor, using shaving cream and post-shave balm to prevent irritation",
+    "key_objects": [
+      "safety_razor",
+      "shaving_cream",
+      "shaving_brush",
+      "mirror",
+      "aftershave_balm"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0146",
+    "category": "cooking_baking",
+    "difficulty": 6,
+    "goal_description": "Bake a homemade lemon tart with a shortcrust pastry base and meringue topping",
+    "key_objects": [
+      "pastry_dough",
+      "lemon_juice",
+      "eggs",
+      "sugar",
+      "butter",
+      "meringue_topping",
+      "tart_pan"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0147",
+    "category": "cooking_baking",
+    "difficulty": 6,
+    "goal_description": "Prepare and bake a layered lasagna with homemade tomato sauce and fresh ricotta filling",
+    "key_objects": [
+      "lasagna_noodles",
+      "ground_beef",
+      "tomatoes",
+      "ricotta_cheese",
+      "mozzarella",
+      "baking_dish"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0148",
+    "category": "organizing",
+    "difficulty": 6,
+    "goal_description": "Sort and categorize a mixed collection of digital photo folders on a home computer by date, event, and people, then back them up to an external hard drive",
+    "key_objects": [
+      "computer",
+      "external_hard_drive",
+      "photo_folders",
+      "file_explorer",
+      "backup_software"
+    ],
+    "rooms": [
+      "home_office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0149",
+    "category": "organizing",
+    "difficulty": 6,
+    "goal_description": "Reorganize a cluttered kitchen pantry by grouping items by food type, labeling clear containers, and rotating stock to follow FIFO (first in, first out) principles",
+    "key_objects": [
+      "pantry",
+      "clear_containers",
+      "label_maker",
+      "food_items",
+      "shelf_dividers",
+      "expiry_date_tracker"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0150",
+    "category": "home_repair",
+    "difficulty": 6,
+    "goal_description": "Repair a cracked vinyl floor tile in the kitchen using a replacement tile and adhesive",
+    "key_objects": [
+      "vinyl_replacement_tile",
+      "floor_adhesive",
+      "utility_knife",
+      "roller_tool",
+      "measuring_tape",
+      "putty_knife"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0151",
+    "category": "home_repair",
+    "difficulty": 6,
+    "goal_description": "Fix a wobbly toilet seat by tightening or replacing the mounting bolts",
+    "key_objects": [
+      "toilet_seat",
+      "mounting_bolts",
+      "wrench",
+      "screwdriver",
+      "rubber_washers",
+      "plumber_putty"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0152",
+    "category": "pet_care",
+    "difficulty": 6,
+    "goal_description": "Bathe a medium-sized dog using pet shampoo, then dry thoroughly with a towel and blow dryer to prevent chills",
+    "key_objects": [
+      "dog",
+      "pet_shampoo",
+      "towel",
+      "blow_dryer",
+      "brush",
+      "bathtub"
+    ],
+    "rooms": [
+      "bathroom",
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0153",
+    "category": "pet_care",
+    "difficulty": 6,
+    "goal_description": "Clean and refill a hamster's cage with fresh bedding, food, and water, while sanitizing used accessories",
+    "key_objects": [
+      "hamster",
+      "cage",
+      "bedding_material",
+      "food_bowl",
+      "water_bottle",
+      "cleaning_brush"
+    ],
+    "rooms": [
+      "living_room",
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0154",
+    "category": "personal_care",
+    "difficulty": 6,
+    "goal_description": "Apply a weekly deep-cleaning face mask using a clay-based product, then rinse with warm water and moisturize to prevent dryness",
+    "key_objects": [
+      "face_mask",
+      "facial_brush",
+      "washcloth",
+      "warm_water",
+      "moisturizer",
+      "towel"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0155",
+    "category": "personal_care",
+    "difficulty": 6,
+    "goal_description": "Clean and organize a makeup brush set using brush-cleaning solution, then reshape bristles and lay flat to dry",
+    "key_objects": [
+      "makeup_brushes",
+      "brush_cleaning_solution",
+      "cleaning_mat",
+      "rinse_basin",
+      "paper_towel",
+      "brush_drying_rack"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0156",
+    "category": "gardening",
+    "difficulty": 6,
+    "goal_description": "Plant tomato seedlings in a raised garden bed using compost-enriched soil and secure with stakes",
+    "key_objects": [
+      "tomato_seedlings",
+      "raised_garden_bed",
+      "garden_trowel",
+      "compost",
+      "stakes",
+      "twine"
+    ],
+    "rooms": [
+      "garden"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0157",
+    "category": "gardening",
+    "difficulty": 6,
+    "goal_description": "Prune overgrown rose bushes using bypass shears and dispose of clippings in a compost bin",
+    "key_objects": [
+      "rose_bushes",
+      "bypass_pruning_shears",
+      "gardening_gloves",
+      "compost_bin",
+      "pruning_sealant",
+      "wheelbarrow"
+    ],
+    "rooms": [
+      "garden",
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0158",
+    "category": "furniture_assembly",
+    "difficulty": 6,
+    "goal_description": "Assemble a six-piece patio set including table, chairs, and umbrella using hex bolts, washers, and an Allen wrench according to the outdoor furniture instructions",
+    "key_objects": [
+      "patio_table_frame",
+      "chair_panels",
+      "umbrella_stand",
+      "hex_bolts",
+      "washers",
+      "allen_wrench"
+    ],
+    "rooms": [
+      "backyard",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0159",
+    "category": "furniture_assembly",
+    "difficulty": 6,
+    "goal_description": "Build a wooden loft bed frame with ladder and guardrails using pre-drilled panels, metal brackets, and a power drill following the manufacturer's blueprint",
+    "key_objects": [
+      "bed_frame_panels",
+      "metal_brackets",
+      "lag_screws",
+      "power_drill",
+      "ladder_sections",
+      "guardrail_beam"
+    ],
+    "rooms": [
+      "bedroom",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0160",
+    "category": "cleaning",
+    "difficulty": 6,
+    "goal_description": "Deep clean the oven using a commercial degreaser, focusing on baked-on spills and grease buildup",
+    "key_objects": [
+      "commercial_oven_cleaner",
+      "rubber_gloves",
+      "scrubbing_sponge",
+      "microfiber_cloth",
+      "oven_racks",
+      "baking_tray"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0161",
+    "category": "cleaning",
+    "difficulty": 6,
+    "goal_description": "Wash all window blinds in the living room using a vacuum brush attachment and soapy water solution",
+    "key_objects": [
+      "step_stool",
+      "vacuum_with_brush_attachment",
+      "bucket",
+      "mild_dish_soap",
+      "sponge",
+      "dry_cloth"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0162",
+    "category": "laundry",
+    "difficulty": 6,
+    "goal_description": "Wash a delicate silk blouse using cold water and gentle cycle, then lay it flat to dry on a clean towel to prevent wrinkles",
+    "key_objects": [
+      "silk_blouse",
+      "mesh_laundry_bag",
+      "mild_detergent",
+      "washing_machine",
+      "clean_towel",
+      "drying_rack"
+    ],
+    "rooms": [
+      "bathroom",
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0163",
+    "category": "laundry",
+    "difficulty": 6,
+    "goal_description": "Remove grass stains from a child's soccer jersey by pre-treating with stain remover, washing in warm water, and air-drying before storage",
+    "key_objects": [
+      "soccer_jersey",
+      "stain_remover",
+      "laundry_brush",
+      "washing_machine",
+      "clothesline",
+      "clothespins"
+    ],
+    "rooms": [
+      "laundry_room",
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0164",
+    "category": "meal_preparation",
+    "difficulty": 6,
+    "goal_description": "Prepare a baked salmon fillet with roasted asparagus and mashed potatoes from scratch",
+    "key_objects": [
+      "salmon_fillet",
+      "asparagus",
+      "potatoes",
+      "oven",
+      "mixing_bowl",
+      "masher"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0165",
+    "category": "meal_preparation",
+    "difficulty": 6,
+    "goal_description": "Make a homemade chicken burrito bowl with cilantro-lime rice, black beans, and fresh salsa",
+    "key_objects": [
+      "chicken_breast",
+      "rice",
+      "black_beans",
+      "lime",
+      "cilantro",
+      "salsa"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0166",
+    "category": "cooking_baking",
+    "difficulty": 6,
+    "goal_description": "Bake a classic chocolate chip cookie batch using homemade dough and a cookie sheet",
+    "key_objects": [
+      "mixing_bowl",
+      "baking_sheets",
+      "chocolate_chips",
+      "flour",
+      "butter",
+      "sugar",
+      "egg"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0167",
+    "category": "cooking_baking",
+    "difficulty": 6,
+    "goal_description": "Prepare and bake a homemade pizza with tomato sauce, mozzarella, and pepperoni from scratch",
+    "key_objects": [
+      "pizza_dough",
+      "tomato_sauce",
+      "mozzarella_cheese",
+      "pepperoni",
+      "rolling_pin",
+      "pizza_pan"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0168",
+    "category": "organizing",
+    "difficulty": 6,
+    "goal_description": "Organize a home office desk by sorting paperwork into labeled folders, removing clutter, and arranging supplies in designated trays",
+    "key_objects": [
+      "desk",
+      "labeled_folders",
+      "paper_tray",
+      "pen_holder",
+      "wastebasket",
+      "stapler"
+    ],
+    "rooms": [
+      "home_office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0169",
+    "category": "organizing",
+    "difficulty": 6,
+    "goal_description": "Reorganize a linen closet by folding and stacking towels by size, placing sheets in labeled bins, and arranging blankets by season",
+    "key_objects": [
+      "linen_closet",
+      "towels",
+      "sheet_bins",
+      "folding_board",
+      "label_maker",
+      "seasonal_blankets"
+    ],
+    "rooms": [
+      "hallway",
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0170",
+    "category": "home_repair",
+    "difficulty": 6,
+    "goal_description": "Fix a squeaky bedroom door by lubricating the hinges and tightening loose screws",
+    "key_objects": [
+      "screwdriver",
+      "hinges",
+      "lubricating_oil",
+      "door",
+      "screws",
+      "clean_cloth"
+    ],
+    "rooms": [
+      "bedroom",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0171",
+    "category": "home_repair",
+    "difficulty": 6,
+    "goal_description": "Repair a cracked garden hose using a hose repair kit and connectors",
+    "key_objects": [
+      "garden_hose",
+      "hose_repair_kit",
+      "hose_clamps",
+      "utility_knife",
+      "wrench",
+      "water_spigot"
+    ],
+    "rooms": [
+      "yard",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0172",
+    "category": "pet_care",
+    "difficulty": 6,
+    "goal_description": "Administer monthly heartworm medication to a dog, including checking the dosage, offering a treat, and recording the dose in a pet health log",
+    "key_objects": [
+      "heartworm_medication",
+      "dog_treat",
+      "pet_health_log",
+      "measuring_syringe",
+      "water_bowl"
+    ],
+    "rooms": [
+      "kitchen",
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0173",
+    "category": "pet_care",
+    "difficulty": 6,
+    "goal_description": "Trim a cat's nails using pet clippers, safely restrain the cat, and apply styptic powder if a quick is accidentally cut",
+    "key_objects": [
+      "cat_nail_clippers",
+      "styptic_powder",
+      "towel",
+      "cat",
+      "treats",
+      "flashlight"
+    ],
+    "rooms": [
+      "bathroom",
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0174",
+    "category": "personal_care",
+    "difficulty": 6,
+    "goal_description": "Perform a weekly hair treatment using a deep conditioning mask, then rinse thoroughly and style with heat protection spray",
+    "key_objects": [
+      "deep_conditioning_mask",
+      "shower_cap",
+      "towel",
+      "shampoo",
+      "conditioner",
+      "heat_protection_spray"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0175",
+    "category": "cooking_baking",
+    "difficulty": 7,
+    "goal_description": "Bake a homemade lemon tart from scratch, including making the crust, preparing the filling, and cooling to set",
+    "key_objects": [
+      "butter",
+      "flour",
+      "sugar",
+      "lemons",
+      "eggs",
+      "mixing_bowl",
+      "tart_pan"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0176",
+    "category": "cooking_baking",
+    "difficulty": 7,
+    "goal_description": "Prepare and bake cinnamon rolls from scratch, including dough rising, rolling, filling, and icing",
+    "key_objects": [
+      "yeast",
+      "flour",
+      "milk",
+      "butter",
+      "cinnamon",
+      "sugar",
+      "baking_pan"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0177",
+    "category": "organizing",
+    "difficulty": 7,
+    "goal_description": "Organize a child's toy collection by sorting items by type, discarding broken pieces, and storing in labeled bins with a rotation system",
+    "key_objects": [
+      "toy_bins",
+      "labels",
+      "marker",
+      "trash_bag",
+      "donation_box",
+      "wet_cloths",
+      "storage_shelves"
+    ],
+    "rooms": [
+      "playroom",
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0178",
+    "category": "organizing",
+    "difficulty": 7,
+    "goal_description": "Reorganize a kitchen pantry by expiring date, grouping similar food items, and placing frequently used goods at eye level",
+    "key_objects": [
+      "food_containers",
+      "label_maker",
+      "notepad",
+      "expiration_tracker",
+      "step_stool",
+      "wiping_cloth",
+      "pantry_shelves"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0179",
+    "category": "home_repair",
+    "difficulty": 7,
+    "goal_description": "Repair a leaky kitchen faucet by replacing worn washers and reassembling the fixture to stop dripping",
+    "key_objects": [
+      "adjustable_wrench",
+      "plumber's_tape",
+      "replacement_washers",
+      "screwdriver",
+      "bucket",
+      "towel",
+      "faucet_handle_tool"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0180",
+    "category": "home_repair",
+    "difficulty": 7,
+    "goal_description": "Fix a sagging closet door by realigning the hinges and reinforcing the frame with wall anchors",
+    "key_objects": [
+      "screwdriver",
+      "level",
+      "drill",
+      "wall_anchors",
+      "screws",
+      "measuring_tape",
+      "hammer"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0181",
+    "category": "pet_care",
+    "difficulty": 7,
+    "goal_description": "Give a dog a full grooming session including bathing, brushing, and ear cleaning in the backyard",
+    "key_objects": [
+      "dog_shampoo",
+      "brush",
+      "towels",
+      "ear_cleaning_solution",
+      "cotton_balls",
+      "treats",
+      "garden_hose"
+    ],
+    "rooms": [
+      "backyard",
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0182",
+    "category": "pet_care",
+    "difficulty": 7,
+    "goal_description": "Clean and refill a hamster's habitat with fresh bedding, food, and water, then inspect all cage components for wear",
+    "key_objects": [
+      "hamster_cage",
+      "bedding_material",
+      "food_bowl",
+      "water_bottle",
+      "toy_wheel",
+      "cleaning_spray",
+      "paper_towels"
+    ],
+    "rooms": [
+      "living_room",
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0183",
+    "category": "personal_care",
+    "difficulty": 7,
+    "goal_description": "Perform a weekly skincare routine including double cleansing, exfoliating, applying a face mask, and moisturizing with sunscreen",
+    "key_objects": [
+      "cleansing_oil",
+      "facial_wash",
+      "exfoliant",
+      "clay_mask",
+      "toner",
+      "moisturizer",
+      "sunscreen"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0184",
+    "category": "personal_care",
+    "difficulty": 7,
+    "goal_description": "Shave facial hair with a safety razor, including pre-shave preparation, post-shave soothing, and blade cleaning",
+    "key_objects": [
+      "shaving_brush",
+      "shaving_cream",
+      "safety_razor",
+      "aftershave_balm",
+      "warm_towel",
+      "shaving_mug",
+      "razor_blade"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0185",
+    "category": "gardening",
+    "difficulty": 7,
+    "goal_description": "Install a drip irrigation system in the vegetable garden using a timer, tubing, and emitters to ensure consistent watering",
+    "key_objects": [
+      "drip_hose_kit",
+      "water_timer",
+      "garden_hose",
+      "emitters",
+      "tube_cutters",
+      "stakes",
+      "water_source_connector"
+    ],
+    "rooms": [
+      "garden",
+      "garage"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0186",
+    "category": "gardening",
+    "difficulty": 7,
+    "goal_description": "Transplant overgrown lavender plants to a new sunny garden bed and mulch to prevent weeds and retain moisture",
+    "key_objects": [
+      "shovel",
+      "garden_twine",
+      "mulch",
+      "pruning_shears",
+      "wheelbarrow",
+      "garden_gloves",
+      "measuring_tape"
+    ],
+    "rooms": [
+      "garden"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0187",
+    "category": "furniture_assembly",
+    "difficulty": 7,
+    "goal_description": "Assemble a five-shelf bookcase using wooden panels, metal rails, and cam locks with a screwdriver and rubber mallet following illustrated instructions",
+    "key_objects": [
+      "wooden_panels",
+      "metal_rails",
+      "cam_locks",
+      "screwdriver",
+      "rubber_mallet",
+      "instruction_manual"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0188",
+    "category": "furniture_assembly",
+    "difficulty": 7,
+    "goal_description": "Build a double-drawer nightstand with pre-cut boards, drawer slides, and dowel pins using a hammer, drill, and wood glue as per assembly guide",
+    "key_objects": [
+      "pre-cut_boards",
+      "drawer_slides",
+      "dowel_pins",
+      "hammer",
+      "drill",
+      "wood_glue",
+      "assembly_guide"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0189",
+    "category": "cleaning",
+    "difficulty": 7,
+    "goal_description": "Clean and disinfect all surfaces in the bathroom, including sink, toilet, shower, and floor, using appropriate cleaning agents and tools",
+    "key_objects": [
+      "toilet_brush",
+      "sponge",
+      "disinfectant_spray",
+      "glass_cleaner",
+      "mop",
+      "rubber_gloves",
+      "bathroom_trash_bag"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0190",
+    "category": "cleaning",
+    "difficulty": 7,
+    "goal_description": "Vacuum and spot-clean the living room carpet, move furniture, treat stains, and deodorize with baking soda before final vacuum pass",
+    "key_objects": [
+      "vacuum_cleaner",
+      "baking_soda",
+      "carpet_stain_removal_solution",
+      "cleaning_cloth",
+      "spray_bottle",
+      "furniture_dolly",
+      "measuring_cup"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0191",
+    "category": "laundry",
+    "difficulty": 7,
+    "goal_description": "Wash, dry, and fold a load of mixed cotton clothing including shirts, pants, and towels using appropriate cycle settings and fabric softener",
+    "key_objects": [
+      "washing_machine",
+      "dryer",
+      "laundry_basket",
+      "detergent",
+      "fabric_softener",
+      "clothes_hanger",
+      "folding_table"
+    ],
+    "rooms": [
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0192",
+    "category": "laundry",
+    "difficulty": 7,
+    "goal_description": "Remove wrinkles from a set of dress clothes including a button-down shirt, dress pants, and a blouse using an iron and ironing board",
+    "key_objects": [
+      "iron",
+      "ironing_board",
+      "spray_bottle",
+      "starch",
+      "hangers",
+      "laundry_basket",
+      "garment_brush"
+    ],
+    "rooms": [
+      "laundry_room",
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0193",
+    "category": "meal_preparation",
+    "difficulty": 7,
+    "goal_description": "Prepare a vegetarian lasagna from scratch including making tomato sauce, boiling noodles, and assembling layers with ricotta and mozzarella",
+    "key_objects": [
+      "lasagna_noodles",
+      "tomato_sauce",
+      "ricotta_cheese",
+      "mozzarella",
+      "mixing_bowl",
+      "baking_dish",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0194",
+    "category": "meal_preparation",
+    "difficulty": 7,
+    "goal_description": "Cook a shrimp stir-fry with jasmine rice, including marinating shrimp, chopping vegetables, and preparing a soy-ginger sauce",
+    "key_objects": [
+      "shrimp",
+      "jasmine_rice",
+      "soy_sauce",
+      "ginger",
+      "stir_fry_pan",
+      "cutting_board",
+      "rice_cooker"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0195",
+    "category": "cooking_baking",
+    "difficulty": 7,
+    "goal_description": "Bake a classic apple pie from scratch, including preparing the pastry crust, slicing apples, assembling the filling, and baking until golden",
+    "key_objects": [
+      "apples",
+      "flour",
+      "butter",
+      "sugar",
+      "rolling_pin",
+      "pie_dish",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0196",
+    "category": "cooking_baking",
+    "difficulty": 7,
+    "goal_description": "Make homemade banana bread from overripe bananas, including mashing fruit, mixing batter, greasing the loaf pan, and cooling after baking",
+    "key_objects": [
+      "bananas",
+      "flour",
+      "baking_soda",
+      "eggs",
+      "loaf_pan",
+      "mixing_bowl",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0197",
+    "category": "organizing",
+    "difficulty": 7,
+    "goal_description": "Organize the home office desk and filing system by sorting documents, labeling folders, and arranging supplies for efficient access",
+    "key_objects": [
+      "file_folders",
+      "label_maker",
+      "desk_tray",
+      "stapler",
+      "paper_clips",
+      "wastebasket",
+      "filing_cabinet"
+    ],
+    "rooms": [
+      "home_office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0198",
+    "category": "organizing",
+    "difficulty": 7,
+    "goal_description": "Reorganize the linen closet by folding and stacking towels and sheets, grouping by size, and placing frequently used items at eye level",
+    "key_objects": [
+      "towels",
+      "bed_sheets",
+      "storage_baskets",
+      "label_stickers",
+      "linen_closet_shelves",
+      "measuring_tape",
+      "donation_bag"
+    ],
+    "rooms": [
+      "bathroom",
+      "hall_closet"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0199",
+    "category": "home_repair",
+    "difficulty": 7,
+    "goal_description": "Replace a cracked ceiling light fixture in the living room, including turning off power, removing the old fixture, wiring the new unit, and testing the connection",
+    "key_objects": [
+      "ladder",
+      "screwdriver",
+      "voltage_tester",
+      "wire_nuts",
+      "ceiling_light_fixture",
+      "electrical_tape",
+      "work_gloves"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0200",
+    "category": "home_repair",
+    "difficulty": 7,
+    "goal_description": "Fix a creaky wooden staircase by locating loose steps, securing with wood screws, and applying wood filler to damaged edges",
+    "key_objects": [
+      "drill",
+      "wood_screws",
+      "level",
+      "putty_knife",
+      "wood_filler",
+      "sandpaper",
+      "clamp"
+    ],
+    "rooms": [
+      "entryway",
+      "stairs"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0201",
+    "category": "pet_care",
+    "difficulty": 7,
+    "goal_description": "Bathe and medicate a cat with flea treatment, including pre-bath brushing, applying topical solution, and post-bath drying in a controlled bathroom environment",
+    "key_objects": [
+      "cat_shampoo",
+      "flea_treatment",
+      "towels",
+      "brush",
+      "non_slip_mat",
+      "treats",
+      "bath_tub"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0202",
+    "category": "pet_care",
+    "difficulty": 7,
+    "goal_description": "Clean and restock a rabbit's indoor enclosure including waste removal, litter replacement, toy sanitation, and fresh food and water setup",
+    "key_objects": [
+      "rabbit_litter",
+      "hay",
+      "food_bowl",
+      "water_bottle",
+      "toys",
+      "cleaning_spray",
+      "waste_bags"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0203",
+    "category": "personal_care",
+    "difficulty": 7,
+    "goal_description": "Perform a full hair care routine including shampooing, conditioning, deep treatment, and styling with heat protection",
+    "key_objects": [
+      "shampoo",
+      "conditioner",
+      "hair_mask",
+      "towel",
+      "wide-tooth_comb",
+      "heat_protectant_spray",
+      "hair_dryer"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0204",
+    "category": "cooking_baking",
+    "difficulty": 8,
+    "goal_description": "Prepare and bake homemade pizza from scratch, including making the dough, preparing sauce, adding toppings, and baking in the oven",
+    "key_objects": [
+      "flour",
+      "yeast",
+      "tomato_sauce",
+      "mozzarella",
+      "pepperoni",
+      "rolling_pin",
+      "pizza_stone",
+      "oven",
+      "mixing_bowl"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0205",
+    "category": "cooking_baking",
+    "difficulty": 8,
+    "goal_description": "Make a batch of cinnamon rolls from scratch, including dough preparation, filling rolling, cutting, proofing, baking, and icing application",
+    "key_objects": [
+      "flour",
+      "yeast",
+      "butter",
+      "cinnamon",
+      "sugar",
+      "mixing_bowl",
+      "baking_pan",
+      "oven",
+      "icing_drizzle_tool"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0206",
+    "category": "organizing",
+    "difficulty": 8,
+    "goal_description": "Sort and reorganize the kitchen pantry by food category, expiration date, and usage frequency, using clear containers and labels",
+    "key_objects": [
+      "clear_storage_containers",
+      "label_maker",
+      "expiration_date_tracker",
+      "pantry_shelves",
+      "food_groups_chart",
+      "trash_bags",
+      "measuring_cups",
+      "step_stool"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0207",
+    "category": "organizing",
+    "difficulty": 8,
+    "goal_description": "Reconfigure and declutter the bedroom closet by season, color, and clothing type, installing new dividers and updating hanger inventory",
+    "key_objects": [
+      "clothing_dividers",
+      "matching_hangers",
+      "storage_bins",
+      "donation_bags",
+      "color_code_chart",
+      "shelf_inserts",
+      "full_length_mirror",
+      "label_roll"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0208",
+    "category": "home_repair",
+    "difficulty": 8,
+    "goal_description": "Repair a leaking kitchen faucet by replacing worn washers and seals, including shutting off water supply and reassembling components",
+    "key_objects": [
+      "adjustable_wrench",
+      "plumber's_tape",
+      "replacement_washers",
+      "screwdriver",
+      "basin_wrench",
+      "bucket",
+      "plumber's_putty",
+      "faucet_handle_puller"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0209",
+    "category": "home_repair",
+    "difficulty": 8,
+    "goal_description": "Fix a sagging section of backyard wooden fence by replacing damaged posts, securing rails, and reinforcing panel alignment",
+    "key_objects": [
+      "post_hole_digger",
+      "concrete_mix",
+      "level",
+      "hammer",
+      "galvanized_nails",
+      "wooden_posts",
+      "fence_panels",
+      "circular_saw"
+    ],
+    "rooms": [
+      "outdoor",
+      "backyard"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0210",
+    "category": "pet_care",
+    "difficulty": 8,
+    "goal_description": "Give a large dog a full grooming session including brushing, bathing, nail trimming, and ear cleaning in the bathroom",
+    "key_objects": [
+      "dog_brush",
+      "shampoo",
+      "towels",
+      "nail_clippers",
+      "ear_cleaning_solution",
+      "cotton_balls",
+      "non_slip_bathtub_mat",
+      "treats"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0211",
+    "category": "pet_care",
+    "difficulty": 8,
+    "goal_description": "Set up and maintain a quarantine area for a sick cat including food, litter, medication administration, and daily cleaning",
+    "key_objects": [
+      "litter_box",
+      "scent_free_litter",
+      "feeding_bowl",
+      "medicated_food",
+      "pill_dispenser",
+      "disinfectant_wipes",
+      "recovery_bed",
+      "isolation_room_sign"
+    ],
+    "rooms": [
+      "spare_bedroom",
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0212",
+    "category": "personal_care",
+    "difficulty": 8,
+    "goal_description": "Perform a weekly skincare routine including double cleansing, exfoliation, toning, serum application, moisturizing, face masking, eye care, and SPF protection",
+    "key_objects": [
+      "cleanser",
+      "exfoliant",
+      "toner",
+      "serum",
+      "moisturizer",
+      "face_mask",
+      "eye_cream",
+      "sunscreen"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0213",
+    "category": "personal_care",
+    "difficulty": 8,
+    "goal_description": "Complete a full foot care session including soaking, exfoliating, trimming nails, filing calluses, cuticle treatment, moisturizing, sock application, and nail polish drying",
+    "key_objects": [
+      "foot_soak_basin",
+      "pumice_stone",
+      "nail_clippers",
+      "nail_file",
+      "cuticle_oil",
+      "foot_lotion",
+      "cotton_socks",
+      "nail_polish"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0214",
+    "category": "gardening",
+    "difficulty": 8,
+    "goal_description": "Prune and shape overgrown rose bushes, collect clippings, apply mulch, and fertilize for healthy regrowth",
+    "key_objects": [
+      "pruning_shears",
+      "gardening_gloves",
+      "wheelbarrow",
+      "mulch",
+      "fertilizer",
+      "rake",
+      "burlap_sack",
+      "watering_can"
+    ],
+    "rooms": [
+      "garden"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0215",
+    "category": "gardening",
+    "difficulty": 8,
+    "goal_description": "Harvest ripe tomatoes from the garden, sort by ripeness, store properly, and preserve surplus by making sun-dried tomatoes",
+    "key_objects": [
+      "harvest_basket",
+      "gardening_knife",
+      "cutting_board",
+      "dehydrator",
+      "glass_jars",
+      "olive_oil",
+      "salt",
+      "gloves"
+    ],
+    "rooms": [
+      "garden",
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0216",
+    "category": "furniture_assembly",
+    "difficulty": 8,
+    "goal_description": "Assemble a three-drawer dresser using particleboard panels, wooden dowels, and metal drawer slides with a screwdriver and rubber mallet following manufacturer instructions",
+    "key_objects": [
+      "particleboard_panels",
+      "wooden_dowels",
+      "metal_drawer_slides",
+      "screwdriver",
+      "rubber_mallet",
+      "drawer_knobs",
+      "assembly_instructions",
+      "cam_locks"
+    ],
+    "rooms": [
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0217",
+    "category": "furniture_assembly",
+    "difficulty": 8,
+    "goal_description": "Build a corner L-shaped desk from a flat-pack kit including attaching legs, securing table sections, and installing cable management clips using an Allen wrench and level",
+    "key_objects": [
+      "flat_pack_desk_kit",
+      "tabletop_sections",
+      "desk_legs",
+      "Allen_wrench",
+      "level",
+      "cable_management_clips",
+      "bolts_and_washers",
+      "instruction_manual"
+    ],
+    "rooms": [
+      "home_office"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0218",
+    "category": "cleaning",
+    "difficulty": 8,
+    "goal_description": "Clean and deodorize the kitchen garbage disposal and sink drain using natural agents, including ice, vinegar, and baking soda, followed by thorough rinsing and disposal grinding",
+    "key_objects": [
+      "ice_cubes",
+      "baking_soda",
+      "white_vinegar",
+      "lemon_slices",
+      "plunger",
+      "toilet_brush",
+      "rubber_gloves",
+      "sink_strainer"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0219",
+    "category": "cleaning",
+    "difficulty": 8,
+    "goal_description": "Deep-clean all interior surfaces of the refrigerator, including removing shelves, scrubbing drawers, wiping down walls, and organizing perishables with expired item disposal",
+    "key_objects": [
+      "sponge",
+      "microfiber_cloth",
+      "baking_soda",
+      "mild_dish_soap",
+      "vacuum_seal_bags",
+      "refrigerator_shelves",
+      "trash_bin",
+      "cooler"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0220",
+    "category": "laundry",
+    "difficulty": 8,
+    "goal_description": "Wash and dry a load of delicate clothing including silk blouses and wool sweaters using a mesh laundry bag and air-dry setting",
+    "key_objects": [
+      "delicate_clothing",
+      "mesh_laundry_bag",
+      "mild_detergent",
+      "washing_machine",
+      "dryer",
+      "air_dry_setting",
+      "drying_rack",
+      "clothes_pins"
+    ],
+    "rooms": [
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0221",
+    "category": "laundry",
+    "difficulty": 8,
+    "goal_description": "Remove stubborn wine stain from white cotton sheets, pre-treat, wash in hot water with color-safe bleach, and sun-dry for full stain removal",
+    "key_objects": [
+      "stained_sheets",
+      "laundry_pre_treater",
+      "color_safe_bleach",
+      "washing_machine",
+      "hot_water",
+      "stain_brush",
+      "drying_rack",
+      "sunlight_area"
+    ],
+    "rooms": [
+      "laundry_room",
+      "bedroom"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0222",
+    "category": "meal_preparation",
+    "difficulty": 8,
+    "goal_description": "Prepare a homemade chicken parmesan dinner with spaghetti, including breading the chicken, making marinara sauce from canned tomatoes, and baking with cheese",
+    "key_objects": [
+      "chicken_breasts",
+      "spaghetti",
+      "canned_tomatoes",
+      "breadcrumbs",
+      "parmesan_cheese",
+      "mozzarella_cheese",
+      "pasta_pot",
+      "saucepan",
+      "baking_dish"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0223",
+    "category": "meal_preparation",
+    "difficulty": 8,
+    "goal_description": "Make a complete taco night from scratch including cooking seasoned ground beef, preparing fresh toppings, and warming tortillas",
+    "key_objects": [
+      "ground_beef",
+      "taco_seasoning",
+      "corn_tortillas",
+      "lettuce",
+      "tomatoes",
+      "cheddar_cheese",
+      "sour_cream",
+      "skillet",
+      "mixing_bowl"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0224",
+    "category": "cooking_baking",
+    "difficulty": 8,
+    "goal_description": "Bake a lemon meringue pie from scratch, including making the crust, preparing the lemon curd filling, baking, and topping with torched meringue",
+    "key_objects": [
+      "flour",
+      "butter",
+      "sugar",
+      "eggs",
+      "lemons",
+      "pie_dish",
+      "mixing_bowl",
+      "hand_mixer",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0225",
+    "category": "cooking_baking",
+    "difficulty": 8,
+    "goal_description": "Prepare and bake homemade lasagna from scratch, including making pasta sheets, cooking meat sauce, assembling layers with ricotta and mozzarella, and baking to golden perfection",
+    "key_objects": [
+      "flour",
+      "eggs",
+      "ground_beef",
+      "tomato_sauce",
+      "ricotta_cheese",
+      "mozzarella",
+      "pasta_rolling_pin",
+      "baking_dish",
+      "oven"
+    ],
+    "rooms": [
+      "kitchen"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0226",
+    "category": "organizing",
+    "difficulty": 8,
+    "goal_description": "Organize and digitize a collection of physical photo albums and loose prints by sorting, scanning, labeling, and storing in archival boxes",
+    "key_objects": [
+      "photo_scanner",
+      "archival_photo_boxes",
+      "label_maker",
+      "sorting_trays",
+      "digital_storage_drive",
+      "photo_catalog_spreadsheet",
+      "cleaning_cloth",
+      "date_sticker_roll"
+    ],
+    "rooms": [
+      "home_office",
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0227",
+    "category": "organizing",
+    "difficulty": 8,
+    "goal_description": "Reorganize and optimize the home medicine cabinet and bathroom storage by purging expired items, grouping by category, and installing stackable bins",
+    "key_objects": [
+      "medicine_cabinet",
+      "stackable_storage_bins",
+      "disposal_bag",
+      "label_maker",
+      "tweezers",
+      "first_aid_kit",
+      "inventory_list",
+      "trash_can"
+    ],
+    "rooms": [
+      "bathroom",
+      "laundry_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0228",
+    "category": "home_repair",
+    "difficulty": 8,
+    "goal_description": "Replace a cracked ceiling light fixture in the living room, including installing a new flush-mount fixture and restoring power safely",
+    "key_objects": [
+      "ladder",
+      "screwdriver",
+      "voltage_tester",
+      "wire_nuts",
+      "electrical_tape",
+      "new_light_fixture",
+      "circuit_breaker_key",
+      "work_gloves"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0229",
+    "category": "home_repair",
+    "difficulty": 8,
+    "goal_description": "Repair a warped section of laminate flooring in the hallway by removing damaged planks and installing new ones with proper alignment and expansion gap",
+    "key_objects": [
+      "pull_bar",
+      "lapping_block",
+      "utility_knife",
+      "tape_measure",
+      "spacer_blocks",
+      "replacement_laminate_planks",
+      "hammer",
+      "saw"
+    ],
+    "rooms": [
+      "hallway"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0230",
+    "category": "pet_care",
+    "difficulty": 8,
+    "goal_description": "Give a long-haired cat a full grooming session including detangling, brushing, cleaning eyes, trimming nails, wiping ears, administering flea treatment, cleaning litter box, and providing post-grooming comfort",
+    "key_objects": [
+      "slicker_brush",
+      "detangling_spray",
+      "cat_claw_clippers",
+      "ear_cleaning_wipes",
+      "flea_treatment_pipette",
+      "litter_scoop",
+      "treats",
+      "calming_spray"
+    ],
+    "rooms": [
+      "bathroom",
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0231",
+    "category": "pet_care",
+    "difficulty": 8,
+    "goal_description": "Prepare and maintain a clean aquarium for tropical fish including water testing, partial water change, algae scrubbing, filter cleaning, gravel vacuuming, equipment check, water conditioning, and fish feeding",
+    "key_objects": [
+      "aquarium_gravel_vacuum",
+      "water_test_kit",
+      "algae_scrubber",
+      "replacement_filter_media",
+      "water_conditioner",
+      "bucket",
+      "submersible_pump",
+      "fish_food"
+    ],
+    "rooms": [
+      "living_room"
+    ]
+  },
+  {
+    "skeleton_id": "skel_0232",
+    "category": "personal_care",
+    "difficulty": 8,
+    "goal_description": "Perform a comprehensive facial care routine including steam treatment, deep pore cleansing, blackhead extraction, clay mask application, facial massage with serum, eye patch treatment, moisturizing, and sun protection",
+    "key_objects": [
+      "facial_steaming_bowl",
+      "towel",
+      "cleanser",
+      "pore_extraction_tool",
+      "clay_mask",
+      "facial_serum",
+      "eye_patches",
+      "moisturizer",
+      "sunscreen"
+    ],
+    "rooms": [
+      "bathroom"
+    ]
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "episode_id": 0,
+    "task_id": "task_0015",
+    "category": "furniture_assembly",
+    "summary": "The task is a level-1 furniture assembly requiring a child to assemble a wooden bookshelf using screws and tools. The child initially struggled with tool selection, incorrectly considering the hammer for driving screws and overcomplicating how to open the toolbox and kit box. The caregiver clarified that screws require a screwdriver, not a hammer, and guided the child to first open the kit box by hand (using the screwdriver only if needed), then retrieve the screwdriver from the toolbox to assemble the shelf; the child successfully began the task by opening the box.",
+    "reward": 1.0,
+    "salience": 0.6807876173288094
+  },
+  {
+    "episode_id": 1,
+    "task_id": "task_0010",
+    "category": "cleaning",
+    "summary": "The child successfully completed the cleaning task by sweeping the living room floor using a broom and dustpan. Initially, the child was unsure whether to move the rug or how to handle debris near furniture, but with caregiver guidance, learned to sweep crumbs into a pile and use the dustpan to collect them. The caregiver reinforced proper tool use and technique, resulting in a clean floor and successful task completion.",
+    "reward": 1.0,
+    "salience": 0.447917709851263
+  },
+  {
+    "episode_id": 2,
+    "task_id": "task_0021",
+    "category": "cooking_baking",
+    "summary": "The child successfully completed the level-1 cooking task of cracking two eggs into a mixing bowl by retrieving the bowl from the cabinet and the eggs from the fridge, initially unsure about the cracking technique. The caregiver guided the child to tap the egg on the bowl's edge and split the shell with thumbs, reinforcing proper tool use and hand coordination. The task was completed successfully, with both eggs cracked into the bowl without breaking the yolks.",
+    "reward": 1.0,
+    "salience": 0.6736815875705459
+  },
+  {
+    "episode_id": 3,
+    "task_id": "task_0020",
+    "category": "home_repair",
+    "summary": "The child successfully retrieved the screwdriver from the toolbox under the sink after initially being unsure how to access it, with the caregiver guiding them to open the cabinet by turning the knob and pulling the door. The child struggled with understanding how to access tools in enclosed spaces, but learned that cabinets can be opened by hand without additional tools. The caregiver reinforced step-by-step problem-solving and proper tool retrieval, and the task is progressing toward tightening the loose hinge screw, with the first step completed successfully.",
+    "reward": 1.0,
+    "salience": 0.6640598534854756
+  },
+  {
+    "episode_id": 4,
+    "task_id": "task_0014",
+    "category": "organizing",
+    "summary": "The child successfully completed the level-1 organizing task of placing keys in the entryway bowl by retrieving the keys from the pocket of a jacket hanging in the entryway and transferring them to the bowl on the table. Initially, the child was uncertain about how to access the keys and whether the jacket needed to be moved, but with caregiver encouragement, understood to take the jacket down, open the pocket, and use the bowl as intended. The task was completed successfully, reinforcing object location awareness and sequential action planning.",
+    "reward": 1.0,
+    "salience": 0.4519934451939923
+  },
+  {
+    "episode_id": 5,
+    "task_id": "task_0001",
+    "category": "pet_care",
+    "summary": "The child needed to clean and refill a guinea pig's food dish in the playroom but was initially unsure how to begin, particularly about accessing the dish from the cage and using the sink. The caregiver guided the child to first retrieve the dish from the cage, then demonstrated turning on the sink, wetting the sponge, applying dish soap, scrubbing the dish, rinsing it, and refilling it with pellets from the sealed container. The child successfully completed the task with support, learning each step of the cleaning and refilling process.",
+    "reward": 1.0,
+    "salience": 0.6641873410466401
+  },
+  {
+    "episode_id": 6,
+    "task_id": "task_0013",
+    "category": "gardening",
+    "summary": "This gardening task required trimming overgrown rose bushes using pruning shears, with the child initially unsure about the correct sequence and tool use, particularly whether gloves were necessary and how to open the shears. The caregiver guided the child to first put on gloves for safety, then retrieve and open the pruning shears correctly by squeezing the handles, emphasizing step-by-step tool handling. The child successfully completed the task by trimming the overgrown branches with support.",
+    "reward": 1.0,
+    "salience": 0.45898338325764587
+  },
+  {
+    "episode_id": 8,
+    "task_id": "task_0004",
+    "category": "laundry",
+    "summary": "The child is learning to transfer damp socks from the washing machine to the dryer, a level-1 laundry task. Initially unsure about how to open the machine and handle the damp socks, the child was guided by the caregiver to pull the washing machine handle down to open it and then retrieve the socks. Following the caregiver's encouragement and instructions, the child successfully opened the machine and began transferring the socks, demonstrating understanding of the sequence and object use.",
+    "reward": 1.0,
+    "salience": 0.4516192603308379
+  },
+  {
+    "episode_id": 18,
+    "task_id": "task_0028",
+    "category": "cleaning",
+    "summary": "The child successfully completed the cleaning task by retrieving the glass cleaner from the medicine cabinet and using the microfiber cloth to clean the smudged mirror, working from top to bottom to avoid streaks. Initially, the child was uncertain about whether to spray the cleaner on the mirror or cloth and how to safely reach the mirror, but with caregiver encouragement, proceeded correctly using the tools as intended. The caregiver praised the child's technique and responsibility, confirming the task was completed successfully.",
+    "reward": 1.0,
+    "salience": 0.3737000799578324
+  },
+  {
+    "episode_id": 24,
+    "task_id": "task_0043",
+    "category": "meal_preparation",
+    "summary": "The child struggled with shifting focus from the toasting steps to the spreading task, initially overcomplicating the sequence. The caregiver guided the child to locate the peanut butter jar in the pantry, retrieve the knife from the drawer, and spread the peanut butter on each toasted slice. The task was completed successfully with support, reinforcing task persistence and tool use.",
+    "reward": 1.0,
+    "salience": 0.4703470116054579
+  },
+  {
+    "episode_id": 25,
+    "task_id": "task_0032",
+    "category": "cooking_baking",
+    "summary": "The task is a level-2 cooking activity requiring the child to melt butter and make a roux by first preparing the stove and saucepan. The child initially struggled with sequencing, focusing on the butter before ensuring the stove was on and the saucepan was in place. The caregiver guided the child to recognize that the stove must be turned on and the saucepan placed on it to begin heating before the butter is added, emphasizing proper setup for successful melting. The task succeeded as the child adjusted the sequence and prepared the equipment correctly.",
+    "reward": 1.0,
+    "salience": 0.3833194456317617
+  },
+  {
+    "episode_id": 31,
+    "task_id": "task_0024",
+    "category": "pet_care",
+    "summary": "The child needs to clean the hamster's cage by replacing soiled bedding with fresh bedding from the garage. They initially struggled with task sequencing, particularly identifying the first physical action needed to access supplies. The caregiver guided them to recall past experiences with storage bins and emphasized starting with retrieving gloves from the drawer, then proceeding to the garage to open the sealed bin and scoop fresh bedding. The task succeeded as the child applied prior knowledge to complete each step correctly.",
+    "reward": 1.0,
+    "salience": 0.3771809088210015
+  },
+  {
+    "episode_id": 36,
+    "task_id": "task_0041",
+    "category": "personal_care",
+    "summary": "The task is a personal care activity requiring the child to comb slightly tangled hair using a hair comb at a bedroom vanity mirror. Initially, the child overcomplicated the task by considering unnecessary steps like adjusting the lamp or mirror, but the caregiver guided them to focus on the simple first step of picking up the comb. With encouragement, the child correctly retrieved the comb, used the mirror to guide the process, and began combing from the ends to avoid tugging, successfully completing the task.",
+    "reward": 1.0,
+    "salience": 0.4596533120153618
+  }
+]

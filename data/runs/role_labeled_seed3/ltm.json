@@ -1,0 +1,82 @@
+[
+  {
+    "episode_id": 0,
+    "task_id": "task_0013",
+    "category": "gardening",
+    "summary": "The task is to trim overgrown rose bushes near the front porch using pruning shears, categorized as a gardening activity. The child initially hesitated about the correct sequence of actions, particularly whether to wear gloves and how to handle the closed pruning shears. The caregiver confirmed the importance of wearing gloves for protection, clarified that the shears should be opened after retrieval, and guided the child to focus solely on trimming without watering. The task succeeded as the child followed the instructions to safely trim the bushes.",
+    "reward": 1.0,
+    "salience": 0.4407876173288095
+  },
+  {
+    "episode_id": 1,
+    "task_id": "task_0004",
+    "category": "laundry",
+    "summary": "The task is to transfer damp socks from the washing machine to the clothes dryer, categorized as a laundry activity. The child initially overthought the process and hesitated on the first physical action, needing prompting to begin opening the washing machine. The caregiver guided the child to start by opening the machine and retrieving the socks, then encouraged them to carry the socks to the dryer and open its door. The task succeeded as the child followed the instructions, retrieved the socks, and proceeded to the dryer.",
+    "reward": 1.0,
+    "salience": 0.42468610134553175
+  },
+  {
+    "episode_id": 2,
+    "task_id": "task_0011",
+    "category": "cooking_baking",
+    "summary": "The task was to measure 1 cup of granulated sugar using a measuring cup for cookie dough, categorized as a cooking/baking activity. The child initially struggled with the correct method to transfer and level the sugar, unsure whether to pour or scoop and how to achieve an accurate measurement. The caregiver guided the child to use the spoon for scooping and the knife or spoon for leveling, emphasizing filling to the 1-cup line and flattening the excess. The task succeeded as the child followed the instructions and accurately measured the sugar.",
+    "reward": 1.0,
+    "salience": 0.4332317931217266
+  },
+  {
+    "episode_id": 3,
+    "task_id": "task_0020",
+    "category": "home_repair",
+    "summary": "The task is a home repair activity requiring tightening a loose screw on a bathroom cabinet door hinge using a screwdriver. The child initially hesitated on locating the tool and identifying the loose screw but was guided to retrieve the screwdriver from under the sink and use it to tighten the wobbling hinge screw by turning clockwise. The caregiver emphasized careful, steady turning and checking the door\u2019s movement afterward, leading to successful completion when the door operated smoothly.",
+    "reward": 1.0,
+    "salience": 0.42424804130318805
+  },
+  {
+    "episode_id": 6,
+    "task_id": "task_0003",
+    "category": "organizing",
+    "summary": "The task is an organizing activity where the child must slide a stack of mail into a designated sorting tray on the hallway desk. The child initially hesitated on how to move the mail, unsure whether to pick it up or slide it, but the caregiver clarified that the stack should be gently pushed into the tray using both hands, similar to sliding a tray. The task succeeded as the child followed the guidance and correctly slid the mail into the sorting tray.",
+    "reward": 1.0,
+    "salience": 0.42644749845380797
+  },
+  {
+    "episode_id": 7,
+    "task_id": "task_0018",
+    "category": "pet_care",
+    "summary": "The task is a pet care activity requiring the child to fill a dog's food bowl with dry kibble from the pantry. The child initially struggled with how to access the kibble, particularly unsure about opening the pantry and the sealed bag, and whether tools were needed. The caregiver guided the child to open the pantry by hand, locate the blue kibble bag, unzip it (offering help if needed), and use the cup to scoop and pour the kibble into the bowl. The task succeeded as the child followed the steps and completed the feeding process.",
+    "reward": 1.0,
+    "salience": 0.42483987920608235
+  },
+  {
+    "episode_id": 11,
+    "task_id": "task_0015",
+    "category": "furniture_assembly",
+    "summary": "This furniture assembly task involved building a wooden bookshelf using screws and a screwdriver, not a hammer. The child initially struggled with overcomplicating the process, mistakenly thinking tools were needed to open the toolbox and bookshelf box. The caregiver clarified that the toolbox opens with a latch and the cardboard box can be opened by hand, while emphasizing using the screwdriver for screws and pre-drilled holes. The task succeeded as the child correctly retrieved the tools, accessed the kit, and began assembling with guidance.",
+    "reward": 1.0,
+    "salience": 0.41886641642466554
+  },
+  {
+    "episode_id": 14,
+    "task_id": "task_0010",
+    "category": "cleaning",
+    "summary": "The child successfully completed the cleaning task of sweeping the living room floor using the broom and dustpan. Initially, they were unsure about the sequence of steps and how to properly use the tools together, particularly whether to move the dustpan or sweep toward it. The caregiver affirmed their correct approach, emphasizing tilting the dustpan upright to catch debris and emptying it into the trash, which the child followed to complete the task.",
+    "reward": 1.0,
+    "salience": 0.4149120839932961
+  },
+  {
+    "episode_id": 17,
+    "task_id": "task_0041",
+    "category": "personal_care",
+    "summary": "The child successfully completed the personal care task of combing their hair using a hair comb at the bedroom vanity mirror. Initially, they hesitated on the first step and overthought tool use, similar to past experiences with assembly and repair tasks, but the caregiver guided them to correctly pick up the comb and begin. With encouragement, the child started combing from the ends to gently detangle their hair, following best practices, and the task succeeded as they performed the steps independently with proper technique.",
+    "reward": 1.0,
+    "salience": 0.4204479046340362
+  },
+  {
+    "episode_id": 20,
+    "task_id": "task_0033",
+    "category": "meal_preparation",
+    "summary": "The child struggled with initiating the task and understanding how to measure and transfer water to boil, particularly unsure about using the cup to fill the kettle and the sequence of steps. The caregiver guided them to retrieve the mug and noodles first, then use the cup to measure two cups of water into the kettle, emphasizing step-by-step actions and tool use. The task succeeded as the child followed the instructions to prepare the ramen with boiled water.",
+    "reward": 1.0,
+    "salience": 0.42814159349700015
+  }
+]

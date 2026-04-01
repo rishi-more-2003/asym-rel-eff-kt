@@ -1,0 +1,902 @@
+{
+  "kitchen": {
+    "knife": [
+      "cut",
+      "chop",
+      "slice",
+      "spread"
+    ],
+    "stove": [
+      "heat",
+      "boil",
+      "simmer",
+      "fry"
+    ],
+    "refrigerator": [
+      "open",
+      "close",
+      "store_in",
+      "retrieve_from"
+    ],
+    "microwave": [
+      "heat",
+      "defrost",
+      "cook"
+    ],
+    "sink": [
+      "wash",
+      "rinse",
+      "fill"
+    ],
+    "cutting_board": [
+      "place_on",
+      "support",
+      "chop_on"
+    ],
+    "spoon": [
+      "stir",
+      "scoop",
+      "eat_with"
+    ],
+    "fork": [
+      "poke",
+      "lift_food",
+      "eat_with"
+    ],
+    "plate": [
+      "serve_on",
+      "place_food_on",
+      "stack"
+    ],
+    "cup": [
+      "drink_from",
+      "fill",
+      "wash"
+    ],
+    "kettle": [
+      "boil_water",
+      "heat",
+      "pour"
+    ],
+    "toaster": [
+      "toast",
+      "heat"
+    ],
+    "dishwasher": [
+      "load",
+      "unload",
+      "clean_dishes"
+    ],
+    "sponge": [
+      "scrub",
+      "wipe",
+      "clean"
+    ],
+    "dish_soap": [
+      "squeeze",
+      "lather",
+      "clean_with"
+    ],
+    "pan": [
+      "fry",
+      "cook",
+      "heat",
+      "place_on_stove"
+    ],
+    "pot": [
+      "boil",
+      "simmer",
+      "cook",
+      "place_on_stove"
+    ],
+    "oven": [
+      "bake",
+      "roast",
+      "heat",
+      "preheat"
+    ],
+    "fridge_magnet": [
+      "attach_to",
+      "hold_paper"
+    ],
+    "cabinet": [
+      "open",
+      "close",
+      "store_in",
+      "retrieve_from"
+    ],
+    "drawer": [
+      "open",
+      "close",
+      "store_in",
+      "retrieve_from"
+    ],
+    "blender": [
+      "blend",
+      "mix",
+      "puree"
+    ],
+    "coffee_maker": [
+      "brew",
+      "heat",
+      "pour"
+    ],
+    "trash_can": [
+      "throw_in",
+      "open_lid",
+      "take_out"
+    ],
+    "faucet": [
+      "turn_on",
+      "turn_off",
+      "adjust_temperature"
+    ]
+  },
+  "bathroom": {
+    "toothbrush": [
+      "brush_teeth",
+      "scrub"
+    ],
+    "toothpaste": [
+      "squeeze",
+      "apply",
+      "dispense"
+    ],
+    "sink": [
+      "wash_hands",
+      "rinse",
+      "fill"
+    ],
+    "faucet": [
+      "turn_on",
+      "turn_off",
+      "adjust_temperature"
+    ],
+    "mirror": [
+      "look_at",
+      "wipe",
+      "reflect"
+    ],
+    "shower": [
+      "shower",
+      "rinse",
+      "turn_on",
+      "turn_off"
+    ],
+    "shower_head": [
+      "spray",
+      "adjust_flow"
+    ],
+    "bathtub": [
+      "bathe",
+      "soak",
+      "fill",
+      "drain"
+    ],
+    "toilet": [
+      "flush",
+      "sit_on",
+      "clean"
+    ],
+    "toilet_paper": [
+      "unroll",
+      "wipe",
+      "tear"
+    ],
+    "towel": [
+      "dry_with",
+      "hang",
+      "wrap"
+    ],
+    "bath_mat": [
+      "stand_on",
+      "wipe_feet",
+      "place_on_floor"
+    ],
+    "shampoo": [
+      "lather",
+      "rinse",
+      "apply"
+    ],
+    "soap": [
+      "lather",
+      "scrub",
+      "rinse"
+    ],
+    "razor": [
+      "shave",
+      "clean"
+    ],
+    "hairbrush": [
+      "brush_hair",
+      "detangle"
+    ],
+    "comb": [
+      "comb_hair",
+      "detangle"
+    ],
+    "cabinet": [
+      "open",
+      "close",
+      "store_in",
+      "retrieve_from"
+    ],
+    "medicine_cabinet": [
+      "open",
+      "close",
+      "store_medicines",
+      "retrieve_medicines"
+    ],
+    "cotton_balls": [
+      "apply_lotion",
+      "wipe",
+      "dispose"
+    ],
+    "nail_clippers": [
+      "clip_nails",
+      "trim"
+    ],
+    "scale": [
+      "weigh",
+      "step_on",
+      "read"
+    ],
+    "tissue_box": [
+      "pull_out",
+      "wipe",
+      "dispose"
+    ],
+    "exhaust_fan": [
+      "turn_on",
+      "turn_off",
+      "ventilate"
+    ],
+    "shower_curtain": [
+      "open",
+      "close",
+      "pull"
+    ]
+  },
+  "bedroom": {
+    "bed": [
+      "sleep_on",
+      "sit_on",
+      "lie_down"
+    ],
+    "pillow": [
+      "rest_head_on",
+      "fluff",
+      "hug"
+    ],
+    "blanket": [
+      "cover_with",
+      "wrap_in",
+      "fold"
+    ],
+    "sheets": [
+      "sleep_under",
+      "change",
+      "fold"
+    ],
+    "mattress": [
+      "lie_on",
+      "support"
+    ],
+    "nightstand": [
+      "place_on",
+      "open_drawer",
+      "store_items"
+    ],
+    "lamp": [
+      "turn_on",
+      "turn_off",
+      "read_under"
+    ],
+    "dresser": [
+      "open",
+      "close",
+      "store_clothes",
+      "retrieve_clothes"
+    ],
+    "drawer": [
+      "open",
+      "close",
+      "store_in",
+      "retrieve_from"
+    ],
+    "wardrobe": [
+      "hang_clothes",
+      "store_in",
+      "close",
+      "open"
+    ],
+    "hanger": [
+      "hang_on",
+      "support_clothes"
+    ],
+    "mirror": [
+      "look_at",
+      "check_appearance",
+      "wipe"
+    ],
+    "alarm_clock": [
+      "set",
+      "turn_off",
+      "check_time"
+    ],
+    "clothes": [
+      "wear",
+      "fold",
+      "hang",
+      "remove"
+    ],
+    "shoes": [
+      "wear",
+      "tie",
+      "remove",
+      "place_on_floor"
+    ],
+    "socks": [
+      "wear",
+      "fold",
+      "remove"
+    ],
+    "jacket": [
+      "wear",
+      "hang",
+      "remove"
+    ],
+    "books": [
+      "read",
+      "place_on_shelf",
+      "carry"
+    ],
+    "bookshelf": [
+      "store_books",
+      "place_on",
+      "organize"
+    ],
+    "rug": [
+      "stand_on",
+      "walk_on",
+      "place_under_furniture"
+    ],
+    "window": [
+      "open",
+      "close",
+      "look_through"
+    ],
+    "curtains": [
+      "open",
+      "close",
+      "draw"
+    ],
+    "fan": [
+      "turn_on",
+      "turn_off",
+      "adjust_speed"
+    ],
+    "charger": [
+      "plug_in",
+      "charge_phone",
+      "unplug"
+    ],
+    "phone": [
+      "call",
+      "text",
+      "charge",
+      "use"
+    ]
+  },
+  "living_room": {
+    "sofa": [
+      "sit_on",
+      "lie_on",
+      "relax_on"
+    ],
+    "coffee_table": [
+      "place_items_on",
+      "set_down",
+      "clean"
+    ],
+    "television": [
+      "watch",
+      "turn_on",
+      "turn_off",
+      "adjust_volume"
+    ],
+    "remote_control": [
+      "press_buttons",
+      "change_channel",
+      "adjust_volume"
+    ],
+    "lamp": [
+      "turn_on",
+      "turn_off",
+      "read_under"
+    ],
+    "rug": [
+      "walk_on",
+      "place_under_furniture",
+      "sit_on"
+    ],
+    "bookshelf": [
+      "store_books",
+      "organize",
+      "place_on"
+    ],
+    "books": [
+      "read",
+      "carry",
+      "place_on_shelf"
+    ],
+    "plants": [
+      "water",
+      "trim",
+      "dust"
+    ],
+    "window": [
+      "open",
+      "close",
+      "look_through"
+    ],
+    "curtains": [
+      "open",
+      "close",
+      "draw"
+    ],
+    "speaker": [
+      "play_music",
+      "turn_on",
+      "turn_off",
+      "adjust_volume"
+    ],
+    "game_console": [
+      "play",
+      "turn_on",
+      "connect_controller"
+    ],
+    "controller": [
+      "press_buttons",
+      "play_with",
+      "charge"
+    ],
+    "fireplace": [
+      "light",
+      "warm_hands_near",
+      "turn_off"
+    ],
+    "clock": [
+      "check_time",
+      "set",
+      "hang"
+    ],
+    "decorative_pillow": [
+      "sit_on",
+      "hug",
+      "arrange"
+    ],
+    "trash_can": [
+      "throw_in",
+      "open_lid",
+      "take_out"
+    ],
+    "side_table": [
+      "place_items_on",
+      "set_down"
+    ],
+    "fan": [
+      "turn_on",
+      "turn_off",
+      "adjust_speed"
+    ],
+    "charger": [
+      "plug_in",
+      "charge_device",
+      "unplug"
+    ],
+    "tablet": [
+      "use",
+      "charge",
+      "read_on",
+      "watch_video"
+    ],
+    "photo_frame": [
+      "hang",
+      "clean",
+      "look_at"
+    ],
+    "coasters": [
+      "place_under_cup",
+      "protect_surface"
+    ],
+    "magazines": [
+      "read",
+      "flip_through",
+      "place_on_table"
+    ]
+  },
+  "laundry_room": {
+    "washing_machine": [
+      "load",
+      "start",
+      "unload",
+      "clean"
+    ],
+    "dryer": [
+      "load",
+      "start",
+      "unload",
+      "dry_clothes"
+    ],
+    "laundry_basket": [
+      "carry_clothes",
+      "place_in",
+      "empty"
+    ],
+    "detergent": [
+      "pour",
+      "measure",
+      "add_to_washer"
+    ],
+    "fabric_softener": [
+      "pour",
+      "add_to_rinse_cycle"
+    ],
+    "bleach": [
+      "pour",
+      "add_to_wash",
+      "disinfect"
+    ],
+    "clothes_hamper": [
+      "throw_in",
+      "carry",
+      "empty"
+    ],
+    "iron": [
+      "iron",
+      "heat",
+      "press"
+    ],
+    "ironing_board": [
+      "set_up",
+      "fold",
+      "place_clothes_on"
+    ],
+    "hanger": [
+      "hang_clothes",
+      "support"
+    ],
+    "stain_removal_pen": [
+      "apply",
+      "rub",
+      "remove_stain"
+    ],
+    "laundry_bags": [
+      "carry",
+      "store_dirty_clothes",
+      "wash"
+    ],
+    "drying_rack": [
+      "hang_clothes_on",
+      "dry",
+      "fold"
+    ],
+    "measuring_cup": [
+      "measure",
+      "pour",
+      "rinse"
+    ],
+    "gloves": [
+      "wear",
+      "protect_hands",
+      "remove"
+    ],
+    "sink": [
+      "pre_treat",
+      "rinse",
+      "soak"
+    ],
+    "folding_table": [
+      "fold_clothes_on",
+      "place_items_on"
+    ],
+    "baskets": [
+      "sort_laundry",
+      "carry",
+      "store"
+    ],
+    "timer": [
+      "set",
+      "start",
+      "stop"
+    ],
+    "vent": [
+      "clean",
+      "inspect",
+      "ventilate"
+    ],
+    "light_switch": [
+      "turn_on",
+      "turn_off"
+    ],
+    "mop": [
+      "clean_floor",
+      "wring",
+      "hang"
+    ],
+    "bucket": [
+      "carry_water",
+      "mix_cleaner",
+      "rinse_mop"
+    ],
+    "dustpan": [
+      "sweep_into",
+      "dispose_debris",
+      "clean"
+    ],
+    "broom": [
+      "sweep",
+      "clean_floor",
+      "store"
+    ]
+  },
+  "garden": {
+    "shovel": [
+      "dig",
+      "scoop",
+      "plant"
+    ],
+    "rake": [
+      "rake",
+      "gather_leaves",
+      "level_soil"
+    ],
+    "gloves": [
+      "wear",
+      "protect_hands",
+      "remove"
+    ],
+    "watering_can": [
+      "water",
+      "carry_water",
+      "pour"
+    ],
+    "hose": [
+      "water",
+      "spray",
+      "coil"
+    ],
+    "plants": [
+      "water",
+      "prune",
+      "inspect"
+    ],
+    "flowers": [
+      "plant",
+      "cut",
+      "arrange"
+    ],
+    "lawn_mower": [
+      "mow",
+      "start",
+      "adjust_height"
+    ],
+    "wheelbarrow": [
+      "carry",
+      "load",
+      "unload"
+    ],
+    "compost_bin": [
+      "add_waste",
+      "mix",
+      "empty"
+    ],
+    "garden_hose_nozzle": [
+      "spray",
+      "adjust_flow",
+      "attach"
+    ],
+    "pruning_shears": [
+      "cut",
+      "trim",
+      "prune"
+    ],
+    "seeds": [
+      "plant",
+      "sow",
+      "store"
+    ],
+    "fertilizer": [
+      "spread",
+      "apply",
+      "measure"
+    ],
+    "pot": [
+      "plant_in",
+      "place_on_surface",
+      "water"
+    ],
+    "trowel": [
+      "dig",
+      "plant",
+      "scoop"
+    ],
+    "garden_bed": [
+      "plant_in",
+      "weed",
+      "water"
+    ],
+    "weed_puller": [
+      "pull_weeds",
+      "remove",
+      "use"
+    ],
+    "mulch": [
+      "spread",
+      "apply",
+      "cover_soil"
+    ],
+    "garden_light": [
+      "turn_on",
+      "turn_off",
+      "install"
+    ],
+    "fence": [
+      "lean_on",
+      "attach_to",
+      "maintain"
+    ],
+    "bird_bath": [
+      "fill",
+      "clean",
+      "place_in_garden"
+    ],
+    "patio_table": [
+      "place_items_on",
+      "sit_at"
+    ],
+    "patio_chair": [
+      "sit_on",
+      "move",
+      "clean"
+    ],
+    "umbrella": [
+      "open",
+      "close",
+      "shade_under"
+    ],
+    "hose_reel": [
+      "wind_hose",
+      "store",
+      "unwind"
+    ]
+  },
+  "garage": {
+    "car": [
+      "drive",
+      "start",
+      "park",
+      "clean"
+    ],
+    "garage_door": [
+      "open",
+      "close",
+      "repair"
+    ],
+    "lawn_mower": [
+      "store",
+      "start",
+      "push"
+    ],
+    "toolbench": [
+      "place_tools_on",
+      "organize",
+      "work_on"
+    ],
+    "wrench": [
+      "tighten",
+      "loosen",
+      "use"
+    ],
+    "hammer": [
+      "hammer",
+      "tap",
+      "drive_nail"
+    ],
+    "screwdriver": [
+      "screw",
+      "unscrew",
+      "tighten"
+    ],
+    "nails": [
+      "hammer_in",
+      "place",
+      "store"
+    ],
+    "screws": [
+      "screw_in",
+      "store",
+      "use"
+    ],
+    "toolbox": [
+      "open",
+      "store_tools",
+      "carry"
+    ],
+    "ladder": [
+      "climb",
+      "set_up",
+      "fold"
+    ],
+    "broom": [
+      "sweep",
+      "clean_floor",
+      "store"
+    ],
+    "dustpan": [
+      "sweep_into",
+      "dispose_debris"
+    ],
+    "trash_can": [
+      "throw_in",
+      "take_out",
+      "close_lid"
+    ],
+    "oil": [
+      "pour",
+      "change",
+      "store"
+    ],
+    "battery": [
+      "install",
+      "replace",
+      "charge"
+    ],
+    "paint_cans": [
+      "open",
+      "pour",
+      "store"
+    ],
+    "paintbrush": [
+      "paint",
+      "dip",
+      "clean"
+    ],
+    "workbench": [
+      "assemble",
+      "place_items_on",
+      "clamp"
+    ],
+    "vise": [
+      "clamp",
+      "hold",
+      "secure"
+    ],
+    "jack": [
+      "lift_car",
+      "support",
+      "lower"
+    ],
+    "tire": [
+      "inflate",
+      "replace",
+      "store"
+    ],
+    "bike": [
+      "ride",
+      "repair",
+      "store"
+    ],
+    "bike_helmet": [
+      "wear",
+      "store",
+      "adjust"
+    ],
+    "extension_cord": [
+      "plug_in",
+      "unroll",
+      "power_device"
+    ]
+  }
+}
