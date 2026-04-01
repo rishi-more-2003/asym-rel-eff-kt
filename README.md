@@ -8,16 +8,36 @@
 
 ---
 
-<p align="center">
-  <img src="documentation/figures/learning_curves.png" width="48%"/>
-  <img src="documentation/figures/training_success.png" width="48%"/>
-</p>
-
-## TL;DR
-
-We investigate whether a persistent **caregiver–child relationship** improves knowledge transfer in language agents. A Qwen3-235B caregiver teaches a Qwen3-8B child across 160 household tasks using a cognitively-inspired memory architecture (instinct buffer, working memory, long-term episodic store, LoRA-based habits) and a **salience-gated consolidation** mechanism. Caregiver-assisted agents achieve **100% training success** with **25% fewer turns**, but this advantage **does not transfer** to independent evaluation — mirroring the *scaffolding dependency* phenomenon from developmental psychology.
+> We investigate whether a persistent **caregiver–child relationship** improves knowledge transfer in language agents. A Qwen3-235B caregiver teaches a Qwen3-8B child across 160 household tasks using a cognitively-inspired memory architecture and a **salience-gated consolidation** mechanism. Caregiver-assisted agents achieve **100% training success** with **25% fewer turns**, but this advantage **does not transfer** to independent evaluation — mirroring the *scaffolding dependency* phenomenon from developmental psychology.
 
 ## Key Results
+
+<table>
+<tr>
+<td width="50%">
+<img src="documentation/figures/learning_curves.png" width="100%"/>
+<p align="center"><sub><b>Learning Curves</b> — Caregiver conditions maintain near-perfect completion as curriculum difficulty increases.</sub></p>
+</td>
+<td width="50%">
+<img src="documentation/figures/h1_transfer.png" width="100%"/>
+<p align="center"><sub><b>H1: Transfer Accuracy</b> — Despite training gaps, all conditions transfer similarly to held-out tasks.</sub></p>
+</td>
+</tr>
+</table>
+
+<table>
+<tr><td>
+<img src="documentation/figures/training_success.png" width="100%"/>
+<p align="center"><sub><b>H2: Habit Acceleration</b> — Caregiver conditions achieve 100% success and 160/160 LoRA updates vs. ~130 for Solo/Peer.</sub></p>
+</td></tr>
+</table>
+
+<table>
+<tr><td>
+<img src="documentation/figures/teaching_efficiency.png" width="100%"/>
+<p align="center"><sub><b>Teaching Efficiency</b> — Caregiver: 6.1 turns avg vs. Solo/Peer: 8.4 turns (25% reduction).</sub></p>
+</td></tr>
+</table>
 
 | Metric | Solo | Sym. Peer | Role-Labeled | **Relational** |
 |:---|:---:|:---:|:---:|:---:|
@@ -25,11 +45,6 @@ We investigate whether a persistent **caregiver–child relationship** improves 
 | Training Success Rate | 81.5% | 84.4% | **100%** | 99.8% |
 | Avg. Turns to Complete | 8.36 | 8.52 | **6.10** | 6.42 |
 | Total LoRA Updates | 130 | 135 | **160** | 160 |
-
-<p align="center">
-  <img src="documentation/figures/teaching_efficiency.png" width="48%"/>
-  <img src="documentation/figures/category_heatmap.png" width="48%"/>
-</p>
 
 ## Setup
 
@@ -41,8 +56,8 @@ We investigate whether a persistent **caregiver–child relationship** improves 
 ### Installation
 
 ```bash
-git clone https://github.com/rmore2/msi-project.git
-cd msi-project
+git clone https://github.com/rishi-more-2003/asym-rel-eff-kt.git
+cd asym-rel-eff-kt
 
 python -m venv .venv
 source .venv/bin/activate  # or .venv\Scripts\activate on Windows
@@ -175,16 +190,41 @@ $$s = \alpha \cdot \text{novelty}(e) + \beta \cdot \text{prediction\\_error}(e) 
 | Role-Labeled | 235B caregiver + 8B child | γ = 0 |
 | **Relational** | 235B caregiver + 8B child | **γ = 0.3** |
 
-## Figures
+## Additional Figures
 
-<p align="center">
-  <img src="documentation/figures/h1_transfer.png" width="38%"/>
-  <img src="documentation/figures/transfer_by_difficulty.png" width="58%"/>
-</p>
-<p align="center">
-  <img src="documentation/figures/salience_ltm.png" width="48%"/>
-  <img src="documentation/figures/difficulty_progression.png" width="48%"/>
-</p>
+<table>
+<tr><td>
+<img src="documentation/figures/transfer_by_difficulty.png" width="100%"/>
+<p align="center"><sub><b>Transfer by Difficulty</b> — All conditions handle easy tasks well; performance degrades similarly on hard tasks.</sub></p>
+</td></tr>
+</table>
+
+<table>
+<tr>
+<td width="50%">
+<img src="documentation/figures/difficulty_progression.png" width="100%"/>
+<p align="center"><sub><b>Curriculum Progression</b></sub></p>
+</td>
+<td width="50%">
+<img src="documentation/figures/competence_levels.png" width="100%"/>
+<p align="center"><sub><b>Adaptive Scaffolding</b></sub></p>
+</td>
+</tr>
+</table>
+
+<table>
+<tr><td>
+<img src="documentation/figures/salience_ltm.png" width="100%"/>
+<p align="center"><sub><b>Salience & LTM Growth</b> — Salience decays as tasks become familiar; caregiver conditions accumulate more LTM entries.</sub></p>
+</td></tr>
+</table>
+
+<table>
+<tr><td>
+<img src="documentation/figures/category_heatmap.png" width="100%"/>
+<p align="center"><sub><b>Category Heatmap</b> — Transfer accuracy by condition and task category. No condition dominates all categories.</sub></p>
+</td></tr>
+</table>
 
 ## Citation
 
