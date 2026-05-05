@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="documentation/final_report.tex"><b>Paper</b></a> &nbsp;|&nbsp;
+  <a href="documentation/final_report.pdf"><b>Paper</b></a> &nbsp;|&nbsp;
   <a href="documentation/presentation.tex"><b>Slides</b></a> &nbsp;|&nbsp;
   <a href="documentation/proposal.tex"><b>Proposal</b></a>
 </p>
